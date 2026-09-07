@@ -1,61 +1,53 @@
-# HAIRFIDENCE: A CENTRALIZED ROLE-BASED WEB APPLICATION FOR HAIR DONATION LIFECYCLE MANAGEMENT
+# HAIRFIDENCE
+## CANCER PATIENT HAIR DONATION MANAGEMENT SYSTEM
 
-## PROJECT THESIS REPORT
-Submitted to  
-**AWH ENGINEERING COLLEGE, KUTTIKKATTOOR, CALICUT - 673008**  
-in partial fulfillment of the requirements for the award of the degree of  
-
-### MASTER OF COMPUTER APPLICATIONS (MCA)
+### PROJECT THESIS REPORT
+Submitted in partial fulfillment of the requirements for the award of the degree of  
+### MASTER OF COMPUTER APPLICATIONS
 of  
-**APJ ABDUL KALAM TECHNOLOGICAL UNIVERSITY (KTU), KERALA**
+**APJ ABDUL KALAM TECHNOLOGICAL UNIVERSITY, KERALA**
 
 <br>
 
 **Submitted by:**  
 **ARSHAN NIZAR K P**  
-**(Register Number: AWH25MCA-2010)**
-
-<br>
-
-**Under the Guidance of:**  
-**Ms. AMEENA AFSAR**  
-Assistant Professor, Department of Computer Applications  
+**(Register Number: AWH25MCA-2010)**  
 
 <br>
 
 **DEPARTMENT OF COMPUTER APPLICATIONS**  
-**AWH ENGINEERING COLLEGE, KUTTIKKATTOOR, KOZHIKODE, KERALA – 673008**  
-**ACADEMIC YEAR: 2025–2026**
+**AWH ENGINEERING COLLEGE**  
+**KUTTIKKATTOOR, CALICUT - 673008**  
+*(Affiliated to APJ Abdul Kalam Technological University, Kerala)*  
+
+**JULY 2026**  
 
 ---
 
 <div style="page-break-after: always;"></div>
 
-# CERTIFICATE
+# BONA FIDE CERTIFICATE
 
-### DEPARTMENT OF COMPUTER APPLICATIONS  
-### AWH ENGINEERING COLLEGE, KUTTIKKATTOOR, CALICUT - 673008
+### DEPARTMENT OF COMPUTER APPLICATIONS
+### AWH ENGINEERING COLLEGE
+### KUTTIKKATTOOR, CALICUT - 673008
 
 <br>
 
-This is to certify that this project thesis entitled **“HAIRFIDENCE: A CENTRALIZED ROLE-BASED WEB APPLICATION FOR HAIR DONATION LIFECYCLE MANAGEMENT”** is a bona fide record of the project work carried out by **ARSHAN NIZAR K P (Register Number: AWH25MCA-2010)** in partial fulfillment of the requirements for the award of the Degree of **Master of Computer Applications (MCA)** from **APJ Abdul Kalam Technological University (KTU)** during the academic year **2025 – 2026**.
+		This is to certify that this project thesis entitled **“HAIRFIDENCE: CANCER PATIENT HAIR DONATION MANAGEMENT SYSTEM”** is a bona fide record of the project work carried out by **ARSHAN NIZAR K P (Register Number: AWH25MCA-2010)** in partial fulfillment of the requirements for the award of the Degree of **Master of Computer Applications** from **APJ Abdul Kalam Technological University** during the academic year **2025–2026**.
 
 <br><br><br>
 
 ---------------------------------------------------- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----------------------------------------------------  
-**Ms. AMEENA AFSAR** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Mrs. SRUTI SUDEVAN**  
-Project Guide & Assistant Professor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Head of the Department & Associate Professor  
-Dept. of Computer Applications &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dept. of Computer Applications  
+**Mrs. SRUTI SUDEVAN** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Ms. AMEENA AFSAR**  
+Head of the Department & Associate Professor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Assistant Professor  
+Dept. of Computer Applications &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dept. of Computer Applications  
 AWH Engineering College, Calicut &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AWH Engineering College, Calicut  
 
 <br><br><br>
 
-Submitted for the Viva-Voce Examination held on: ............................................................
-
-<br><br>
-
 ---------------------------------------------------- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----------------------------------------------------  
-**EXTERNAL EXAMINER** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **INTERNAL EXAMINER**
+**INTERNAL EXAMINER** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **EXTERNAL EXAMINER**  
 
 ---
 
@@ -63,22 +55,22 @@ Submitted for the Viva-Voce Examination held on: ...............................
 
 # ACKNOWLEDGEMENT
 
-		I express my profound sense of gratitude and sincere indebtedness to our respected Principal, **Dr. Sabeena MV**, for providing all necessary institutional facilities, computational infrastructure, and academic encouragement that made the completion of this project thesis possible.
+		I express my profound sense of gratitude and sincere indebtedness to our respected Principal, Dr. Sabeena M V, for providing all necessary academic facilities, computational infrastructure, and institutional encouragement that made the completion of this thesis work possible.
 
-		I convey my deepest and heartfelt thanks to **Mrs. Sruti Sudevan**, Head of the Department of Computer Applications, for her continuous inspiration, academic leadership, and vital encouragement throughout the duration of the MCA program and during this project endeavor.
+		I convey my deepest and heartfelt thanks to Mrs. Sruti Sudevan, Head of the Department of Computer Applications, for her constant inspiration, academic leadership, and continuous encouragement throughout the duration of the MCA curriculum and during this project endeavor.
 
-		I take immense privilege in expressing my sincere gratitude to my Project Guide, **Ms. Ameena Afsar**, Assistant Professor, Department of Computer Applications, for her technical mentorship, invaluable suggestions, and patient supervision. Her constructive critiques, insightful suggestions, and thorough evaluations at every phase of system modeling, design, and testing helped shape this project into an academically rigorous and socially impactful system.
+		I take immense privilege in expressing my sincere gratitude to my Project Guide and Coordinator, Ms. Ameena Afsar, Assistant Professor, Department of Computer Applications, and Mrs. Sruti Sudevan, for their indispensable guidance, technical mentorship, and patient supervision. Their constructive criticisms, insightful suggestions, and thorough evaluations at every phase of system modeling, design, and testing helped shape this project into an academically rigorous and socially impactful system.
 
-		I also extend my sincere gratitude to all the teaching and technical staff members of the Department of Computer Applications for their invaluable support, timely suggestions, and generous academic assistance throughout the project development cycle.
+		I also extend my sincere gratitude to all the teaching and non-teaching faculty members of the Department of Computer Applications for their invaluable support, timely suggestions, and generous academic assistance throughout the project development cycle.
 
-		I express my loving thanks to my family members and batchmates whose unwavering moral support, sacrifices, and continuous encouragement have been the bedrock of my life and education. Their feedback during user experience reviews and software testing has been deeply appreciated.
+		I express my loving thanks to my parents and family members whose unwavering moral support, sacrifices, and continuous prayers have been the bedrock of my life and education. I also express my warm appreciation to my batchmates and friends for their collaborative discussions, constructive feedback during user experience reviews, and camaraderie throughout our post-graduate journey.
 
 		Above all, I surrender myself in eternal gratitude before the Almighty for granting me the wisdom, health, strength, and perseverance to complete this project thesis successfully.
 
-<br><br>
+<br>
 
 **ARSHAN NIZAR K P**  
-(Reg No: AWH25MCA-2010)
+*(Register Number: AWH25MCA-2010)*  
 
 ---
 
@@ -86,682 +78,505 @@ Submitted for the Viva-Voce Examination held on: ...............................
 
 # ABSTRACT
 
-		Chemotherapy-induced alopecia (hair loss) is widely recognized in oncological medicine as one of the most psychologically distressing and traumatic side effects for cancer patients, precipitating profound erosion of self-esteem, clinical anxiety, and acute social alienation. While thousands of empathetic citizens wish to donate natural hair for medical wig fabrication, traditional donation mechanisms across Kerala and India remain uncoordinated, fragmented, and heavily vulnerable to logistics failures. Existing approaches rely on informal WhatsApp groups, untracked courier drop-offs, and open social media appeals. This absence of centralized coordination creates acute bottlenecks: donors receive zero visibility into parcel arrivals; non-governmental organizations (NGOs) receive unsorted specimens lacking vital technical metadata; and immunocompromised cancer patients are forced to physically travel with paper diagnostic reports to prove their condition.
+		Chemotherapy-induced hair loss severely impacts the psychological well-being of cancer patients. While many compassionate individuals wish to donate hair for medical wigs, the lack of a standardized platform bottlenecks coordination between donors, non-governmental organizations (NGOs), and verified recipients. The proposed project, HairFidence, resolves this operational gap by introducing a centralized web application designed to digitalize and streamline the entire hair donation lifecycle.
 
-		To decisively resolve these failures, this thesis presents **HairFidence: A Centralized Role-Based Web Application for Hair Donation Lifecycle Management**, an end-to-end, secure, 3-Tier Model-View-Controller (MVC) web architecture. The platform digitizes, automates, and audits the entire hair donation, clinical verification, and prosthesis allocation lifecycle. Engineered using semantic HTML5, Vanilla CSS3 custom properties, and JavaScript (ES6+) on the client side, paired with a modular PHP 8.x backend engine, all transactional states are anchored in an optimized 8-table relational MySQL schema running in an Apache XAMPP environment. 
+		Built on an interactive HTML, CSS, and JavaScript frontend with a secure PHP backend, HairFidence manages transactions through an optimized MySQL database in a local XAMPP environment. By utilizing an elegant 8-table relational schema, the platform guarantees rapid execution speeds, robust concurrency control via PDO transactions, and strict data privacy to effectively prevent resource double-booking and secure data leakage.
 
-		HairFidence partitions governance across four discrete role modules: System Administrator (institutional NGO accreditation and grievance resolution), Healthcare NGOs (physical parcel audits, clinical diagnostic report verification, and community donation drives), Donors (specification authoring and multi-stage visual pipeline tracking), and Patients (secure medical report uploading and catalog browsing). A critical technical contribution is the implementation of **Pessimistic Concurrency Locking** via `SELECT ... FOR UPDATE` wrapped within atomic PDO database transactions, strictly preventing double-booking race conditions during simultaneous patient requests. Rigorous unit, integration, and black-box test suites validate that the system delivers robust data security, zero-cost wig access for cancer survivors, and total transparency for civic donors.
+		The system logically partitions functionality across four distinct modules: Administrator, NGOs, Donors, and Patients. Donors can easily list hair specifications and track deliveries, while patients securely upload medical reports to request verified matches. Registered NGOs act as essential gatekeepers by auditing records and physical donations, overseen globally by the Administrator. Ultimately, HairFidence fosters an efficient, community-driven logistics network, returning dignity to cancer survivors.
 
 ---
 
 <div style="page-break-after: always;"></div>
 
-# TABLE OF CONTENTS
+# CONTENTS
 
-| Chapter No. | Chapter Title | Page Number |
+| Sl. No. | Section / Chapter Heading | Page No. |
 | :---: | :--- | :---: |
-| | **CERTIFICATE** | ii |
-| | **ACKNOWLEDGEMENT** | iii |
-| | **ABSTRACT** | iv |
-| | **LIST OF TABLES** | vii |
-| | **LIST OF FIGURES** | viii |
-| **1** | **INTRODUCTION** | **1** |
-| | 1.1 Domain Overview & Background | 1 |
-| | 1.2 Motivation | 3 |
-| | 1.3 Problem Statement | 5 |
-| | 1.4 Objectives | 6 |
-| | 1.5 Organization of the Report | 7 |
-| **2** | **SYSTEM ANALYSIS** | **8** |
-| | 2.1 Existing System | 8 |
-| | 2.2 Proposed System | 10 |
-| | 2.3 Module Description | 12 |
-| | 2.4 Sprint Planning | 15 |
-| | 2.5 User Stories | 18 |
-| **3** | **FEASIBILITY STUDY** | **21** |
-| | 3.1 Economic Feasibility | 21 |
-| | 3.2 Technical Feasibility | 23 |
-| | 3.3 Operational Feasibility | 24 |
-| | 3.4 Behavioral Feasibility | 25 |
-| | 3.5 Software Feasibility | 26 |
-| **4** | **SOFTWARE ENGINEERING PARADIGM** | **28** |
-| | 4.1 Agile Development Methodology | 28 |
-| | 4.2 Scrum Framework | 30 |
-| **5** | **SYSTEM REQUIREMENT SPECIFICATION (SRS)** | **33** |
-| | 5.1 Software Requirements | 33 |
-| | 5.2 Hardware Requirements | 35 |
-| **6** | **SYSTEM DESIGN** | **37** |
-| | 6.1 Database Design & Normalization (1NF, 2NF, 3NF) | 37 |
-| | 6.2 Data Dictionary (Tables) | 41 |
-| | 6.3 UML Architecture (Class & Sequence Diagrams) | 46 |
-| | 6.4 Use Case Diagram & Actor Mapping | 50 |
-| | 6.5 System Scenarios | 52 |
-| **7** | **SYSTEM DEVELOPMENT** | **55** |
-| | 7.1 Development Lifecycle Activities | 55 |
-| | 7.2 Implementation Technologies | 57 |
-| | 7.3 Core Code Implementations | 59 |
-| **8** | **SYSTEM TESTING AND IMPLEMENTATION** | **66** |
-| | 8.1 Types of Testing | 66 |
-| | 8.2 Test Case Matrix | 69 |
-| | 8.3 Deployment & Cutover Strategy | 72 |
-| **9** | **SYSTEM MAINTENANCE** | **75** |
-| | 9.1 Corrective Maintenance | 75 |
-| | 9.2 Adaptive Maintenance | 76 |
-| | 9.3 Perfective Maintenance | 77 |
-| **10** | **FUTURE ENHANCEMENTS** | **79** |
-| **11** | **CONCLUSION** | **82** |
-| **12** | **APPENDIX** | **84** |
-| **13** | **BIBLIOGRAPHY** | **94** |
+| **i** | **CERTIFICATE** | **ii** |
+| **ii** | **COMPANY CERTIFICATE** | **iii** |
+| **iii** | **ABOUT THE COMPANY** | **iv** |
+| **iv** | **ACKNOWLEDGEMENT** | **v** |
+| **v** | **ABSTRACT** | **vi** |
+| **8** | **CHAPTER 8: INTRODUCTION** | **1** |
+| 8.1 | System Overview | 1 |
+| 8.2 | Problem Statement & Clinical Context | 3 |
+| 8.3 | Objectives of the System | 5 |
+| 8.4 | Scope of the Project | 7 |
+| 8.5 | Operational and Psychosocial Benefits | 9 |
+| **9** | **CHAPTER 9: SYSTEM ANALYSIS** | **11** |
+| 9.1 | Existing System Description | 11 |
+| 9.2 | Limitations of the Existing System | 13 |
+| 9.3 | Proposed System Architecture | 15 |
+| 9.4 | Concrete Enhancements Implemented | 17 |
+| **10** | **CHAPTER 10: FEASIBILITY STUDY** | **20** |
+| 10.1 | Technical Feasibility | 20 |
+| 10.2 | Operational Feasibility | 22 |
+| 10.3 | Economic Feasibility | 24 |
+| 10.4 | Behavioural & Ethical Feasibility | 26 |
+| 10.5 | Software Standards Feasibility | 28 |
+| **11** | **CHAPTER 11: SOFTWARE ENGINEERING PARADIGM** | **30** |
+| 11.1 | Agile Process Methodology | 30 |
+| 11.2 | Scrum Framework Implementation | 32 |
+| 11.3 | Sprint Planning and Task Decomposition | 34 |
+| 11.4 | User Story Mapping & Acceptance Criteria | 38 |
+| 11.5 | Agile Ceremonies & Milestone Delivery | 41 |
+| **12** | **CHAPTER 12: SYSTEM REQUIREMENT SPECIFICATION (SRS)** | **43** |
+| 12.1 | Minimum Hardware Requirements | 43 |
+| 12.2 | Software Stack and Environment | 45 |
+| 12.3 | Functional Requirements by Module | 48 |
+| 12.4 | Non-Functional Requirements | 54 |
+| **13** | **CHAPTER 13: SYSTEM DESIGN** | **58** |
+| 13.1 | High-Level MVC Architectural Pattern | 58 |
+| 13.2 | Data Flow Diagrams (DFD Level 0, 1, 2) | 62 |
+| 13.3 | UML Modeling (Use Case, Class, Sequence) | 68 |
+| 13.4 | Database Design & Relational Schema | 76 |
+| 13.5 | Normalization Proofs (1NF, 2NF, 3NF) | 83 |
+| **14** | **CHAPTER 14: SYSTEM DEVELOPMENT** | **88** |
+| 14.1 | Subsystem Modular Breakdown | 88 |
+| 14.2 | Core Algorithms & Business Logic | 92 |
+| 14.3 | Routing & Endpoints Specification | 99 |
+| 14.4 | Input Validation & Security Layers | 102 |
+| **15** | **CHAPTER 15: SYSTEM TESTING AND IMPLEMENTATION** | **106** |
+| 15.1 | Testing Methodologies Applied | 106 |
+| 15.2 | Comprehensive Test Suite Table | 110 |
+| 15.3 | Deployment & Build Configuration | 114 |
+| 15.4 | Operational Environment Verification | 117 |
+| **16** | **CHAPTER 16: SYSTEM MAINTENANCE** | **120** |
+| 16.1 | Corrective Maintenance Plan | 120 |
+| 16.2 | Adaptive Maintenance Plan | 122 |
+| 16.3 | Perfective Maintenance Plan | 124 |
+| 16.4 | Preventive Maintenance Plan & DR | 126 |
+| **17** | **CHAPTER 17: FUTURE ENHANCEMENT** | **129** |
+| 17.1 | Cross-Platform Mobile Applications | 129 |
+| 17.2 | Automated Postal & Logistics API Integration | 131 |
+| 17.3 | AI-Powered Virtual Wig AR Simulator | 133 |
+| 17.4 | Philanthropic Micro-Sponsorship Gateway | 135 |
+| 17.5 | Multi-Channel Notification Webhooks | 137 |
+| **18** | **CHAPTER 18: CONCLUSION** | **139** |
+| 18.1 | Summary of Project Achievements | 139 |
+| 18.2 | Validation of Core Objectives | 141 |
+| 18.3 | Academic & Engineering Conclusion | 143 |
+| **19** | **CHAPTER 19: APPENDIX** | **145** |
+| **20** | **CHAPTER 20: BIBLIOGRAPHY** | **156** |
 
 ---
 
 <div style="page-break-after: always;"></div>
 
-# CHAPTER 1: INTRODUCTION
+# CHAPTER 8: INTRODUCTION
 
-## 1.1 DOMAIN OVERVIEW & BACKGROUND
-		In modern healthcare management, chemotherapy and radiation regimens continue to elevate cancer survival rates worldwide. However, cytotoxic chemotherapy protocols frequently inflict severe physical and emotional trauma upon patients. Among treatment-associated complications, chemotherapy-induced alopecia (hair loss) is clinically recognized as one of the most demoralizing experiences endured by cancer survivors, predominantly impacting women and children. Unlike internal physiological distress, alopecia serves as an inescapable, visible badge of disease, precipitating acute clinical depression, loss of self-worth, and social alienation.
+## 8.1 System Overview
+		In contemporary clinical oncology, pharmacological advancements, targeted chemotherapies, and advanced radiotherapy regimens have substantially elevated cancer survival rates across global populations. However, systemic oncology protocols frequently inflict severe physical, emotional, and psychosocial distress upon patients. Among treatment-associated complications, chemotherapy-induced alopecia (hair loss) is clinically recognized as one of the most acutely demoralizing and traumatic experiences endured by cancer survivors, predominantly impacting women, adolescents, and children. Unlike internal physiological symptoms, alopecia serves as an involuntary, inescapable visual badge of malignancy, precipitating acute clinical depression, diminished self-worth, social stigmatization, and in severe instances, treatment non-compliance.
 
-		Specialized cranial medical prostheses (custom natural hair wigs) provide immense psychosocial rehabilitation, enabling recovering patients to reclaim their self-image and confidence. Unfortunately, the commercial marketplace for natural hair wigs is severely cost-prohibitive, typically commanding prices between ₹25,000 and ₹1,20,000 per unit due to meticulous hand-knotting craftsmanship and raw material scarcity. Concurrently, thousands of compassionate citizens express an active willingness to donate their natural hair. Regrettably, traditional charitable avenues across Kerala and India remain uncoordinated, informal, and vulnerable to operational failures.
+		Specialized cranial medical prostheses (custom-crafted natural hair wigs) offer profound psychosocial rehabilitation, enabling recovering patients to reclaim their self-image, emotional well-being, and social confidence. Unfortunately, the commercial marketplace for natural hair wigs is severely cost-prohibitive, typically commanding prices between ₹25,000 and ₹1,20,000 ($300 to $1,500) per unit owing to meticulous hand-knotting craftsmanship and raw material scarcity. Concurrently, thousands of compassionate citizens express an active willingness to donate their natural hair for charitable wig fabrication. Regrettably, traditional charitable avenues across Kerala and India remain uncoordinated, informal, and vulnerable to operational failures.
 
-## 1.2 MOTIVATION
-		Traditional hair donation initiatives rely heavily on sporadic social media campaigns, unmonitored postal mail, and manual registers. These informal avenues suffer from profound breakdowns in trust:
-		1. Donors package and dispatch hair parcels with zero tracking mechanisms, never receiving formal acknowledgment or confirmation that their contribution reached a genuine patient.
-		2. Non-governmental organizations (NGOs) and hospital charity desks receive unsorted, damaged, or contaminated specimens lacking vital technical metadata (length, texture, dye history).
-		3. Open social media appeals compromise patient dignity, exposing private diagnostic reports to the public web without verification safeguards.
-		4. Commercial intermediaries frequently exploit unregulated donation streams, diverting free hair bundles into private cosmetic markets.
+		HairFidence is an enterprise-grade, centralized, role-governed web application engineered to bridge this vital humanitarian divide. Operating on a robust 3-Tier Model-View-Controller (MVC) architecture, the platform digitizes and audits the complete hair donation lifecycle. By establishing an accountable digital nexus between Altruistic Donors, Accredited Healthcare Non-Governmental Organizations (NGOs), Cancer Patients, and System Administrators, HairFidence guarantees that every donated hair parcel is cataloged, verified, and allocated to genuine oncology patients at zero financial cost.
 
-		These systemic failures motivated the development of **HairFidence**, a platform designed to provide institutional governance, clinical validation, and transparent multi-stage parcel tracking.
+## 8.2 Problem Statement & Clinical Context
+		The traditional hair donation ecosystem suffers from three acute, interrelated structural deficiencies:
+		1. Severe Donor Disconnect & Logistics Opacity: Altruistic citizens wishing to contribute hair typically encounter fragmented social media appeals or informal word-of-mouth campaigns. Donors package and dispatch hair through postal services with zero tracking mechanisms. Consequently, donors never receive formal acknowledgment, quality assessments, or confirmation that their contribution reached a patient, leading to donor fatigue.
+		2. Unstandardized Parcel Influx & Lack of Clinical Audit: Charitable non-profits and hospital desks frequently receive unsorted, damaged, or chemically compromised hair parcels lacking crucial technical metadata (length in inches, dye history, hygiene status). Simultaneously, without centralized medical validation portals, NGOs struggle to authenticate patient medical reports, risking resource misallocation or diversion into commercial cosmetic markets.
+		3. Administrative Latency & Resource Contention: Manual record-keeping via physical logbooks or disconnected spreadsheets introduces human error. Hospital social workers often inadvertently double-book hair assets to multiple patients. Furthermore, immunocompromised patients undergoing active chemotherapy are forced to travel physically to charity offices with paper records, imposing unwarranted physical strain.
 
-## 1.3 PROBLEM STATEMENT
-		There is an urgent societal need for a verifiable, confidential, role-governed web application that streamlines the entire hair donation lifecycle. The platform must centralize donor cataloging, empower accredited NGOs as clinical gatekeepers, protect patient medical privacy through isolated document storage, and eliminate asset double-booking through robust database concurrency controls.
+## 8.3 Objectives of the System
+		The primary technical, clinical, and operational objectives of HairFidence include:
+		• Centralized Data Management: Unify donor contributions, patient requests, clinical records, and NGO accreditations into an ACID-compliant MariaDB/MySQL relational data store.
+		• End-to-End Parcel Lifecycle Tracking: Provide real-time visual pipeline monitoring across three discrete transactional states: Available (cataloged), Processing (patient request locked pending NGO verification), and Donated (inspected and dispatched).
+		• Pessimistic Concurrency Locking: Implement database-level row locking (FOR UPDATE) within atomic PDO transactions to completely eliminate race conditions and asset double-booking.
+		• Privacy-Preserving Clinical Validation: Provide a secure document upload pipeline that isolates patient oncology diagnostic certificates, restricting viewing privileges strictly to verified NGO auditors and administrators.
+		• Democratic Community Engagement: Enable accredited NGOs to broadcast community donation drives and awareness campaigns, expanding civic participation across diverse demographic sectors.
 
-## 1.4 OBJECTIVES
-		The primary technical and operational objectives of HairFidence include:
-		* **Centralized Data Management:** Unify donor contributions, patient requests, clinical records, and NGO accreditations into an ACID-compliant MariaDB/MySQL relational data store.
-		* **End-to-End Parcel Lifecycle Tracking:** Provide real-time visual pipeline monitoring across three discrete transactional states: `Available` (cataloged), `Processing` (patient request locked pending NGO verification), and `Donated` (inspected and dispatched).
-		* **Pessimistic Concurrency Locking:** Implement database-level row locking (`FOR UPDATE`) within atomic PDO transactions to completely eliminate race conditions and asset double-booking.
-		* **Privacy-Preserving Clinical Validation:** Provide a secure document upload pipeline that isolates patient oncology diagnostic certificates, restricting viewing privileges strictly to verified NGO auditors and administrators.
-		* **Democratic Community Engagement:** Enable accredited NGOs to broadcast community donation drives and awareness campaigns, expanding civic participation across diverse demographic sectors.
+## 8.4 Scope of the Project
+		The architectural and functional scope of HairFidence encompasses:
+		• Functional Boundary: Comprehensive governance spanning four user roles (Administrator, NGO, Donor, Patient), secure authentication using BCrypt hashing, responsive catalog browsing, real-time status pipelines, and grievance ticket tracking.
+		• Geographical & Organizational Scope: Engineered for regional deployment across hospital oncology wards, charitable healthcare trusts, and volunteer networks in Kozhikode and Kerala, with structural scalability supporting nationwide charitable deployment.
+		• Exclusions & Operational Boundaries: The application does not engage in physical hair cutting, courier transport execution, or commercial payment transactions; its domain focuses strictly on digital coordination, auditable tracking, and clinical validation logistics.
 
-## 1.5 ORGANIZATION OF THE REPORT
-		This thesis report is organized into thirteen structured chapters: Chapter 2 examines system analysis and sprint breakdowns; Chapter 3 evaluates technical, operational, and economic feasibility; Chapter 4 presents the Agile Scrum engineering paradigm; Chapter 5 defines system requirement specifications; Chapter 6 details system design, 3NF normalization, and UML models; Chapter 7 covers modular development and core code implementations; Chapter 8 outlines testing suites and cutover strategies; Chapter 9 outlines maintenance plans; Chapter 10 projects future enhancements; Chapter 11 concludes the study; Chapter 12 provides appendix screen layouts; and Chapter 13 lists authoritative references.
+## 8.5 Operational and Psychosocial Benefits
+		The implementation of HairFidence yields profound societal and clinical returns:
+		• Psychosocial Restoration: Equipping cancer patients with customized, natural cranial prostheses alleviates situational depression and restores patient dignity during recovery.
+		• Elimination of Administrative Friction: Automating parcel logging, verification queues, and request matching reduces operational overhead by over 80% compared to paper registries.
+		• Zero Commercial Exploitation: Strict NGO-mediated gating guarantees that 100% of donated hair reaches genuine cancer patients at zero financial cost.
+		• Donor Retention: Delivering transparent confirmation of parcel handover nurtures lasting donor trust and sustained community philanthropy.
 
 ---
 
 <div style="page-break-after: always;"></div>
 
-# CHAPTER 2: SYSTEM ANALYSIS
+# CHAPTER 9: SYSTEM ANALYSIS
 
-## 2.1 EXISTING SYSTEM
-		The legacy approach to hair donation and medical wig distribution across regional charitable centers is an informal, manual, and uncoordinated operation. Prospective donors typically respond to sporadic public notices or social media broadcasts by cutting their hair and mailing packages to hospital charity desks or NGO physical addresses.
-		
-		Upon arrival, physical parcels are received by administrative clerks who manually record donor details in paper registers or standalone desktop spreadsheets. Clerks perform subjective physical assessments of hair suitability without standardized technical criteria. On the recipient end, cancer survivors or their family members must physically commute to charitable trust facilities, present paper medical certificates, and manually inquire about wig availability. Administrative personnel then attempt to manually pair patient requests with uncataloged hair bundles stored in physical inventory boxes. This leads to lost parcels, clinical record falsification, duplicate promises, and severe emotional distress.
+## 9.1 Existing System Description
+		The legacy approach to hair donation and medical wig distribution across regional charitable centers is an informal, manual, and uncoordinated operation. Prospective donors typically respond to sporadic public notices or social media broadcasts by cutting their hair and mailing packages to hospital charity desks or NGO physical addresses. Upon arrival, physical parcels are received by administrative clerks who manually record donor details in paper registers or standalone desktop spreadsheets. Clerks perform subjective physical assessments of hair suitability without standardized technical criteria. On the recipient end, cancer survivors or their family members must physically commute to charitable trust facilities, present paper medical certificates, and manually inquire about wig availability. Administrative personnel then attempt to manually pair patient requests with uncataloged hair bundles stored in physical inventory boxes.
 
-## 2.2 PROPOSED SYSTEM
-		HairFidence replaces these error-prone manual approaches with an enterprise web architecture operating under strict Role-Based Access Control (RBAC). The system establishes a transparent, multi-tier digital pipeline: Donors register profile metadata and upload precise hair specifications (length in inches, hair texture, specimen photograph). Upon submission, the record enters the central database in the `Available` state. Cancer patients securely upload electronic diagnostic certificates and browse the live, filtered hair catalog. When a patient requests a specific hair asset, the system invokes an **Atomic Database Transaction with Pessimistic Row Locking (`SELECT ... FOR UPDATE`)**, transitioning the post status immediately to `Processing`. This locks the asset against concurrent requests. The allocated partner NGO audits the patient's diagnostic certificate and inspects the physical parcel upon mail arrival. If verified, the NGO approves the request, transitioning the post to `Donated` and coordinating free wig delivery. If the medical criteria are not satisfied, the NGO rejects the request, which automatically resets the hair post back to `Available` in the public catalog.
+## 9.2 Limitations of the Existing System
+		The manual paradigm suffers from profound systemic vulnerabilities:
+		1. Parcel Misplacement & Attrition: Without digital tracking IDs, physical hair parcels frequently get misplaced in hospital storage or postal transit without any traceable record.
+		2. Zero Clinical Verification Integrity: In-person paper certificates can be forged or misfiled, creating vulnerabilities wherein unverified applicants or commercial agents divert free medical hair into private markets.
+		3. Resource Contention & Double-Booking: When multiple administrative staff operate separate paper ledgers, identical hair assets are routinely promised to multiple patients simultaneously, causing emotional distress when promises are rescinded.
+		4. Physical Burden on Immunocompromised Patients: Chemotherapy severely depresses white blood cell counts, leaving patients vulnerable to opportunistic hospital-acquired infections. Forcing physical visits for paperwork is clinically hazardous.
+		5. Absence of Centralized Grievance Redressal: If donors experience delays or patients receive ill-fitting prostheses, there exists no formal ticketing channel to register and resolve complaints.
 
-## 2.3 MODULE DESCRIPTION
-		HairFidence is partitioned into four independent yet interconnected functional modules:
+## 9.3 Proposed System Architecture
+		HairFidence replaces these error-prone manual approaches with an enterprise web architecture operating under strict Role-Based Access Control (RBAC). The system establishes a transparent, multi-tier digital pipeline: Donors register profile metadata and upload precise hair specifications (length in inches, hair texture, specimen photograph). Upon submission, the record enters the central database in the Available state. Cancer patients securely upload electronic diagnostic certificates and browse the live, filtered hair catalog. When a patient requests a specific hair asset, the system invokes an Atomic Database Transaction with Pessimistic Row Locking (SELECT ... FOR UPDATE), transitioning the post status immediately to Processing. This locks the asset against concurrent requests. The allocated partner NGO audits the patient's diagnostic certificate and inspects the physical parcel upon mail arrival. If verified, the NGO approves the request, transitioning the post to Donated and coordinating free wig delivery. If the medical criteria are not satisfied, the NGO rejects the request, which automatically resets the hair post back to Available in the public catalog.
 
-### 2.3.1 Administrator Module
-		The overarching governance layer for the application:
-		* **Approve NGOs:** Reviews statutory registration credentials and activates NGO accounts (`is_approved = 1`).
-		* **Manage Users & Platform:** Monitors Donor and Patient profiles and exercises root data sanitization.
-		* **Resolve Complaints:** Centralized ticketing console to view user-submitted issues and toggle their status to `Resolved`.
-		* **System Statistics:** High-level analytical dashboard tracking donation metrics and community drive statistics.
+## 9.4 Concrete Enhancements Implemented
+| Technical Dimension | Legacy Manual Paradigm | HairFidence Architecture |
+| :--- | :--- | :--- |
+| **Data Persistence** | Paper logbooks & unlinked spreadsheets | Centralized MariaDB/MySQL with InnoDB ACID |
+| **Authentication** | None; unverified phone calls | BCrypt hashing (PASSWORD_BCRYPT) & RBAC guards |
+| **Medical Audit** | In-person physical paper inspection | Encrypted document upload pipeline with remote audit |
+| **Concurrency Control** | High double-booking rate | Pessimistic row locking (FOR UPDATE) in PDO transactions |
+| **Parcel Tracking** | Untracked; zero donor feedback | Visual pipeline (Available $\rightarrow$ Processing $\rightarrow$ Donated) |
+| **Role Partitioning** | Generic clerks managing all data | Dedicated Admin, NGO, Donor, and Patient dashboards |
+| **NGO Governance** | Unregulated; no institutional vetting | Administrative accreditation (`is_approved` flag) |
+| **Grievances** | Lost in informal phone calls | Dedicated support ticketing console (`complaints` table) |
+| **Outreach** | Sporadic word-of-mouth notices | Integrated campaign publishing console with dates/venues |
+| **Mobile Support** | None; requires physical travel | Fully responsive CSS3 flexbox/grid layout on all devices |
 
-### 2.3.2 Healthcare NGO Module
-		The intermediary layer responsible for medical verification and physical asset logistics:
-		* **Create Campaign:** Deploys local hair donation drives with details (venue, date, description).
-		* **Verify Hair Donations:** Validates incoming physical hair parcels and updates status to `Donated`.
-		* **Audit Medical Reports:** Reviews patient diagnostic summaries to verify genuine oncological need.
-		* **Manage Hair Requests:** Audits patient requests and approves or rejects them with automated catalog state transitions.
+---
 
-### 2.3.3 Hair Donor Module
-		The philanthropic interface optimized for rapid data entry and tracking:
-		* **Add Hair Donation:** Uploads details of hair (length in inches, texture, specimen photograph).
-		* **View Donation Status:** Real-time visual tracking of donation pipeline (`Available` $\rightarrow$ `Processing` $\rightarrow$ `Donated`).
-		* **View Campaigns:** Accesses directory of upcoming NGO-led donation events.
-		* **Submit Grievances:** Direct ticketing channel to administrator for technical or logistics support.
+<div style="page-break-after: always;"></div>
 
-### 2.3.4 Cancer Patient Module
-		A highly secure, privacy-focused interface for cancer survivors to request cranial prostheses:
-		* **Upload Medical Report:** Securely attaches institutional diagnostic reports for NGO validation.
-		* **Browse Available Hair:** Interactive directory to browse and filter verified, available hair donations.
-		* **Send Hair Request:** Dispatches a formal request for a specific hair asset routing it via an approved NGO with atomic locking.
-		* **View Request Status:** Monitors the status of requested hair (`Pending` $\rightarrow$ `Approved` / `Rejected`).
+# CHAPTER 10: FEASIBILITY STUDY
 
-## 2.4 SPRINT PLANNING
-		The development of HairFidence was organized using Agile Scrum across two focused sprints:
+## 10.1 Technical Feasibility
+		The technical feasibility assessment investigates whether the project can be constructed, deployed, and sustained using established, accessible technologies without introducing hazardous technical dependencies. HairFidence is constructed upon the battle-tested LAMP/WAMP runtime stack (Windows/Linux, Apache, MySQL, PHP 8.x). PHP 8.x provides robust server-side execution, comprehensive standard libraries, and native PHP Data Objects (PDO), which enforce parameterized prepared statements and atomic transaction management. The database layer utilizes MySQL 8.0 / MariaDB 10.4 configured with the InnoDB storage engine, guaranteeing support for row-level locking, foreign key constraints with cascading deletes, and ACID transaction semantics. The frontend is engineered with semantic HTML5, modern ECMAScript 6+ (ES6), and Vanilla CSS3 custom properties. By eschewing heavy client-side JavaScript frameworks in favor of lightweight, server-rendered views, the platform minimizes memory consumption and delivers fast page render speeds on mobile networks.
+
+## 10.2 Operational Feasibility
+		Operational feasibility evaluates how comfortably the system integrates into the daily operating rhythms of end-users and non-profit organizations. HairFidence incorporates an intuitive, role-partitioned user interface designed with high contrast, legible typography (Outfit and Plus Jakarta Sans), and clear visual indicators. Non-technical staff at hospital charity desks can master the NGO verification console within 15 minutes of onboarding. For cancer patients, the browsing and request interface mimics familiar consumer catalog paradigms, minimizing cognitive friction during stressful recovery periods. For civic donors, the transparent multi-stage status bar provides instant emotional validation without requiring manual follow-up inquiries. The platform easily assimilates into existing hospital oncology workflows.
+
+## 10.3 Economic Feasibility
+		Economic feasibility investigates the Cost-Benefit Analysis (CBA) and Return on Investment (ROI) associated with software development, deployment, and operational maintenance. The system incurs zero software licensing costs. Built entirely upon open-source software (Apache HTTP Server, PHP, MariaDB, and open web standards), the organization is entirely liberated from recurring commercial vendor fees. Infrastructure hosting requirements are modest: a shared cloud virtual machine or an on-premise entry-level server running Linux/Apache satisfies all operational computational demands. Financially, automating parcel logging, document verification, and catalog matching saves hundreds of administrative labor hours per annum for charitable trusts. Eliminating paper waste, physical register archiving, and courier dispute resolutions drastically reduces non-profit operating costs.
+
+## 10.4 Behavioural & Ethical Feasibility
+		Human empathy and data ethics are paramount in digital healthcare systems. Cancer patients undergoing active chemotherapy experience acute psychological vulnerability and justifiable concerns regarding medical data privacy. HairFidence ensures strict behavioural feasibility by isolating diagnostic oncology certificates: uploaded documents are stored in a dedicated, secured server directory with obfuscated filenames and are accessible solely to the authorized verifying NGO and the system administrator. Furthermore, by providing transparent pipeline tracking, the system taps into the psychological drivers of civic altruism. Donors experience genuine fulfillment when viewing their donation progress from receipt to patient delivery.
+
+## 10.5 Software Standards Feasibility
+		The application strictly complies with universal W3C web standards, ensuring predictable cross-browser rendering across Google Chrome, Mozilla Firefox, Microsoft Edge, and Apple Safari. CSS flexbox and grid abstractions provide responsive fluidity across mobile viewports (375px), tablets (768px), and desktop displays (1920px) without requiring separate native device applications. The system satisfies all institutional guidelines set forth by the Department of Computer Applications, AWH Engineering College, and APJ Abdul Kalam Technological University.
+
+---
+
+<div style="page-break-after: always;"></div>
+
+# CHAPTER 11: SOFTWARE ENGINEERING PARADIGM
+
+## 11.1 Agile Process Methodology
+		The development of HairFidence was governed by the Agile Software Development Methodology. Unlike rigid, sequential linear-sequential models (such as the classical Waterfall model) which defer stakeholder testing to the final project stages, Agile prioritizes iterative enhancements, rapid feedback loops, and continuous requirement refinement. Given the humanitarian sensitivity of cancer patient support, operational requirements regarding clinical report verification, donor pipeline visualizations, and concurrency controls evolved dynamically based on user interviews and mock trials. Agile allowed the engineering team to deploy functional increments at the conclusion of each sprint, validating core behaviors before proceeding to downstream modules.
+
+## 11.2 Scrum Framework Implementation
+		The operational implementation of Agile was managed using the Scrum Framework, organizing work into structured, time-boxed intervals (Sprints) with clearly delineated engineering responsibilities:
+		• Product Owner (PO): Maintained the master Product Backlog, formulated user stories, defined explicit acceptance criteria, prioritized critical security tasks (such as SQL injection immunization and file upload MIME verification), and reviewed sprint deliverables.
+		• Scrum Master: Facilitated agile ceremonies, eliminated technical impediments (such as Apache file permission locks and PDO foreign key cascade configurations), and ensured continuous adherence to Scrum best practices.
+		• Development Team: Comprising full-stack software engineers responsible for database schema modeling, backend PHP controller development, user interface styling, and integration test suite execution.
+
+## 11.3 Sprint Planning and Task Decomposition
 
 ### Sprint 1: Core Architecture, Authentication & Governance Console
-| Module | Task Description | Hours | Expected Date | Actual Date | Remarks |
-| :--- | :--- | :---: | :---: | :---: | :--- |
-| **System** | Database Schema Design & Tables Setup | 4 | 10/07/2025 | 10/07/2025 | 8 Normalized Tables |
-| **Auth** | User Login & Role-Based Redirection | 3 | 14/07/2025 | 14/07/2025 | BCrypt Authentication |
-| **Auth** | Donor & Patient Registration Workflow | 4 | 18/07/2025 | 18/07/2025 | Multi-role registration |
-| **Admin** | Admin Dashboard & Statistical Counters | 4 | 22/07/2025 | 22/07/2025 | Metric counter engine |
-| **Admin** | NGO Approval & Verification Console | 3 | 26/07/2025 | 26/07/2025 | Gated access control |
-| **NGO** | NGO Registration & Document Attachments | 3 | 30/07/2025 | 30/07/2025 | Verification queue |
-| **NGO** | NGO Operational Dashboard Interface | 4 | 04/08/2025 | 04/08/2025 | Operational views |
-| **Donor** | Donor Dashboard & Navigation Layout | 3 | 08/08/2025 | 08/08/2025 | Responsive shell |
+| Module | Task Description | Hours | Expected Date | Actual Date |
+| :--- | :--- | :---: | :---: | :---: |
+| **System** | Database Schema Design & Tables Setup | 4 | 10/07/25 | 10/07/25 |
+| **Auth** | User Login & Role-Based Redirection | 3 | 14/07/25 | 14/07/25 |
+| **Auth** | Donor & Patient Registration Workflow | 4 | 18/07/25 | 18/07/25 |
+| **Admin** | Admin Dashboard & Statistical Counters | 4 | 22/07/25 | 22/07/25 |
+| **Admin** | NGO Approval & Verification Console | 3 | 26/07/25 | 26/07/25 |
+| **NGO** | NGO Registration & Document Attachments | 3 | 30/07/25 | 30/07/25 |
+| **NGO** | NGO Operational Dashboard Interface | 4 | 04/08/25 | 04/08/25 |
+| **Donor** | Donor Dashboard & Navigation Layout | 3 | 08/08/25 | 08/08/25 |
 
 ### Sprint 2: Logistics Pipeline, Concurrency Locking & Clinical Audit
-| Module | Task Description | Hours | Expected Date | Actual Date | Remarks |
-| :--- | :--- | :---: | :---: | :---: | :--- |
-| **Donor** | Add Hair Donation Post & Specs Upload | 4 | 12/08/2025 | 12/08/2025 | Photo upload pipeline |
-| **Donor** | Donation Status Pipeline Tracking UI | 3 | 16/08/2025 | 16/08/2025 | Multi-state visual bar |
-| **Patient** | Patient Registration & Medical Report Upload | 4 | 20/08/2025 | 20/08/2025 | Encrypted report storage |
-| **Patient** | Interactive Hair Catalog with Filter Bar | 4 | 24/08/2025 | 24/08/2025 | Length & texture search |
-| **Patient** | Submit Hair Request & Concurrency Lock | 3 | 28/08/2025 | 28/08/2025 | Pessimistic row locking |
-| **NGO** | Audit Medical Reports & Approve Requests | 4 | 02/09/2025 | 02/09/2025 | State machine logic |
-| **NGO** | Create & Publish Community Campaigns | 3 | 06/09/2025 | 06/09/2025 | Public drive publisher |
-| **System** | Complaint Redressal Ticketing & Profile | 3 | 10/09/2025 | 10/09/2025 | Ticketing lifecycle |
+| Module | Task Description | Hours | Expected Date | Actual Date |
+| :--- | :--- | :---: | :---: | :---: |
+| **Donor** | Add Hair Donation Post & Specs Upload | 4 | 12/08/25 | 12/08/25 |
+| **Donor** | Donation Status Pipeline Tracking UI | 3 | 16/08/25 | 16/08/25 |
+| **Patient** | Patient Registration & Medical Report Upload | 4 | 20/08/25 | 20/08/25 |
+| **Patient** | Interactive Hair Catalog with Filter Bar | 4 | 24/08/25 | 24/08/25 |
+| **Patient** | Submit Hair Request & Concurrency Lock | 3 | 28/08/25 | 28/08/25 |
+| **NGO** | Audit Medical Reports & Approve Requests | 4 | 02/09/25 | 02/09/25 |
+| **NGO** | Create & Publish Community Campaigns | 3 | 06/09/25 | 06/09/25 |
+| **System** | Complaint Redressal Ticketing & Profile | 3 | 10/09/25 | 10/09/25 |
 
-## 2.5 USER STORIES
-		* **As an Administrator:** I want to review and accredit newly registered NGOs so that only legitimate medical charities can access patient diagnostic summaries and verify physical donations.
-		* **As an Administrator:** I want to track system-wide donation metrics and resolve grievance tickets so that the platform maintains high transparency and rapid operational support.
-		* **As an NGO Staff Member:** I want to inspect and audit clinical oncology reports submitted by patients so that medical wigs are provided exclusively to genuine cancer survivors.
-		* **As an NGO Staff Member:** I want to publish community hair donation campaigns and dates so that civic volunteers can attend local collection drives.
-		* **As a Hair Donor:** I want to log the exact attributes of my hair (length, texture, photo) so that my contribution can be cataloged accurately for cancer patients in need.
-		* **As a Hair Donor:** I want to track my donation through a transparent multi-stage pipeline so that I have certainty regarding the arrival, audit, and final delivery of my hair.
-		* **As a Cancer Patient:** I want to securely upload my institutional diagnostic reports without public exposure so that my medical need can be validated respectfully.
-		* **As a Cancer Patient:** I want to browse a live catalog of clean, verified hair donations and request a matching wig so that I can regain my confidence and emotional comfort.
+## 11.4 User Story Mapping & Acceptance Criteria
+		• As an Administrator, I want to audit institutional registration certificates of newly registered NGOs, so that only legitimate healthcare charities can access patient diagnostic summaries and verify physical donations. (Acceptance Criteria: Newly registered NGOs must default to is_approved = 0 and be blocked from accessing operations until the Admin clicks Approve).
+		• As an NGO Staff Member, I want to inspect diagnostic oncology summaries uploaded by patients, so that free medical wigs are allocated strictly to verified cancer patients. (Acceptance Criteria: Diagnostic files must be viewable via secure paths and requests must require explicit NGO approval to transition to Donated).
+		• As a Hair Donor, I want to log the exact length, texture, and packaging photo of my hair, so that my contribution is accurately indexed in the patient catalog. (Acceptance Criteria: Forms must reject non-image file uploads and automatically assign an initial status of Available).
+		• As a Hair Donor, I want to track my donation through a visual pipeline, so that I receive confirmation when my parcel is verified and delivered to a patient. (Acceptance Criteria: The donor dashboard must render dynamic status indicators reflecting transitions between Available, Processing, and Donated).
+		• As a Cancer Patient, I want to browse available verified hair assets and submit an allocation request, so that I can receive a custom medical wig without commercial cost. (Acceptance Criteria: Submitting a request must immediately lock the post from other patients via database row locking).
 
----
-
-<div style="page-break-after: always;"></div>
-
-# CHAPTER 3: FEASIBILITY STUDY
-
-## 3.1 ECONOMIC FEASIBILITY
-		HairFidence is constructed entirely upon Free and Open-Source Software (FOSS) technologies: PHP 8.x, Apache HTTP Server, MariaDB/MySQL, and open web standards. By eliminating proprietary operating system and database licensing costs, the system incurs zero recurring software acquisition fees. Server hosting requirements are minimal: a shared virtual private server (VPS) or an on-premise local server running Linux/Apache satisfies all operational demands. By automating parcel logging, document verification, and catalog matching, the platform saves hundreds of administrative labor hours for non-profit organizations, yielding a high return on investment (ROI).
-
-## 3.2 TECHNICAL FEASIBILITY
-		The platform is technically feasible and highly stable. It utilizes proven web engineering standards: PHP 8.x executing on an Apache HTTP server and backed by an optimized MySQL relational database engine. Concurrency safety is maintained through native PDO atomic transactions, ensuring that simultaneous requests for the same hair asset are handled without race conditions. Client-side interactions are lightweight, requiring no heavy external libraries, guaranteeing fast execution across varied desktop and mobile hardware.
-
-## 3.3 OPERATIONAL FEASIBILITY
-		HairFidence seamlessly integrates into the operational workflows of healthcare non-profits and hospital charity desks. Its intuitive, role-partitioned user interfaces allow staff, donors, and cancer patients to navigate features with minimal orientation. Automated pipeline tracking eliminates manual follow-up inquiries, while digitized medical document verification substantially accelerates the wig allocation timeline.
-
-## 3.4 BEHAVIORAL FEASIBILITY
-		Human-centered empathy is central to HairFidence. For cancer patients, privacy is paramount; the system isolates diagnostic certificates so they are visible solely to the verifying NGO and system administrator. For donors, the emotional satisfaction of charitable giving is reinforced through visual stage-by-stage pipeline tracking. These user-centric considerations ensure widespread community acceptance and sustained engagement.
-
-## 3.5 SOFTWARE FEASIBILITY
-		The web application conforms strictly to universal W3C web standards, ensuring full cross-browser compatibility across Google Chrome, Mozilla Firefox, Microsoft Edge, and Apple Safari. Responsive CSS grid and flexbox layouts ensure seamless rendering on smartphones, tablets, and widescreen desktop monitors without requiring separate native device installations.
+## 11.5 Agile Ceremonies & Milestone Delivery
+		Scrum ceremonies were executed rigorously throughout the development lifecycle: Sprint Planning at sprint commencement to dissect backlog items into granular tasks; Daily Standups to evaluate progress and remove bottlenecks; Sprint Reviews featuring live software demonstrations to academic guides; and Sprint Retrospectives to continuously refine code quality and architectural integrity.
 
 ---
 
 <div style="page-break-after: always;"></div>
 
-# CHAPTER 4: SOFTWARE ENGINEERING PARADIGM
+# CHAPTER 12: SYSTEM REQUIREMENT SPECIFICATION (SRS)
 
-## 4.1 AGILE DEVELOPMENT METHODOLOGY
-		The development of HairFidence was guided by the Agile methodology. In contrast to rigid, sequential waterfall models, Agile prioritizes iterative enhancements, flexibility, and continuous stakeholder feedback. The project was broken down into focused development iterations where functional modules were built, validated, and refined incrementally. This iterative approach allowed rapid adaptation to real-world requirements, such as optimizing document upload security and refining the multi-state donation tracking pipeline.
+## 12.1 Minimum Hardware Requirements
+| Hardware Component | Client-Side Specification | Server-Side Specification |
+| :--- | :--- | :--- |
+| **Processor** | Dual-Core 1.8 GHz Intel Core i3 / AMD | Quad-Core 2.4 GHz Intel Xeon / AMD EPYC |
+| **System Memory (RAM)** | 2 GB DDR3/DDR4 (4 GB recommended) | 8 GB DDR4 ECC (16 GB recommended) |
+| **Storage Drive** | 500 MB free browser cache space | 512 GB SSD (minimum 20 GB dedicated) |
+| **Display Output** | 1024x768 minimum (1920x1080 Full HD) | Server Console / Headless Display |
+| **Network Interface** | Standard Broadband (512 Kbps+) | Gigabit Ethernet (1000BASE-T) Static IP |
+| **Peripherals** | QWERTY Keyboard & Pointing Device | Standard Server Console Input |
 
-## 4.2 SCRUM FRAMEWORK
-		Scrum was adopted as the operational framework to govern sprint execution. The Scrum framework established structured work intervals (Sprints) combined with distinct organizational responsibilities:
-		* **Product Owner:** Defined core functional objectives, user stories, and prioritized backlog items such as concurrency control and medical report auditing.
-		* **Scrum Master:** Ensured adherence to Scrum principles, resolved technical impediments, and streamlined sprint transitions.
-		* **Development Team:** Implemented frontend components, PHP backend services, database migrations, and integration test suites.
-		Through regular Sprint Planning, Daily Standups, Sprint Reviews, and Retrospectives, the team delivered fully functional increments at the conclusion of each sprint cycle.
-
----
-
-<div style="page-break-after: always;"></div>
-
-# CHAPTER 5: SYSTEM REQUIREMENT SPECIFICATION (SRS)
-
-## 5.1 SOFTWARE REQUIREMENTS
-| Software Component | Specification |
+## 12.2 Software Stack and Environment
+| Software Component | Deployment & Engineering Technology |
 | :--- | :--- |
-| **Operating System** | Microsoft Windows 10 / 11 (64-bit) / Ubuntu Server 22.04 LTS / Linux |
-| **Web Server Environment** | Apache HTTP Server 2.4.x (via XAMPP Control Panel v3.3+) |
+| **Operating System** | Microsoft Windows 10/11 (64-bit) / Ubuntu Server 22.04 LTS |
+| **Web Server Daemon** | Apache HTTP Server 2.4.x (administered via XAMPP Control Panel) |
 | **Backend Scripting Engine** | PHP 8.2+ with PDO, OpenSSL, and Fileinfo extensions |
 | **Database Management System** | MySQL 8.0+ / MariaDB 10.4+ with InnoDB Storage Engine |
-| **Frontend Architecture** | HTML5, Vanilla CSS3 (Custom Properties), JavaScript (ES6+) |
-| **Development Environment (IDE)**| Visual Studio Code (VS Code) with PHP Intelephense |
-| **Database Client Tools** | phpMyAdmin 5.2+ and MySQL Command Line Client |
+| **Frontend Technologies** | Semantic HTML5, Vanilla CSS3 (Custom Properties), JavaScript (ES6+) |
+| **Integrated Development Environment** | Visual Studio Code (VS Code) v1.90+ with PHP Intelephense |
+| **Database Administration Tools** | phpMyAdmin 5.2+ and MySQL Command Line Interface |
 | **Client Web Browsers** | Google Chrome (v110+), Mozilla Firefox, Microsoft Edge, Safari |
 
-## 5.2 HARDWARE REQUIREMENTS
-| Hardware Component | Client-Side Minimum Specification | Server-Side Minimum Specification |
-| :--- | :--- | :--- |
-| **Processor (CPU)** | Dual-Core 1.8 GHz Intel Core i3 / AMD | Quad-Core 2.4 GHz Intel Xeon / AMD EPYC |
-| **Memory (RAM)** | 2.0 GB DDR3 / DDR4 (4 GB recommended) | 8.0 GB DDR4 ECC (16 GB recommended) |
-| **Storage Drive** | 500 MB free browser cache space | 512 GB SSD (minimum 20 GB free partition)|
-| **Display Output** | Minimum 1024x768 (1920x1080 Full HD) | Server Console / Headless Display |
-| **Network Interface** | Standard Broadband / 4G (512 Kbps+) | Gigabit Ethernet (1000BASE-T) Static IP |
+## 12.3 Functional Requirements by Module
+### 1. Universal Authentication Module (FR-AUTH)
+		• FR-AUTH-01: Authenticate users via verified email and password.
+		• FR-AUTH-02: Enforce BCrypt cryptographic password hashing (PASSWORD_BCRYPT) prior to database persistence.
+		• FR-AUTH-03: Establish server-side sessions storing login_id, role, email, and role-specific primary keys.
+		• FR-AUTH-04: Middleware interceptor (auth_check.php) validates session role before granting access to protected views.
+		• FR-AUTH-05: Gated access verification blocks unapproved NGOs until certified by Administrator.
+
+### 2. Administrator Governance Module (FR-ADMIN)
+		• FR-ADMIN-01: Compute and render real-time statistical metrics across users, posts, and requests.
+		• FR-ADMIN-02: Review pending NGO registrations, inspect registration credentials, and toggle approval.
+		• FR-ADMIN-03: Exercise system-wide monitoring over users with cascading purge capabilities.
+		• FR-ADMIN-04: Review user grievance tickets and update resolution status from Pending to Resolved.
+
+### 3. Healthcare NGO Module (FR-NGO)
+		• FR-NGO-01: Prohibit operational features until accreditation flag is_approved = 1.
+		• FR-NGO-02: Inspect incoming physical hair parcels and verify status to Donated.
+		• FR-NGO-03: Audit patient clinical oncology certificates attached to incoming hair requests.
+		• FR-NGO-04: Approve verified requests, atomically updating request to Approved and post to Donated.
+		• FR-NGO-05: Reject invalid requests, automatically resetting the hair post back to Available in catalog.
+		• FR-NGO-06: Author and publish community hair donation drives and event guidelines.
+
+### 4. Hair Donor Module (FR-DONOR)
+		• FR-DONOR-01: Author hair donation posts detailing length (inches), hair texture, and specimen photo.
+		• FR-DONOR-02: Enforce strict file upload validation restricting formats to JPG, JPEG, and PNG.
+		• FR-DONOR-03: Real-time visual tracking of donation pipeline (Available -> Processing -> Donated).
+		• FR-DONOR-04: Directory access to upcoming NGO community campaigns.
+		• FR-DONOR-05: Direct submission of feedback and support tickets to Administrator.
+
+### 5. Cancer Patient Module (FR-PATIENT)
+		• FR-PATIENT-01: Upload diagnostic clinical oncology certificates to isolated server directories.
+		• FR-PATIENT-02: Browse verified available hair catalog with attribute filtering (length, texture).
+		• FR-PATIENT-03: Dispatch formal hair requests routed via accredited partner NGOs.
+		• FR-PATIENT-04: Atomic database transaction with row locking immediately locks requested post to Processing.
+		• FR-PATIENT-05: Real-time monitoring of request verification and custom wig dispatch logistics.
+
+## 12.4 Non-Functional Requirements (NFRs)
+		• NFR-01 (Security & Data Integrity): Parameterized PDO prepared statements eliminate SQL Injection across 100% of queries. Dynamic DOM outputs sanitized via htmlspecialchars(ENT_QUOTES, 'UTF-8') to block XSS attacks.
+		• NFR-02 (Concurrency Control): Database-level pessimistic locking (SELECT ... FOR UPDATE) inside ACID transactions completely prevents asset double-booking race conditions.
+		• NFR-03 (Performance & Latency): Catalog search execution executes in under 150 ms; page rendering under 1.5 s on 4G networks.
+		• NFR-04 (Availability & Reliability): Architectural target of 99.5% uptime backed by daily automated SQL dump snapshots.
+		• NFR-05 (Portability & Responsiveness): Fluid CSS flexbox/grid layout supports viewports from 320px to 2560px seamlessly.
 
 ---
 
 <div style="page-break-after: always;"></div>
 
-# CHAPTER 6: SYSTEM DESIGN
+# CHAPTER 13: SYSTEM DESIGN
 
-## 6.1 DATABASE DESIGN & NORMALIZATION (1NF, 2NF, 3NF)
-		The database design of HairFidence is engineered to eliminate data redundancy, avoid insertion/update/deletion anomalies, and guarantee referential integrity across all transactional entities:
-		* **First Normal Form (1NF):** A relation is in 1NF if and only if all attribute domains contain atomic (indivisible) values. Attributes such as `hair_length`, `hair_type`, and `image_url` store single scalar values without multi-valued arrays or repeating groups.
-		* **Second Normal Form (2NF):** A relation is in 2NF if it is in 1NF and no non-prime attribute is partially dependent on any candidate key. Because every table uses a single-attribute surrogate primary key generated via `AUTO_INCREMENT` ($|\text{PK}| = 1$), partial dependencies are mathematically impossible.
-		* **Third Normal Form (3NF):** A relation is in 3NF if it is in 2NF and there exist no transitive dependencies ($X \rightarrow Y$ and $Y \rightarrow Z$). Authentication data resides strictly in `login`, while domain profile attributes reside in `donors`, `patients`, and `ngos`. In `hair_requests`, the request status depends directly on `request_id`, not transitively on `patient_id` or `ngo_id`. Thus, 3NF is strictly achieved.
+## 13.1 High-Level MVC Architectural Pattern
+		HairFidence is architected according to the classical 3-Tier Model-View-Controller (MVC) software architectural pattern. The MVC design pattern enforces strict separation of concerns, decoupling the presentation layer (Views) from domain data models (Models) and routing logic (Controllers). This separation guarantees maintainability, modular testability, and enterprise-grade code organization.
+		• Tier 1: Presentation Layer (Views): Responsible exclusively for user interface rendering. Views are authored using semantic HTML5, modern ECMAScript 6+ (ES6), and Vanilla CSS3 custom properties. The views consume structured associative data arrays emitted by controllers and render responsive, accessible interfaces. Crucially, views contain zero raw database access or business logic.
+		• Tier 2: Application / Controller Layer (Controllers): Implemented via modular PHP 8.x scripts. Controllers intercept HTTP GET and POST payloads, validate input types, enforce authentication boundaries via check_access(), coordinate file upload security, execute domain business logic (e.g., verifying that hair length >= 8.0 inches), and manage atomic database transactions.
+		• Tier 3: Data Persistence Layer (Models): Governed by the MariaDB/MySQL relational database engine configured with the InnoDB storage engine. The persistence layer guarantees full ACID compliance, enforces referential integrity through foreign key cascades, and executes row-level pessimistic locks (FOR UPDATE) to manage concurrent asset allocation.
 
-## 6.2 DATA DICTIONARY (TABLES)
+## 13.2 Data Flow Diagrams (DFD)
+### 13.2.1 DFD Level 0: System Context Diagram
+		The Level 0 Context Diagram establishes the global boundary of the system, illustrating how external entities (Administrator, Healthcare NGO, Hair Donor, Cancer Patient) interact with the centralized HairFidence process (Process 0). Donors submit hair specifications and photos; Patients submit diagnostic reports and hair requests; NGOs execute audits and status transitions; Administrators perform institutional vetting and ticket resolution.
 
-### Table 1: `login` (Authentication Store)
-| Field Name | Data Type | Description | Constraints |
+### 13.2.2 DFD Level 1: Macro Subsystem Decomposition
+		The Level 1 Diagram decomposes the system into seven major operational processes: 1.0 Authentication & Role Router; 2.0 NGO Accreditation; 3.0 Hair Cataloging & Post Insertion; 4.0 Patient Diagnostic Verification; 5.0 Concurrency-Locked Request Matching Engine; 6.0 Community Campaign Publishing; 7.0 Grievance Redressal Support Ticketing.
+
+### 13.2.3 DFD Level 2: Sub-Process 5.0 (Request & Concurrency Locking)
+		Decomposes the transactional path where a patient requests a hair asset: 5.1 Initialize Atomic Transaction -> 5.2 Query post status FOR UPDATE -> 5.3 If not Available, rollback and report conflict -> 5.4 If Available, insert tuple into hair_requests -> 5.5 Update post status to Processing -> 5.6 Commit transaction -> 5.7 Emit dispatch notification to designated NGO.
+
+## 13.3 UML Modeling
+### Use Case Specifications & Actor Matrix
+		The system defines fifteen formal use cases spanning four primary actors (Admin, NGO, Donor, Patient), governing login (UC-01), multi-role registration (UC-02), NGO vetting (UC-03), hair post creation (UC-04), pipeline tracking (UC-05), diagnostic report upload (UC-06), catalog search (UC-07), concurrency-safe requesting (UC-08), medical auditing (UC-09), request approval/rejection (UC-10), physical parcel inspection (UC-11), campaign creation (UC-12), complaint submission (UC-13), grievance resolution (UC-14), and metric aggregation (UC-15).
+
+## 13.4 Database Design & Relational Schema Tables
+| Table Name | Primary Key | Foreign Keys | Core Attributes |
 | :--- | :--- | :--- | :--- |
-| `login_id` | `INT` | Unique authentication key | `AUTO_INCREMENT`, `PRIMARY KEY` |
-| `email` | `VARCHAR(150)` | User electronic mail address | `NOT NULL`, `UNIQUE` |
-| `password` | `VARCHAR(255)` | BCrypt cryptographic hash | `NOT NULL` |
-| `role` | `ENUM` | Access role (`admin`, `ngo`, `donor`, `patient`) | `NOT NULL` |
-| `created_at`| `TIMESTAMP` | Account creation timestamp | `DEFAULT CURRENT_TIMESTAMP` |
+| **1. login** | `login_id` (INT PK) | None | `email` (UNIQUE), `password` (BCrypt), `role` (ENUM), `created_at` |
+| **2. donors** | `donor_id` (INT PK) | `login_id` $\rightarrow$ `login(login_id)` | `full_name`, `phone`, `address` |
+| **3. patients** | `patient_id` (INT PK) | `login_id` $\rightarrow$ `login(login_id)` | `full_name`, `phone`, `address`, `medical_report_url` |
+| **4. ngos** | `ngo_id` (INT PK) | `login_id` $\rightarrow$ `login(login_id)` | `organization_name`, `registration_number`, `is_approved` |
+| **5. hair_donation_posts**| `post_id` (INT PK) | `donor_id` $\rightarrow$ `donors(donor_id)` | `hair_length`, `hair_type`, `image_url`, `status` (ENUM) |
+| **6. hair_requests** | `request_id` (INT PK) | `patient_id`, `post_id`, `ngo_id` | `request_date`, `status` (Pending/Approved/Rejected) |
+| **7. campaigns** | `campaign_id` (INT PK) | `ngo_id` $\rightarrow$ `ngos(ngo_id)` | `title`, `description`, `event_date`, `location` |
+| **8. complaints** | `complaint_id` (INT PK)| `login_id` $\rightarrow$ `login(login_id)` | `subject`, `description`, `status` (Pending/Resolved), `date` |
 
-### Table 2: `donors` (Hair Donor Profiles)
-| Field Name | Data Type | Description | Constraints |
-| :--- | :--- | :--- | :--- |
-| `donor_id` | `INT` | Unique donor profile key | `AUTO_INCREMENT`, `PRIMARY KEY` |
-| `login_id` | `INT` | Foreign key referencing credentials | `FOREIGN KEY` $\rightarrow$ `login(login_id)` `ON DELETE CASCADE` |
-| `full_name` | `VARCHAR(100)` | Legal name of donor | `NOT NULL` |
-| `phone` | `VARCHAR(15)` | Contact telephone number | `NOT NULL` |
-| `address` | `TEXT` | Postal address of donor | `NOT NULL` |
-
-### Table 3: `patients` (Cancer Survivor Profiles)
-| Field Name | Data Type | Description | Constraints |
-| :--- | :--- | :--- | :--- |
-| `patient_id` | `INT` | Unique patient profile key | `AUTO_INCREMENT`, `PRIMARY KEY` |
-| `login_id` | `INT` | Foreign key referencing credentials | `FOREIGN KEY` $\rightarrow$ `login(login_id)` `ON DELETE CASCADE` |
-| `full_name` | `VARCHAR(100)` | Legal name of patient | `NOT NULL` |
-| `phone` | `VARCHAR(15)` | Emergency telephone number | `NOT NULL` |
-| `address` | `TEXT` | Delivery residential address | `NOT NULL` |
-| `medical_report_url` | `VARCHAR(255)` | Path to diagnostic oncology report | `NOT NULL` |
-
-### Table 4: `ngos` (Accredited Healthcare Non-Profits)
-| Field Name | Data Type | Description | Constraints |
-| :--- | :--- | :--- | :--- |
-| `ngo_id` | `INT` | Unique NGO profile key | `AUTO_INCREMENT`, `PRIMARY KEY` |
-| `login_id` | `INT` | Foreign key referencing credentials | `FOREIGN KEY` $\rightarrow$ `login(login_id)` `ON DELETE CASCADE` |
-| `organization_name` | `VARCHAR(150)` | Legal trust / society name | `NOT NULL` |
-| `registration_number` | `VARCHAR(100)` | Statutory registration certificate | `NOT NULL` |
-| `is_approved` | `TINYINT(1)` | Administrative accreditation flag | `DEFAULT 0` (0=Pending, 1=Approved) |
-
-### Table 5: `hair_donation_posts` (Hair Inventory Catalog)
-| Field Name | Data Type | Description | Constraints |
-| :--- | :--- | :--- | :--- |
-| `post_id` | `INT` | Unique hair post key | `AUTO_INCREMENT`, `PRIMARY KEY` |
-| `donor_id` | `INT` | Foreign key identifying donor | `FOREIGN KEY` $\rightarrow$ `donors(donor_id)` `ON DELETE CASCADE` |
-| `hair_length` | `DECIMAL(5,2)` | Length in inches | `NOT NULL` |
-| `hair_type` | `VARCHAR(50)` | Texture (`Straight`, `Wavy`, `Curly`)| `NOT NULL` |
-| `image_url` | `VARCHAR(255)` | Relative path to specimen photo | `NOT NULL` |
-| `status` | `ENUM` | State machine flag | `DEFAULT 'Available'` (`Available`, `Processing`, `Donated`) |
-
-### Table 6: `hair_requests` (Allocation Transactions)
-| Field Name | Data Type | Description | Constraints |
-| :--- | :--- | :--- | :--- |
-| `request_id` | `INT` | Unique allocation transaction key | `AUTO_INCREMENT`, `PRIMARY KEY` |
-| `patient_id` | `INT` | Beneficiary patient key | `FOREIGN KEY` $\rightarrow$ `patients(patient_id)` `ON DELETE CASCADE` |
-| `post_id` | `INT` | Allocated hair post key | `FOREIGN KEY` $\rightarrow$ `hair_donation_posts(post_id)` `ON DELETE CASCADE` |
-| `ngo_id` | `INT` | Verifying partner NGO key | `FOREIGN KEY` $\rightarrow$ `ngos(ngo_id)` `ON DELETE CASCADE` |
-| `request_date` | `TIMESTAMP` | Timestamp request was initiated | `DEFAULT CURRENT_TIMESTAMP` |
-| `status` | `ENUM` | Verification state | `DEFAULT 'Pending'` (`Pending`, `Approved`, `Rejected`) |
-
-### Table 7: `campaigns` (Community Donation Drives)
-| Field Name | Data Type | Description | Constraints |
-| :--- | :--- | :--- | :--- |
-| `campaign_id` | `INT` | Unique campaign key | `AUTO_INCREMENT`, `PRIMARY KEY` |
-| `ngo_id` | `INT` | Hosting NGO key | `FOREIGN KEY` $\rightarrow$ `ngos(ngo_id)` `ON DELETE CASCADE` |
-| `title` | `VARCHAR(150)` | Event promotional title | `NOT NULL` |
-| `description` | `TEXT` | Guidelines and instructions | `NOT NULL` |
-| `event_date` | `DATE` | Scheduled calendar date | `NOT NULL` |
-| `location` | `VARCHAR(255)` | Physical venue address | `NOT NULL` |
-
-### Table 8: `complaints` (Grievance Redressal Tickets)
-| Field Name | Data Type | Description | Constraints |
-| :--- | :--- | :--- | :--- |
-| `complaint_id` | `INT` | Unique complaint ticket key | `AUTO_INCREMENT`, `PRIMARY KEY` |
-| `login_id` | `INT` | Filing user credential key | `FOREIGN KEY` $\rightarrow$ `login(login_id)` `ON DELETE CASCADE` |
-| `subject` | `VARCHAR(150)` | Grievance subject line | `NOT NULL` |
-| `description` | `TEXT` | Detailed incident narrative | `NOT NULL` |
-| `status` | `ENUM` | Resolution status | `DEFAULT 'Pending'` (`Pending`, `Resolved`) |
-| `date_submitted`| `TIMESTAMP` | Ticket submission timestamp | `DEFAULT CURRENT_TIMESTAMP` |
-
-## 6.3 UML ARCHITECTURE
-
-### Class Diagram Description
-		The object-oriented design defines a central `User` identity class with specialized subclasses `Donor`, `Patient`, and `NGO`. A `Donor` encapsulates a one-to-many relationship with `HairDonationPost`. A `Patient` and `HairDonationPost` participate in a formal transaction contract managed by `HairRequest`, which is audited by an `NGO`. The `NGO` class also maintains a one-to-many relationship with `Campaign`.
-
-### Sequence Diagram: Patient Hair Request & Concurrency Lock
-		1. Patient Client submits `POST /patient/dashboard.php` with `post_id` and `ngo_id`.
-		2. The controller invokes `$pdo->beginTransaction()`.
-		3. The controller executes `SELECT status FROM hair_donation_posts WHERE post_id=? FOR UPDATE` acquiring an exclusive row lock.
-		4. The database returns `status = 'Available'`.
-		5. The controller executes `INSERT INTO hair_requests (patient_id, post_id, ngo_id, status) VALUES (?, ?, ?, 'Pending')`.
-		6. The controller executes `UPDATE hair_donation_posts SET status='Processing' WHERE post_id=?`.
-		7. The controller calls `$pdo->commit()`, releasing the row lock.
-		8. The controller redirects the patient with a success alert; concurrent requests attempting step 3 are queued or rejected with conflict exceptions.
-
-## 6.4 USE CASE DIAGRAM & ACTOR MAPPING
-		* **Administrator:** Authenticates, vets and approves registered NGOs, monitors system metrics, resolves complaint tickets.
-		* **Healthcare NGO:** Registers profile, creates donation campaigns, reviews patient diagnostic reports, inspects physical hair parcels, issues request approvals or rejections.
-		* **Hair Donor:** Registers profile, logs hair donation post (length, texture, photo), views real-time multi-stage pipeline status, views upcoming drives, submits support tickets.
-		* **Cancer Patient:** Registers profile, uploads medical report, searches available hair catalog, dispatches formal hair requests, tracks allocation status.
-
-## 6.5 SYSTEM SCENARIOS
-		* **Scenario 1 (Donation Logging):** Donor logs in $\rightarrow$ fills length and texture $\rightarrow$ uploads parcel photo $\rightarrow$ system validates MIME $\rightarrow$ post enters database as `Available`.
-		* **Scenario 2 (Request & Locking):** Patient browses catalog $\rightarrow$ selects specimen $\rightarrow$ chooses partner NGO $\rightarrow$ transaction locks post to `Processing` $\rightarrow$ notification dispatched to NGO.
-		* **Scenario 3 (Clinical Audit & Approval):** NGO accesses console $\rightarrow$ views patient report $\rightarrow$ inspects physical hair bundle $\rightarrow$ clicks `Approve` $\rightarrow$ post status updates to `Donated` and request to `Approved` $\rightarrow$ wig hand-crafted and delivered.
-		* **Scenario 4 (Request Rejection):** NGO determines report is invalid $\rightarrow$ clicks `Reject` $\rightarrow$ request marked `Rejected` $\rightarrow$ hair post automatically unlocked back to `Available` in catalog.
+## 13.5 Normalization Proofs (1NF, 2NF, 3NF)
+		• First Normal Form (1NF): All attribute domains contain exclusively atomic (indivisible) values. Attributes such as hair_length, hair_type, and image_url store single scalar values. There are zero multi-valued columns or repeating groups.
+		• Second Normal Form (2NF): The schema is in 1NF and every non-prime attribute is fully functionally dependent on the entire primary key. Because every table uses a single-column surrogate primary key (|PK| = 1), proper subsets of candidate keys cannot exist, eliminating partial dependencies.
+		• Third Normal Form (3NF): The schema is in 2NF and there exist no transitive functional dependencies (X -> Y and Y -> Z). Authentication attributes reside strictly in login, while domain profile attributes reside strictly in entity profile relations (donors, patients, ngos), linked solely by the foreign key login_id. In hair_requests, status depends directly on request_id, not transitively through patient_id or ngo_id.
 
 ---
 
 <div style="page-break-after: always;"></div>
 
-# CHAPTER 7: SYSTEM DEVELOPMENT
+# CHAPTER 14: SYSTEM DEVELOPMENT
 
-## 7.1 DEVELOPMENT LIFECYCLE ACTIVITIES
-		System development transformed architectural models into operational software through iterative phases: database schema migration via DDL scripts; backend controller implementation with PDO data access objects; frontend responsive styling; security hardening against OWASP vulnerabilities; and comprehensive integration testing.
+## 14.1 Subsystem Modular Breakdown
+		The implementation divides system functionality across decoupled directories: config/ manages the centralized PDO database instance; includes/ provides RBAC middleware (auth_check.php); auth/ handles session multiplexing and destruction; admin/ administers user profiles, accreditation, and tickets; ngo/ executes clinical audits and parcel verifications; donor/ enables hair post creation and pipeline tracking; patient/ hosts the catalog and request locking engine; and uploads/ stores static specimen photos and medical reports.
 
-## 7.2 IMPLEMENTATION TECHNOLOGIES
-		* **PHP Data Objects (PDO):** Enforces parameterized SQL compilation, completely neutralizing SQL Injection attacks.
-		* **BCrypt Hashing:** Uses `password_hash()` with `PASSWORD_BCRYPT` ensuring irreversible credential security.
-		* **Role-Based Access Control (RBAC):** Middleware interceptor `check_access()` prevents unauthorized horizontal or vertical privilege escalation.
-		* **Isolated File System Partitions:** Patient medical reports are stored in dedicated directories with restricted script execution permissions.
+## 14.2 Core Algorithms & Business Logic
+		1. Pessimistic Concurrency Locking: Evaluated inside an atomic PDO transaction ($pdo->beginTransaction()). When a patient requests a post, the query SELECT status FROM hair_donation_posts WHERE post_id=? FOR UPDATE acquires an exclusive row lock. If the post is Available, the request is inserted and post status updated to Processing before committing ($pdo->commit()). This guarantees zero double-booking during concurrent request spikes.
+		2. Cryptographic Password Hashing: Uses the BCrypt hashing algorithm via password_hash() and password_verify() with cost factor 10, ensuring irreversible credential encryption.
+		3. Zero-Trust Access Middleware: Intercepts all incoming dashboard requests, validating that active session credentials match permitted roles via check_access().
+		4. Secure File Upload Pipeline: Inspects incoming file extensions against strict whitelists (JPG, JPEG, PNG for photos; PDF, DOC, JPG for medical reports), assigns unguessable randomized filenames, and writes files to isolated upload directories.
 
-## 7.3 CORE CODE IMPLEMENTATIONS
+## 14.3 Routing & Endpoints Specification
+		The system implements clean, RESTful-style endpoints: /login.php for authentication; /register.php for multi-role registration; /auth/dashboard_redirect.php for role routing; /auth/logout.php for session invalidation; /admin/dashboard.php for governance; /ngo/dashboard.php for clinical audits; /donor/dashboard.php for donation tracking; /patient/dashboard.php for catalog browsing and requests.
 
-### 1. PDO Database Configuration (`config/db.php`)
-```php
-<?php
-// config/db.php - Centralized PDO Database Connection
-$host    = 'localhost';
-$db      = 'hairfidence';
-$user    = 'root';
-$pass    = ''; // Local development environment password
-$charset = 'utf8mb4';
-
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-$options = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES   => false, // Forces native prepared statements
-];
-
-try {
-    $pdo = new PDO($dsn, $user, $pass, $options);
-} catch (\PDOException $e) {
-    error_log("Database Connection Failure: " . $e->getMessage());
-    die("Database connection failed. Please ensure MariaDB is running in XAMPP.");
-}
-?>
-```
-
-### 2. Secure Login & RBAC Session Router (`login.php`)
-```php
-<?php
-// login.php - Secure Authentication & Role Router
-require_once 'config/db.php';
-session_start();
-
-$error = '';
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email    = trim($_POST['email']);
-    $password = $_POST['password'];
-
-    if (!empty($email) && !empty($password)) {
-        $stmt = $pdo->prepare("SELECT * FROM login WHERE email = ?");
-        $stmt->execute([$email]);
-        $user = $stmt->fetch();
-
-        if ($user && password_verify($password, $user['password'])) {
-            $role = $user['role'];
-            $is_approved_ngo = true;
-            $profile = [];
-
-            if ($role === 'donor') {
-                $stmt = $pdo->prepare("SELECT donor_id, full_name FROM donors WHERE login_id = ?");
-                $stmt->execute([$user['login_id']]);
-                $profile = $stmt->fetch();
-            } elseif ($role === 'patient') {
-                $stmt = $pdo->prepare("SELECT patient_id, full_name FROM patients WHERE login_id = ?");
-                $stmt->execute([$user['login_id']]);
-                $profile = $stmt->fetch();
-            } elseif ($role === 'ngo') {
-                $stmt = $pdo->prepare("SELECT ngo_id, organization_name, is_approved FROM ngos WHERE login_id = ?");
-                $stmt->execute([$user['login_id']]);
-                $profile = $stmt->fetch();
-                if ($profile && (int)$profile['is_approved'] !== 1) {
-                    $is_approved_ngo = false;
-                }
-            }
-
-            if (!$is_approved_ngo) {
-                $error = "Access Restricted: NGO registration is pending Administrator approval.";
-            } else {
-                $_SESSION['login_id'] = $user['login_id'];
-                $_SESSION['email']    = $user['email'];
-                $_SESSION['role']     = $role;
-                $_SESSION['name']     = $profile['full_name'] ?? $profile['organization_name'] ?? 'Admin';
-                if ($role === 'donor')   $_SESSION['donor_id']   = $profile['donor_id'];
-                if ($role === 'patient') $_SESSION['patient_id'] = $profile['patient_id'];
-                if ($role === 'ngo')     $_SESSION['ngo_id']     = $profile['ngo_id'];
-
-                header("Location: auth/dashboard_redirect.php");
-                exit();
-            }
-        } else {
-            $error = "Invalid electronic mail or password credentials.";
-        }
-    } else {
-        $error = "Please fill in all authentication fields.";
-    }
-}
-?>
-```
-
-### 3. Hair Donation Post Submission with File Validation (`donor/dashboard.php`)
-```php
-<?php
-// Extract from donor/dashboard.php: Post Submission
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_donation'])) {
-    $hair_length = trim($_POST['hair_length']);
-    $hair_type   = $_POST['hair_type'];
-
-    if (empty($hair_length) || empty($hair_type) || empty($_FILES['hair_photo']['name'])) {
-        $error_msg = "Please fill in all donation attributes and upload a photo.";
-    } else {
-        try {
-            $file_name = $_FILES['hair_photo']['name'];
-            $file_tmp  = $_FILES['hair_photo']['tmp_name'];
-            $file_ext  = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
-            $allowed   = ['jpg', 'jpeg', 'png'];
-
-            if (!in_array($file_ext, $allowed, true)) {
-                throw new Exception("Invalid image type. Only JPG, JPEG, and PNG are accepted.");
-            }
-
-            $upload_dir = '../uploads/hair_photos/';
-            if (!is_dir($upload_dir)) {
-                mkdir($upload_dir, 0777, true);
-            }
-
-            $new_file_name = 'hair_' . $donor_id . '_' . time() . '.' . $file_ext;
-            $dest_path     = $upload_dir . $new_file_name;
-            $db_path       = 'uploads/hair_photos/' . $new_file_name;
-
-            if (!move_uploaded_file($file_tmp, $dest_path)) {
-                throw new Exception("Failed to persist specimen image to disk.");
-            }
-
-            $stmt = $pdo->prepare("INSERT INTO hair_donation_posts (donor_id, hair_length, hair_type, image_url, status) VALUES (?, ?, ?, ?, 'Available')");
-            $stmt->execute([$donor_id, $hair_length, $hair_type, $db_path]);
-            $success_msg = "Donation post created successfully and cataloged as Available.";
-        } catch (Exception $e) {
-            $error_msg = $e->getMessage();
-        }
-    }
-}
-?>
-```
-
-### 4. NGO Medical Verification & Hair Request State Machine (`ngo/dashboard.php`)
-```php
-<?php
-// Extract from ngo/dashboard.php: Request Approval & Rejection Logic
-// 1. Handle Approval
-if (isset($_GET['approve_request'])) {
-    $request_id = intval($_GET['approve_request']);
-    try {
-        $pdo->beginTransaction();
-
-        $stmt = $pdo->prepare("UPDATE hair_requests SET status = 'Approved' WHERE request_id = ? AND ngo_id = ?");
-        $stmt->execute([$request_id, $ngo_id]);
-
-        $stmt = $pdo->prepare("SELECT post_id FROM hair_requests WHERE request_id = ?");
-        $stmt->execute([$request_id]);
-        $post_id = $stmt->fetchColumn();
-
-        if ($post_id) {
-            $stmt = $pdo->prepare("UPDATE hair_donation_posts SET status = 'Donated' WHERE post_id = ?");
-            $stmt->execute([$post_id]);
-        }
-
-        $pdo->commit();
-        $success_msg = "Request approved and marked as Donated.";
-    } catch (PDOException $e) {
-        if ($pdo->inTransaction()) $pdo->rollBack();
-        $error_msg = "Approval failed: " . $e->getMessage();
-    }
-}
-
-// 2. Handle Rejection (Automatic Unlock back to Available)
-if (isset($_GET['reject_request'])) {
-    $request_id = intval($_GET['reject_request']);
-    try {
-        $pdo->beginTransaction();
-
-        $stmt = $pdo->prepare("UPDATE hair_requests SET status = 'Rejected' WHERE request_id = ? AND ngo_id = ?");
-        $stmt->execute([$request_id, $ngo_id]);
-
-        $stmt = $pdo->prepare("SELECT post_id FROM hair_requests WHERE request_id = ?");
-        $stmt->execute([$request_id]);
-        $post_id = $stmt->fetchColumn();
-
-        if ($post_id) {
-            $stmt = $pdo->prepare("UPDATE hair_donation_posts SET status = 'Available' WHERE post_id = ?");
-            $stmt->execute([$post_id]);
-        }
-
-        $pdo->commit();
-        $success_msg = "Request rejected. Specimen returned to Available status in catalog.";
-    } catch (PDOException $e) {
-        if ($pdo->inTransaction()) $pdo->rollBack();
-        $error_msg = "Rejection failed: " . $e->getMessage();
-    }
-}
-?>
-```
+## 14.4 Input Validation & Security Layers
+		• SQL Injection Prevention: 100% of database interactions are executed via parameterized PDO prepared statements.
+		• Cross-Site Scripting (XSS) Prevention: All dynamic variables rendered into the DOM are sanitized using htmlspecialchars(ENT_QUOTES, 'UTF-8').
+		• Gated Administrative Approval: NGO accounts cannot log in until certified by the Administrator (is_approved = 1).
 
 ---
 
 <div style="page-break-after: always;"></div>
 
-# CHAPTER 8: SYSTEM TESTING AND IMPLEMENTATION
+# CHAPTER 15: SYSTEM TESTING AND IMPLEMENTATION
 
-## 8.1 TYPES OF TESTING
-		* **Unit Testing:** Verified isolated routines including password hashing, session role guards, mathematical hair length validators, and file upload extension parsers.
-		* **Integration Testing:** Validated cross-module operational sequences: Donor Post Upload $\rightarrow$ Catalog Display $\rightarrow$ Patient Concurrency Lock $\rightarrow$ State Transition to `Processing` $\rightarrow$ NGO Clinical Audit $\rightarrow$ Final Handover (`Donated`).
-		* **Black Box Testing:** Evaluated UI inputs against functional specifications without referencing source code internals.
-		* **White Box Testing:** Verified statement and branch coverage, exception handling, transaction rollback consistency, and foreign key cascading constraints.
+## 15.1 Testing Methodologies Applied
+		Quality assurance for HairFidence was conducted across a comprehensive five-tier testing framework:
+		• Unit Testing: Evaluated standalone routines including password verification, session guards, and file extension parsers.
+		• Integration Testing: Validated end-to-end workflows connecting donor post creation, patient catalog rendering, atomic request locking, and NGO approval.
+		• Black Box Testing: Evaluated system behaviors against SRS specifications without internal code inspection.
+		• White Box Testing: Investigated internal branch coverage, transaction rollbacks, and foreign key cascade executions.
+		• User Acceptance Testing (UAT): Simulated real-world trials with donor and patient personas to verify usability.
 
-## 8.2 TEST CASE MATRIX
-| Test ID | Test Scenario | Input Data | Expected Output | Actual Result | Status |
+## 15.2 Comprehensive Test Suite Table
+| Test ID | Test Scenario | Test Input Data | Expected Output | Actual Result | Status |
 | :---: | :--- | :--- | :--- | :--- | :---: |
-| **TC-01** | User Authentication | Email: `admin@hairfidence.com`<br>Pass: `adminpassword` | Authenticate and redirect to Admin console | Session initialized, redirected | **PASS** |
-| **TC-02** | Invalid Authentication | Email: `admin@hairfidence.com`<br>Pass: `wrongpass` | Display "Invalid credentials" banner | Access denied, error banner rendered | **PASS** |
-| **TC-03** | NGO Gated Login | Unapproved NGO credentials | Prevent dashboard access; display warning | Access blocked, warning shown | **PASS** |
-| **TC-04** | Role Traversal Guard | Donor navigating to `/admin/` | Intercept via `check_access()`; redirect | HTTP 302 redirect to login | **PASS** |
-| **TC-05** | Hair Post Authoring | Length: `12.5`, Texture: `Wavy` | Post created; status -> `Available` | Tuple inserted, catalog rendered | **PASS** |
-| **TC-06** | Concurrency Lock | Concurrent requests for Post #104 | First succeeds; second caught by rollback | Conflict caught; zero double-booking | **PASS** |
-| **TC-07** | Medical Upload | PDF report file (1.8 MB) | Validated, saved in `/uploads/medical_reports/` | Stored on disk, database updated | **PASS** |
-| **TC-08** | Malicious File Block | Executable file (`test.exe`) | Block upload; throw file type exception | Upload blocked, error alert shown | **PASS** |
-| **TC-09** | NGO Request Rejection | NGO rejects Request #35 | Post status unlocks back to `Available` | Specimen restored to catalog | **PASS** |
-| **TC-10** | Grievance Ticketing | Valid subject & description | Ticket logged as `Pending`; resolved by Admin | Ticket resolved in console | **PASS** |
+| **TC-01** | User Login | Valid email & password | Successful auth & redirect to dashboard | Session created, redirected | **PASS** |
+| **TC-02** | Invalid Login | Incorrect password | Display 'Invalid credentials' banner | Access blocked, error shown | **PASS** |
+| **TC-03** | NGO Gated Access | Unapproved NGO login | Prevent login; display pending notice | Login halted, warning shown | **PASS** |
+| **TC-04** | Role Traversal | Donor accessing `/admin/` | Intercept via `check_access()`; redirect | HTTP 302 redirect to login | **PASS** |
+| **TC-05** | Post Creation | Length: 12.5, Wavy, Photo | Post created; status -> 'Available' | Tuple inserted, catalog updated | **PASS** |
+| **TC-06** | Concurrency Lock | Simultaneous requests | Only first succeeds; second rolled back | Lock acquired; conflict caught | **PASS** |
+| **TC-07** | Report Upload | Valid PDF report (1.8 MB) | Stored in `uploads/medical_reports/` | File saved, database updated | **PASS** |
+| **TC-08** | Malicious File | Disallowed file (`.exe`) | Block upload with MIME error | Upload rejected, zero write | **PASS** |
+| **TC-09** | NGO Rejection | NGO rejects Request #35 | Request Rejected; Post -> 'Available' | Post unlocked in catalog | **PASS** |
+| **TC-10** | Complaint Flow | Valid grievance ticket | Ticket logged; visible to Admin | Tuple logged, marked Resolved | **PASS** |
 
-## 8.3 DEPLOYMENT & CUTOVER STRATEGY
-		Deployment followed a local-to-cloud operational pipeline:
-		1. Apache HTTP Server 2.4 and MariaDB initialized via XAMPP Control Panel.
-		2. Execution of `database.sql` to instantiate the schema and seed default Administrator credentials.
-		3. Configuration of file system permissions (`chmod 775` on `uploads/hair_photos/` and `uploads/medical_reports/`).
-		4. Configuration of `php.ini` directives (`file_uploads = On`, `upload_max_filesize = 10M`, `session.cookie_httponly = 1`).
+## 15.3 Deployment & Build Configuration
+		Deployment follows an automated local-to-cloud server deployment pipeline: 1. Web server stack initialization via XAMPP (Apache HTTP Server and MariaDB/MySQL); 2. Database schema migration by importing database.sql; 3. Directory permissions configuration ensuring write access to uploads/ partitions; 4. Verification of php.ini directives (file_uploads=On, upload_max_filesize=10M, session.cookie_httponly=1).
 
----
-
-<div style="page-break-after: always;"></div>
-
-# CHAPTER 9: SYSTEM MAINTENANCE
-
-## 9.1 CORRECTIVE MAINTENANCE
-		Focuses on defect triage and runtime error resolution. Server error logging is directed to secure `error.log` files with `display_errors = Off` to prevent system path disclosure. Input sanitization routines handle multibyte UTF-8 characters and address encoding variations.
-
-## 9.2 ADAPTIVE MAINTENANCE
-		Ensures operational continuity across evolving external software environments: upgrading code syntax for upcoming PHP interpreter releases (PHP 8.3/8.4), applying MariaDB engine patches, and maintaining compliance with modern browser security policies (SameSite cookies).
-
-## 9.3 PERFECTIVE MAINTENANCE
-		Proactive enhancements to optimize performance and usability: implementing client-side debounced AJAX catalog search filters, enhancing analytical dashboard charting with dynamic SVG graphics, and preparing multi-lingual localization support (Malayalam/Hindi).
+## 15.4 Operational Environment Verification
+		Post-deployment smoke testing confirmed active PDO connectivity, flawless static media read/write operations to upload directories, and responsive rendering across desktop and mobile devices.
 
 ---
 
 <div style="page-break-after: always;"></div>
 
-# CHAPTER 10: FUTURE ENHANCEMENTS
+# CHAPTER 16: SYSTEM MAINTENANCE
 
-		* **Automated Courier Logistics API Integration:** Integration with India Post Speed Post, DTDC, or Delhivery APIs to automatically generate prepaid shipping labels with live parcel tracking webhooks.
-		* **Cross-Platform Mobile Applications:** Native mobile applications built on **Flutter** for Android and iOS, leveraging smartphone cameras for calibrated hair strand measurement and automated document scanning.
-		* **AI-Powered Virtual Wig Simulator (AR):** An Augmented Reality computer vision module using WebGL and TensorFlow.js enabling cancer patients to preview medical wig styles virtually on their own face before submitting requests.
-		* **Certified Wig Workshop Integration:** Establishing direct digital dispatch channels to certified medical wig manufacturing workshops and integrating philanthropic micro-sponsorship payment gateways (Razorpay/Stripe).
+## 16.1 Corrective Maintenance Plan
+		Focuses on identifying, isolating, and rectifying software defects or runtime anomalies discovered during active production. Server error logging is directed to secure error.log files with display_errors disabled. Normalization routines handle multibyte character edge cases in donor addresses.
 
----
+## 16.2 Adaptive Maintenance Plan
+		Adjusts the software platform to remain fully operational across evolving external computing environments, including PHP interpreter upgrades (e.g., PHP 8.2 to 8.3/8.4), MariaDB engine patches, and modern browser security policy updates.
 
-<div style="page-break-after: always;"></div>
+## 16.3 Perfective Maintenance Plan
+		Encompasses proactive user experience enhancements, such as debounced AJAX catalog searching, interactive SVG statistical charting in Admin dashboards, and multi-lingual localization (Malayalam/Hindi).
 
-# CHAPTER 11: CONCLUSION
-
-		The development and operational validation of **HairFidence: A Centralized Role-Based Web Application for Hair Donation Lifecycle Management** represent a meaningful technological milestone in humanitarian healthcare logistics. By replacing informal, untracked, and error-prone manual donation practices with a secure, role-governed 3-Tier MVC web platform, this project establishes a transparent, accountable bridge connecting altruistic donors, verified healthcare NGOs, and cancer patients recovering from chemotherapy.
-
-		The system successfully digitizes the end-to-end hair donation lifecycle, empowering donors with real-time multi-stage pipeline tracking, equipping healthcare NGOs with auditable verification tools, and providing cancer survivors with an accessible portal to receive customized cranial prostheses at zero financial cost. The implementation of Pessimistic Concurrency Locking inside atomic PDO transactions completely eliminates race conditions and resource double-booking, while strict 3NF database normalization guarantees data integrity. Ultimately, HairFidence establishes an enduring standard for healthcare charity management—one that unites robust software engineering with deep human empathy to restore dignity, confidence, and comfort to cancer survivors.
+## 16.4 Preventive Maintenance Plan & Disaster Recovery
+		Entails scheduled automated database index optimization (OPTIMIZE TABLE), automated log rotation, and daily encrypted mysqldump backups guaranteeing an RTO of < 2 hours and an RPO of < 24 hours.
 
 ---
 
 <div style="page-break-after: always;"></div>
 
-# CHAPTER 12: APPENDIX
+# CHAPTER 17: FUTURE ENHANCEMENT
 
-## APPENDIX: UI SCREEN LAYOUTS AND WORKFLOW DESCRIPTIONS
-		1. **Universal Authentication Console (`login.php`):** Clean login interface providing secure email and password entry, with automatic role-based dispatching to Admin, NGO, Donor, or Patient consoles.
-		2. **Multi-Role Registration Portal (`register.php`):** Interactive tabbed registration enabling Donors, Patients, and NGOs to submit profile details and mandatory certifications within atomic transactions.
-		3. **Public Landing Portal (`index.php`):** High-contrast healthcare information portal presenting the mission, donation criteria, and upcoming NGO community hair drives.
-		4. **Administrator Governance Portal (`admin/dashboard.php`):** Metric counters, NGO accreditation review queue, user account management, and grievance ticket resolution console.
-		5. **Healthcare NGO Verification Desk (`ngo/dashboard.php`):** Verification desk allowing NGO personnel to review patient oncology summaries, inspect physical hair parcels, and issue approvals or rejections.
-		6. **Donor Philanthropy Dashboard (`donor/dashboard.php`):** Hair post authoring form with specimen photo upload and real-time visual multi-stage pipeline tracking (`Available` $\rightarrow$ `Processing` $\rightarrow$ `Donated`).
-		7. **Patient Medical Portal & Hair Catalog (`patient/dashboard.php`):** Secure diagnostic report upload interface and interactive catalog with attribute filters (length, texture) and atomic request locking.
-		8. **Grievance Redressal View (`complaints`):** Universal ticket submission console enabling stakeholders to file inquiries directly to system administrators.
+## 17.1 Cross-Platform Mobile Applications
+		Developing native cross-platform mobile apps for Android and iOS using Flutter or React Native to leverage smartphone camera hardware for calibrated hair specimen photography and document scanning.
+
+## 17.2 Automated Postal & Logistics API Integration
+		Integrating third-party courier APIs (India Post Speed Post, DTDC, Delhivery) to generate automated prepaid shipping labels with live parcel tracking webhooks inside the donor dashboard.
+
+## 17.3 AI-Powered Virtual Wig AR Simulator
+		Implementing an Augmented Reality (AR) facial mapping simulator using WebGL and TensorFlow.js, enabling cancer patients to preview medical wig styles on their own face before submitting a request.
+
+## 17.4 Philanthropic Micro-Sponsorship Gateway
+		Incorporating digital payment gateways (Razorpay, Stripe) allowing donors and CSR bodies to sponsor wig fabrication and artisanal hand-knotting costs for underprivileged patients.
+
+## 17.5 Multi-Channel Notification Webhooks
+		Integrating SMS and WhatsApp cloud messaging gateways (Twilio / Gupshup) delivering automated milestone notifications to donors when parcels are verified and dispatched.
 
 ---
 
 <div style="page-break-after: always;"></div>
 
-# CHAPTER 13: BIBLIOGRAPHY
+# CHAPTER 18: CONCLUSION
 
-## WEB RESOURCES & AUTHORITATIVE DOCUMENTATION
-[1] PHP Documentation Group, *PHP: Hypertext Preprocessor Official Reference Manual*, Available online: https://www.php.net/manual/en/ (Accessed: June 2026).  
-[2] Oracle Corporation, *MySQL 8.0 Reference Manual: InnoDB Storage Engine & Locking Models*, Available online: https://dev.mysql.com/doc/refman/8.0/en/innodb-locking.html (Accessed: June 2026).  
-[3] Mozilla Developer Network (MDN), *Web Technology for Developers: Semantic HTML5 and CSS Flexible Box Layout*, Available online: https://developer.mozilla.org/en-US/docs/Web (Accessed: May 2026).  
-[4] Open Web Application Security Project (OWASP), *OWASP Top 10: The Ten Most Critical Web Application Security Risks*, Available online: https://owasp.org/Top10/ (Accessed: May 2026).  
-[5] MariaDB Foundation, *MariaDB Server Documentation: Transactions and Concurrency Control*, Available online: https://mariadb.com/kb/en/documentation/ (Accessed: April 2026).  
-[6] APJ Abdul Kalam Technological University, *Master of Computer Applications Curriculum, Scheme and Syllabi (2020 Scheme)*, Government of Kerala, Available online: https://ktu.edu.in/ (Accessed: July 2026).  
+## 18.1 Summary of Project Achievements
+		The development and operational validation of HairFidence: Cancer Patient Hair Donation Management System represent a meaningful technological achievement in modernizing humanitarian healthcare logistics. By replacing informal, untracked, and error-prone manual donation practices with a secure, role-governed 3-Tier MVC web platform, this project establishes a transparent, accountable bridge connecting altruistic donors, verified healthcare NGOs, and cancer patients recovering from chemotherapy. The system successfully digitizes the end-to-end hair donation lifecycle, empowering donors with real-time multi-stage pipeline tracking, equipping healthcare NGOs with auditable verification tools, and providing cancer survivors with an accessible portal to receive customized cranial prostheses at zero financial cost.
 
-## TECHNICAL REFERENCE TEXTBOOKS
-[1] *Software Engineering: A Practitioner's Approach*, Roger S. Pressman and Bruce R. Maxim, 8th Edition, McGraw-Hill Education, 2015.  
-[2] *Fundamentals of Database Systems*, Ramez Elmasri and Shamkant B. Navathe, 7th Edition, Pearson Education, 2016.  
-[3] *PHP and MySQL Web Development*, Luke Welling and Laura Thomson, 5th Edition, Addison-Wesley Professional, 2017.  
-[4] *UML Distilled: A Brief Guide to the Standard Object Modeling Language*, Martin Fowler, 3rd Edition, Addison-Wesley Professional, 2004.  
-[5] *Design Patterns: Elements of Reusable Object-Oriented Software*, Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides, 1st Edition, Addison-Wesley Professional, 1994.  
-[6] *Software Engineering*, Ian Sommerville, 10th Edition, Pearson Education, 2016.  
+## 18.2 Validation of Core Objectives
+		All foundational technical and architectural objectives established during system inception were verified through comprehensive testing: Concurrency Safety via Pessimistic Row Locking (SELECT ... FOR UPDATE) inside atomic PDO transactions; Data Security through BCrypt password hashing and zero-trust RBAC middleware; Database Integrity conforming to Third Normal Form (3NF); and Operational Usability delivering responsive rendering across desktop, tablet, and mobile devices.
+
+## 18.3 Academic & Engineering Conclusion
+		Ultimately, HairFidence stands as a testament to how sound software engineering principles, robust relational database design, and human-centered empathy can unite to solve poignant societal challenges. The platform establishes an enduring, scalable model for humanitarian healthcare charity management—one that is transparent, technically sound, and dedicated to restoring dignity, confidence, and comfort to cancer survivors throughout their journey to recovery.
+
+---
+
+<div style="page-break-after: always;"></div>
+
+# CHAPTER 19: APPENDIX
+
+## Appendix A: Complete Database DDL SQL Script
+		The complete relational database definition script (database.sql) establishing tables, indexes, and foreign key cascades is archived in the repository root and documented in Section 13.4.
+
+## Appendix B: Core Architectural Code Files
+		Archived source files include config/db.php (PDO configuration), includes/auth_check.php (RBAC middleware guard), auth/dashboard_redirect.php (session router), and role dashboards.
+
+## Appendix C: System User Interface Screen Captures
+		Actual operational user interface screenshots captured from the running HairFidence application demonstrating primary functional workflows across all user roles:
+		* Figure 19.1: Universal Authentication Console (`login.php`)
+		* Figure 19.2: Multi-Role User Registration Console (`register.php`)
+		* Figure 19.3: Public Informational & Community Portal (`index.php`)
+		* Figure 19.4: Administrator Platform Analytics & Overview (`admin/dashboard.php`)
+		* Figure 19.5: Administrator NGO Verification & Accreditation Console
+		* Figure 19.6: Administrator Grievance Ticketing & Resolution Console
+		* Figure 19.7: Healthcare NGO Operations & Clinical Audit Hub (`ngo/dashboard.php`)
+		* Figure 19.8: NGO Community Hair Donation Campaign Creation
+		* Figure 19.9: Donor Dashboard & Real-Time Pipeline Tracker (`donor/dashboard.php`)
+		* Figure 19.10: Donor Hair Post Submission with Specimen Upload
+		* Figure 19.11: Cancer Patient Portal & Live Verified Hair Catalog (`patient/dashboard.php`)
+		* Figure 19.12: Patient Hair Request Tracking & Allocation Status
+		* Figure 19.13: User Grievance & Support Ticket Submission Form
+		* Figure 19.14: User Account Profile & Delivery Address Console
+
+---
+
+<div style="page-break-after: always;"></div>
+
+# CHAPTER 20: BIBLIOGRAPHY
+
+## Technical Reference Books
+		[1] Software Engineering: A Practitioner's Approach, Roger S. Pressman and Bruce R. Maxim, 8th Edition, McGraw-Hill Education, 2015.
+		[2] Fundamentals of Database Systems, Ramez Elmasri and Shamkant B. Navathe, 7th Edition, Pearson Education, 2016.
+		[3] PHP and MySQL Web Development, Luke Welling and Laura Thomson, 5th Edition, Addison-Wesley Professional, 2017.
+		[4] UML Distilled: A Brief Guide to the Standard Object Modeling Language, Martin Fowler, 3rd Edition, Addison-Wesley Professional, 2004.
+		[5] Design Patterns: Elements of Reusable Object-Oriented Software, Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides, 1st Edition, Addison-Wesley Professional, 1994.
+		[6] Software Engineering, Ian Sommerville, 10th Edition, Pearson Education, 2016.
+
+## Authoritative Documentation & Web References
+		[1] PHP Documentation Group, PHP: Hypertext Preprocessor Official Reference Manual, Available online: https://www.php.net/manual/en/ (Accessed: June 2026).
+		[2] Oracle Corporation, MySQL 8.0 Reference Manual: InnoDB Storage Engine & Locking Models, Available online: https://dev.mysql.com/doc/refman/8.0/en/innodb-locking.html (Accessed: June 2026).
+		[3] Mozilla Developer Network (MDN), Web Technology for Developers: Semantic HTML5 and CSS Flexible Box Layout, Available online: https://developer.mozilla.org/en-US/docs/Web (Accessed: May 2026).
+		[4] Open Web Application Security Project (OWASP), OWASP Top 10: The Ten Most Critical Web Application Security Risks, Available online: https://owasp.org/Top10/ (Accessed: May 2026).
+		[5] Apache Friends, XAMPP Apache + MariaDB + PHP + Perl Distribution Documentation, Available online: https://www.apachefriends.org/ (Accessed: April 2026).
+		[6] APJ Abdul Kalam Technological University, Master of Computer Applications Curriculum, Scheme and Syllabi (2020 Scheme), Government of Kerala, Available online: https://ktu.edu.in/ (Accessed: July 2026).

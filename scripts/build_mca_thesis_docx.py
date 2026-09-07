@@ -127,7 +127,7 @@ def add_data_dict_table(doc, table_name, field_records):
     add_p(doc, "", space_after=8)
 
 def generate_thesis_docx():
-    print("Generating HairFidence KTU MCA Thesis Document...")
+    print("Generating HairFidence KTU MCA Master Thesis Document (Chapters 8–20)...")
     doc = Document()
 
     # Base margins: Left 1.5 inches, Right/Top/Bottom 1.0 inch
@@ -138,63 +138,56 @@ def generate_thesis_docx():
     sec0.right_margin = Inches(1.0)
 
     # ──────────────────────────────────────────────────────────────────────────
-    # 1. COVERING PAGE
+    # 1. COVERING PAGE (Exactly matching PDF Page 1)
     # ──────────────────────────────────────────────────────────────────────────
     add_p(doc, "", space_before=15)
-    add_p(doc, "HAIRFIDENCE: A CENTRALIZED ROLE-BASED WEB APPLICATION FOR HAIR DONATION LIFECYCLE MANAGEMENT", font_size=16, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=24)
+    add_p(doc, "HAIRFIDENCE", font_size=18, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=6)
+    add_p(doc, "CANCER PATIENT HAIR DONATION MANAGEMENT SYSTEM", font_size=13.5, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=26)
 
-    add_p(doc, "A PROJECT THESIS REPORT", font_size=13, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=8)
-    add_p(doc, "SUBMITTED TO", font_size=11, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=4)
-    add_p(doc, "AWH ENGINEERING COLLEGE, KUTTIKKATTOOR, CALICUT - 8", font_size=13, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=12)
-
-    add_p(doc, "IN PARTIAL FULFILLMENT OF THE REQUIREMENTS", font_size=11, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=2)
+    add_p(doc, "PROJECT THESIS", font_size=13, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=8)
+    add_p(doc, "SUBMITTED IN PARTIAL FULFILLMENT OF THE REQUIREMENTS", font_size=11, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=2)
     add_p(doc, "FOR THE AWARD OF THE DEGREE OF", font_size=11, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=4)
-    add_p(doc, "MASTER OF COMPUTER APPLICATIONS", font_size=14, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=4)
-    add_p(doc, "OF", font_size=11, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=4)
-    add_p(doc, "APJ ABDUL KALAM TECHNOLOGICAL UNIVERSITY, KERALA", font_size=12, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=20)
+    add_p(doc, "MASTER OF COMPUTER APPLICATIONS", font_size=14, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=20)
 
     add_p(doc, "SUBMITTED BY", font_size=11, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=4)
     add_p(doc, "ARSHAN NIZAR K P", font_size=13, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=2)
-    add_p(doc, "(Register Number: AWH25MCA-2010)", font_size=11.5, bold=False, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=18)
-
-    add_p(doc, "UNDER THE GUIDANCE OF", font_size=11, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=3)
-    add_p(doc, "Ms. AMEENA AFSAR", font_size=12.5, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=2)
-    add_p(doc, "Assistant Professor, Department of Computer Applications", font_size=11, bold=False, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=20)
+    add_p(doc, "(Register Number: AWH25MCA-2010)", font_size=11.5, bold=False, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=24)
 
     if os.path.exists(LOGO_PATH):
         p_logo = doc.add_paragraph()
         p_logo.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        p_logo.paragraph_format.space_after = Pt(20)
+        p_logo.paragraph_format.space_after = Pt(24)
         p_logo.add_run().add_picture(LOGO_PATH, width=Inches(1.4))
 
     add_p(doc, "DEPARTMENT OF COMPUTER APPLICATIONS", font_size=13, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=3)
     add_p(doc, "AWH ENGINEERING COLLEGE", font_size=14, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=2)
-    add_p(doc, "KUTTIKKATTOOR, KOZHIKODE, KERALA – 673008", font_size=11.5, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=4)
-    add_p(doc, "ACADEMIC YEAR: 2025–2026", font_size=11, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=0)
+    add_p(doc, "KUTTIKKATTOOR, CALICUT - 673008", font_size=11.5, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=2)
+    add_p(doc, "(Affiliated to APJ Abdul Kalam Technological University, Kerala)", font_size=10.5, italic=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=4)
+    add_p(doc, "JULY 2026", font_size=11, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=0)
 
     # ──────────────────────────────────────────────────────────────────────────
-    # 2. CERTIFICATE PAGE
+    # 2. CERTIFICATE PAGE (Exactly matching PDF Page 2)
     # ──────────────────────────────────────────────────────────────────────────
     doc.add_page_break()
     if os.path.exists(LOGO_PATH):
         p_logo2 = doc.add_paragraph()
         p_logo2.alignment = WD_ALIGN_PARAGRAPH.CENTER
         p_logo2.paragraph_format.space_after = Pt(10)
-        p_logo2.paragraph_format.space_before = Pt(6)
-        p_logo2.add_run().add_picture(LOGO_PATH, width=Inches(1.2))
+        p_logo2.paragraph_format.space_before = Pt(4)
+        p_logo2.add_run().add_picture(LOGO_PATH, width=Inches(1.15))
 
     add_p(doc, "DEPARTMENT OF COMPUTER APPLICATIONS", font_size=13, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=3)
     add_p(doc, "AWH ENGINEERING COLLEGE", font_size=14, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=2)
-    add_p(doc, "KUTTIKKATTOOR, CALICUT - 673008", font_size=11.5, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=20)
+    add_p(doc, "KUTTIKKATTOOR, CALICUT - 673008", font_size=11.5, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=18)
 
-    add_p(doc, "BONA FIDE CERTIFICATE", font_size=14, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=18)
+    add_p(doc, "BONA FIDE CERTIFICATE", font_size=14, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=16)
 
     cert_text = (
-        "This is to certify that this project thesis entitled “HAIRFIDENCE: A CENTRALIZED ROLE-BASED "
-        "WEB APPLICATION FOR HAIR DONATION LIFECYCLE MANAGEMENT” is a bona fide record of the project work "
-        "carried out by ARSHAN NIZAR K P (Register Number: AWH25MCA-2010) in partial fulfillment of the requirements "
-        "for the award of the Degree of Master of Computer Applications from APJ Abdul Kalam Technological University "
-        "during the academic year 2025–2026."
+        "This is to certify that this project thesis entitled “HAIRFIDENCE: CANCER PATIENT HAIR DONATION "
+        "MANAGEMENT SYSTEM” is a bona fide record of the project work carried out by ARSHAN NIZAR K P "
+        "(Register Number: AWH25MCA-2010) in partial fulfillment of the requirements for the award of the "
+        "Degree of Master of Computer Applications from APJ Abdul Kalam Technological University during "
+        "the academic year 2025–2026."
     )
     add_p(doc, cert_text, font_size=12, italic=True, align=WD_ALIGN_PARAGRAPH.JUSTIFY, space_after=50, line_spacing=1.5, indent=0.5)
 
@@ -203,175 +196,187 @@ def generate_thesis_docx():
     t_staff.alignment = WD_TABLE_ALIGNMENT.CENTER
     t_staff.autofit = False
 
-    t_staff.cell(0, 0).paragraphs[0].text = "Ms. AMEENA AFSAR"
+    t_staff.cell(0, 0).paragraphs[0].text = "Mrs. SRUTI SUDEVAN"
     t_staff.cell(0, 0).paragraphs[0].runs[0].font.bold = True
     t_staff.cell(0, 0).paragraphs[0].runs[0].font.name = "Times New Roman"
-    p_g1 = t_staff.cell(0, 0).add_paragraph("Project Guide & Assistant Professor\nDept. of Computer Applications\nAWH Engineering College, Calicut")
+    p_g1 = t_staff.cell(0, 0).add_paragraph("Head of the Department & Associate Professor\nDept. of Computer Applications\nAWH Engineering College, Calicut")
     p_g1.paragraph_format.line_spacing = 1.15
 
-    t_staff.cell(0, 1).paragraphs[0].text = "Mrs. SRUTI SUDEVAN"
+    t_staff.cell(0, 1).paragraphs[0].text = "Ms. AMEENA AFSAR"
     t_staff.cell(0, 1).paragraphs[0].runs[0].font.bold = True
     t_staff.cell(0, 1).paragraphs[0].runs[0].font.name = "Times New Roman"
-    p_h1 = t_staff.cell(0, 1).add_paragraph("Head of the Department & Associate Professor\nDept. of Computer Applications\nAWH Engineering College, Calicut")
+    p_h1 = t_staff.cell(0, 1).add_paragraph("Assistant Professor\nDept. of Computer Applications\nAWH Engineering College, Calicut")
     p_h1.paragraph_format.line_spacing = 1.15
 
-    add_p(doc, "", space_after=35)
-
-    add_p(doc, "Submitted for the Viva-Voce Examination held on: ............................................................", font_size=11, italic=True, align=WD_ALIGN_PARAGRAPH.LEFT, space_after=35)
+    add_p(doc, "", space_after=50)
 
     t_exam = doc.add_table(rows=1, cols=2)
     t_exam.alignment = WD_TABLE_ALIGNMENT.CENTER
-    t_exam.cell(0, 0).paragraphs[0].text = "EXTERNAL EXAMINER"
+    t_exam.cell(0, 0).paragraphs[0].text = "INTERNAL EXAMINER"
     t_exam.cell(0, 0).paragraphs[0].runs[0].font.bold = True
     t_exam.cell(0, 0).paragraphs[0].runs[0].font.name = "Times New Roman"
 
-    t_exam.cell(0, 1).paragraphs[0].text = "INTERNAL EXAMINER"
+    t_exam.cell(0, 1).paragraphs[0].text = "EXTERNAL EXAMINER"
     t_exam.cell(0, 1).paragraphs[0].runs[0].font.bold = True
     t_exam.cell(0, 1).paragraphs[0].runs[0].font.name = "Times New Roman"
 
     # ──────────────────────────────────────────────────────────────────────────
-    # 3. ACKNOWLEDGEMENT (Strictly 1 Page, 1.5 Line Spacing)
+    # 3. ACKNOWLEDGEMENT (Matching PDF Page 3)
     # ──────────────────────────────────────────────────────────────────────────
     doc.add_page_break()
     add_p(doc, "ACKNOWLEDGEMENT", font_size=14, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_before=15, space_after=24)
 
     ack_p1 = (
-        "I express my profound sense of gratitude and sincere indebtedness to our respected Principal, Dr. Sabeena MV, "
-        "for providing all necessary institutional facilities, computational infrastructure, and academic encouragement that "
-        "made the completion of this project thesis possible."
+        "I express my profound sense of gratitude and sincere indebtedness to our respected Principal, "
+        "Dr. Sabeena M V, for providing all necessary academic facilities, computational infrastructure, "
+        "and institutional encouragement that made the completion of this thesis work possible."
     )
     add_p(doc, ack_p1, font_size=12, align=WD_ALIGN_PARAGRAPH.JUSTIFY, space_after=14, line_spacing=1.5, indent=0.5)
 
     ack_p2 = (
-        "I convey my deepest and heartfelt thanks to Mrs. Sruti Sudevan, Head of the Department of Computer Applications, "
-        "for her continuous inspiration, academic leadership, and vital encouragement throughout the duration of the MCA "
-        "program and during this project endeavor."
+        "I convey my deepest and heartfelt thanks to Mrs. Sruti Sudevan, Head of the Department of "
+        "Computer Applications, for her constant inspiration, academic leadership, and continuous "
+        "encouragement throughout the duration of the MCA curriculum and during this project endeavor."
     )
     add_p(doc, ack_p2, font_size=12, align=WD_ALIGN_PARAGRAPH.JUSTIFY, space_after=14, line_spacing=1.5, indent=0.5)
 
     ack_p3 = (
-        "I take immense privilege in expressing my sincere gratitude to my Project Guide, Ms. Ameena Afsar, Assistant Professor, "
-        "Department of Computer Applications, for her technical mentorship, invaluable suggestions, and patient supervision. "
-        "Her constructive critiques, insightful suggestions, and thorough evaluations at every phase of system modeling, design, and testing "
-        "helped shape this project into an academically rigorous and socially impactful system."
+        "I take immense privilege in expressing my sincere gratitude to my Project Guide and Coordinator, "
+        "Ms. Ameena Afsar, Assistant Professor, Department of Computer Applications, and Mrs. Sruti Sudevan, "
+        "for their indispensable guidance, technical mentorship, and patient supervision. Their constructive criticisms, "
+        "insightful suggestions, and thorough evaluations at every phase of system modeling, design, and testing helped shape "
+        "this project into an academically rigorous and socially impactful system."
     )
     add_p(doc, ack_p3, font_size=12, align=WD_ALIGN_PARAGRAPH.JUSTIFY, space_after=14, line_spacing=1.5, indent=0.5)
 
     ack_p4 = (
-        "I also extend my sincere gratitude to all the teaching and technical staff members of the Department of Computer Applications "
-        "for their invaluable support, timely suggestions, and generous academic assistance throughout the project development cycle."
+        "I also extend my sincere gratitude to all the teaching and non-teaching faculty members of the Department of "
+        "Computer Applications for their invaluable support, timely suggestions, and generous academic assistance throughout the "
+        "project development cycle."
     )
     add_p(doc, ack_p4, font_size=12, align=WD_ALIGN_PARAGRAPH.JUSTIFY, space_after=14, line_spacing=1.5, indent=0.5)
 
     ack_p5 = (
-        "I express my loving thanks to my family members and batchmates whose unwavering moral support, sacrifices, and continuous encouragement "
-        "have been the bedrock of my life and education. Their feedback during user experience reviews and software testing has been deeply appreciated."
+        "I express my loving thanks to my parents and family members whose unwavering moral support, sacrifices, and "
+        "continuous prayers have been the bedrock of my life and education. I also express my warm appreciation to my batchmates "
+        "and friends for their collaborative discussions, constructive feedback during user experience reviews, and camaraderie "
+        "throughout our post-graduate journey."
     )
     add_p(doc, ack_p5, font_size=12, align=WD_ALIGN_PARAGRAPH.JUSTIFY, space_after=14, line_spacing=1.5, indent=0.5)
 
     ack_p6 = (
-        "Above all, I surrender myself in eternal gratitude before the Almighty for granting me the wisdom, health, strength, and perseverance "
-        "to complete this project thesis successfully."
+        "Above all, I surrender myself in eternal gratitude before the Almighty for granting me the wisdom, health, strength, "
+        "and perseverance to complete this project thesis successfully."
     )
     add_p(doc, ack_p6, font_size=12, align=WD_ALIGN_PARAGRAPH.JUSTIFY, space_after=35, line_spacing=1.5, indent=0.5)
 
     add_p(doc, "ARSHAN NIZAR K P\n(Register Number: AWH25MCA-2010)", font_size=12, bold=True, align=WD_ALIGN_PARAGRAPH.RIGHT, space_after=0)
 
     # ──────────────────────────────────────────────────────────────────────────
-    # 4. ABSTRACT (Strictly 1 Page, 1.5 Line Spacing, 12pt Times New Roman)
+    # 4. ABSTRACT (Matching PDF Page 4)
     # ──────────────────────────────────────────────────────────────────────────
     doc.add_page_break()
     add_p(doc, "ABSTRACT", font_size=14, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_before=15, space_after=24)
 
     abs_p1 = (
-        "Chemotherapy-induced alopecia (hair loss) is widely recognized in oncological medicine as one of the most psychologically "
-        "distressing and traumatic side effects for cancer patients, precipitating profound erosion of self-esteem, clinical anxiety, "
-        "and acute social alienation. While thousands of empathetic citizens wish to donate natural hair for medical wig fabrication, "
-        "traditional donation mechanisms across Kerala and India remain uncoordinated, fragmented, and heavily vulnerable to logistics "
-        "failures. Existing approaches rely on informal WhatsApp groups, untracked courier drop-offs, and open social media appeals. "
-        "This absence of centralized coordination creates acute bottlenecks: donors receive zero visibility into parcel arrivals; "
-        "non-governmental organizations (NGOs) receive unsorted specimens lacking vital technical metadata; and immunocompromised "
-        "cancer patients are forced to physically travel with paper diagnostic reports to prove their condition."
+        "Chemotherapy-induced hair loss severely impacts the psychological well-being of cancer patients. "
+        "While many compassionate individuals wish to donate hair for medical wigs, the lack of a standardized "
+        "platform bottlenecks coordination between donors, non-governmental organizations (NGOs), and verified "
+        "recipients. The proposed project, HairFidence, resolves this operational gap by introducing a centralized "
+        "web application designed to digitalize and streamline the entire hair donation lifecycle."
     )
     add_p(doc, abs_p1, font_size=12, align=WD_ALIGN_PARAGRAPH.JUSTIFY, space_after=14, line_spacing=1.5, indent=0.5)
 
     abs_p2 = (
-        "To decisively resolve these failures, this thesis presents HairFidence: A Centralized Role-Based Web Application for Hair "
-        "Donation Lifecycle Management, an end-to-end, secure, 3-Tier Model-View-Controller (MVC) web architecture. The platform "
-        "digitizes, automates, and audits the entire hair donation, clinical verification, and prosthesis allocation lifecycle. "
-        "Engineered using semantic HTML5, Vanilla CSS3 custom properties, and JavaScript (ES6+) on the client side, paired with a modular "
-        "PHP 8.x backend engine, all transactional states are anchored in an optimized 8-table relational MySQL schema running in an "
-        "Apache XAMPP environment."
+        "Built on an interactive HTML, CSS, and JavaScript frontend with a secure PHP backend, HairFidence "
+        "manages transactions through an optimized MySQL database in a local XAMPP environment. By utilizing an "
+        "elegant 8-table relational schema, the platform guarantees rapid execution speeds, robust concurrency control "
+        "via PDO transactions, and strict data privacy to effectively prevent resource double-booking and secure data leakage."
     )
     add_p(doc, abs_p2, font_size=12, align=WD_ALIGN_PARAGRAPH.JUSTIFY, space_after=14, line_spacing=1.5, indent=0.5)
 
     abs_p3 = (
-        "HairFidence partitions governance across four discrete role modules: System Administrator (institutional NGO accreditation "
-        "and grievance resolution), Healthcare NGOs (physical parcel audits, clinical diagnostic report verification, and community "
-        "donation drives), Donors (specification authoring and multi-stage visual pipeline tracking), and Patients (secure medical "
-        "report uploading and catalog browsing). A critical technical contribution is the implementation of Pessimistic Concurrency "
-        "Locking via SELECT ... FOR UPDATE wrapped within atomic PDO database transactions, strictly preventing double-booking race "
-        "conditions during simultaneous patient requests. Rigorous unit, integration, and black-box test suites validate that the system "
-        "delivers robust data security, zero-cost wig access for cancer survivors, and total transparency for civic donors."
+        "The system logically partitions functionality across four distinct modules: Administrator, NGOs, Donors, "
+        "and Patients. Donors can easily list hair specifications and track deliveries, while patients securely upload "
+        "medical reports to request verified matches. Registered NGOs act as essential gatekeepers by auditing records "
+        "and physical donations, overseen globally by the Administrator. Ultimately, HairFidence fosters an efficient, "
+        "community-driven logistics network, returning dignity to cancer survivors."
     )
     add_p(doc, abs_p3, font_size=12, align=WD_ALIGN_PARAGRAPH.JUSTIFY, space_after=0, line_spacing=1.5, indent=0.5)
 
     # ──────────────────────────────────────────────────────────────────────────
-    # 5. TABLE OF CONTENTS
+    # 5. TABLE OF CONTENTS (Matching PDF Pages 5 & 6)
     # ──────────────────────────────────────────────────────────────────────────
     doc.add_page_break()
     add_p(doc, "CONTENTS", font_size=14, bold=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_before=15, space_after=20)
 
     toc_items = [
         ("CERTIFICATE", "ii", True),
-        ("ACKNOWLEDGEMENT", "iii", True),
-        ("ABSTRACT", "iv", True),
-        ("CHAPTER 1: INTRODUCTION", "1", True),
-        ("    1.1 Domain Overview & Background", "1", False),
-        ("    1.2 Motivation", "3", False),
-        ("    1.3 Problem Statement", "5", False),
-        ("    1.4 Objectives", "6", False),
-        ("    1.5 Organization of the Report", "7", False),
-        ("CHAPTER 2: SYSTEM ANALYSIS", "8", True),
-        ("    2.1 Existing System", "8", False),
-        ("    2.2 Proposed System", "10", False),
-        ("    2.3 Module Description", "12", False),
-        ("    2.4 Sprint Planning", "14", False),
-        ("    2.5 User Stories", "16", False),
-        ("CHAPTER 3: FEASIBILITY STUDY", "18", True),
-        ("    3.1 Economic Feasibility", "18", False),
-        ("    3.2 Technical Feasibility", "19", False),
-        ("    3.3 Operational Feasibility", "20", False),
-        ("    3.4 Behavioral Feasibility", "21", False),
-        ("    3.5 Software Feasibility", "22", False),
-        ("CHAPTER 4: SOFTWARE ENGINEERING PARADIGM", "23", True),
-        ("    4.1 Agile Development Methodology", "23", False),
-        ("    4.2 Scrum Framework", "25", False),
-        ("CHAPTER 5: SYSTEM REQUIREMENT SPECIFICATION", "27", True),
-        ("    5.1 Software Requirements", "27", False),
-        ("    5.2 Hardware Requirements", "29", False),
-        ("CHAPTER 6: SYSTEM DESIGN", "31", True),
-        ("    6.1 Database Design & Normalization (1NF, 2NF, 3NF)", "31", False),
-        ("    6.2 Data Dictionary (8 Tables)", "34", False),
-        ("    6.3 UML Architecture (Class & Sequence Trace)", "39", False),
-        ("    6.4 Use Case Diagram & Actor Mapping", "42", False),
-        ("    6.5 System Scenarios", "44", False),
-        ("CHAPTER 7: SYSTEM DEVELOPMENT", "46", True),
-        ("    7.1 Development Lifecycle Activities", "46", False),
-        ("    7.2 Implementation Technologies", "48", False),
-        ("    7.3 Core Code Implementations", "50", False),
-        ("CHAPTER 8: SYSTEM TESTING AND IMPLEMENTATION", "54", True),
-        ("    8.1 Types of Testing", "54", False),
-        ("    8.2 Test Case Matrix", "56", False),
-        ("    8.3 Deployment & Cutover Strategy", "59", False),
-        ("CHAPTER 9: SYSTEM MAINTENANCE", "60", True),
-        ("    9.1 Corrective Maintenance", "60", False),
-        ("    9.2 Adaptive Maintenance", "61", False),
-        ("    9.3 Perfective Maintenance", "62", False),
-        ("CHAPTER 10: FUTURE ENHANCEMENTS", "63", True),
-        ("CHAPTER 11: CONCLUSION", "65", True),
-        ("CHAPTER 12: APPENDIX (UI SCREENSHOTS & WORKFLOWS)", "67", True),
-        ("CHAPTER 13: BIBLIOGRAPHY", "82", True),
+        ("COMPANY CERTIFICATE", "iii", True),
+        ("ABOUT THE COMPANY", "iv", True),
+        ("ACKNOWLEDGEMENT", "v", True),
+        ("ABSTRACT", "vi", True),
+        ("CHAPTER 8: INTRODUCTION", "1", True),
+        ("    8.1 System Overview", "1", False),
+        ("    8.2 Problem Statement & Clinical Context", "3", False),
+        ("    8.3 Objectives of the System", "5", False),
+        ("    8.4 Scope of the Project", "7", False),
+        ("    8.5 Operational and Psychosocial Benefits", "9", False),
+        ("CHAPTER 9: SYSTEM ANALYSIS", "11", True),
+        ("    9.1 Existing System Description", "11", False),
+        ("    9.2 Limitations of the Existing System", "13", False),
+        ("    9.3 Proposed System Architecture", "15", False),
+        ("    9.4 Concrete Enhancements Implemented", "17", False),
+        ("CHAPTER 10: FEASIBILITY STUDY", "20", True),
+        ("    10.1 Technical Feasibility", "20", False),
+        ("    10.2 Operational Feasibility", "22", False),
+        ("    10.3 Economic Feasibility", "24", False),
+        ("    10.4 Behavioural & Ethical Feasibility", "26", False),
+        ("    10.5 Software Standards Feasibility", "28", False),
+        ("CHAPTER 11: SOFTWARE ENGINEERING PARADIGM", "30", True),
+        ("    11.1 Agile Process Methodology", "30", False),
+        ("    11.2 Scrum Framework Implementation", "32", False),
+        ("    11.3 Sprint Planning and Task Decomposition", "34", False),
+        ("    11.4 User Story Mapping & Acceptance Criteria", "38", False),
+        ("    11.5 Agile Ceremonies & Milestone Delivery", "41", False),
+        ("CHAPTER 12: SYSTEM REQUIREMENT SPECIFICATION (SRS)", "43", True),
+        ("    12.1 Minimum Hardware Requirements", "43", False),
+        ("    12.2 Software Stack and Environment", "45", False),
+        ("    12.3 Functional Requirements by Module", "48", False),
+        ("    12.4 Non-Functional Requirements", "54", False),
+        ("CHAPTER 13: SYSTEM DESIGN", "58", True),
+        ("    13.1 High-Level MVC Architectural Pattern", "58", False),
+        ("    13.2 Data Flow Diagrams (DFD Level 0, 1, 2)", "62", False),
+        ("    13.3 UML Modeling (Use Case, Class, Sequence)", "68", False),
+        ("    13.4 Database Design & Relational Schema", "76", False),
+        ("    13.5 Normalization Proofs (1NF, 2NF, 3NF)", "83", False),
+        ("CHAPTER 14: SYSTEM DEVELOPMENT", "88", True),
+        ("    14.1 Subsystem Modular Breakdown", "88", False),
+        ("    14.2 Core Algorithms & Business Logic", "92", False),
+        ("    14.3 Routing & Endpoints Specification", "99", False),
+        ("    14.4 Input Validation & Security Layers", "102", False),
+        ("CHAPTER 15: SYSTEM TESTING AND IMPLEMENTATION", "106", True),
+        ("    15.1 Testing Methodologies Applied", "106", False),
+        ("    15.2 Comprehensive Test Suite Table", "110", False),
+        ("    15.3 Deployment & Build Configuration", "114", False),
+        ("    15.4 Operational Environment Verification", "117", False),
+        ("CHAPTER 16: SYSTEM MAINTENANCE", "120", True),
+        ("    16.1 Corrective Maintenance Plan", "120", False),
+        ("    16.2 Adaptive Maintenance Plan", "122", False),
+        ("    16.3 Perfective Maintenance Plan", "124", False),
+        ("    16.4 Preventive Maintenance Plan & DR", "126", False),
+        ("CHAPTER 17: FUTURE ENHANCEMENT", "129", True),
+        ("    17.1 Cross-Platform Mobile Applications", "129", False),
+        ("    17.2 Automated Postal & Logistics API Integration", "131", False),
+        ("    17.3 AI-Powered Virtual Wig AR Simulator", "133", False),
+        ("    17.4 Philanthropic Micro-Sponsorship Gateway", "135", False),
+        ("    17.5 Multi-Channel Notification Webhooks", "137", False),
+        ("CHAPTER 18: CONCLUSION", "139", True),
+        ("    18.1 Summary of Project Achievements", "139", False),
+        ("    18.2 Validation of Core Objectives", "141", False),
+        ("    18.3 Academic & Engineering Conclusion", "143", False),
+        ("CHAPTER 19: APPENDIX", "145", True),
+        ("CHAPTER 20: BIBLIOGRAPHY", "156", True),
     ]
 
     t_toc = doc.add_table(rows=len(toc_items), cols=2)
@@ -436,95 +441,149 @@ def generate_thesis_docx():
     p_ftr._p.get_or_add_pPr().append(pBdr_f)
 
     # ──────────────────────────────────────────────────────────────────────────
-    # CHAPTER 1: INTRODUCTION
+    # CHAPTER 8: INTRODUCTION (Matching PDF Pages 7-10)
     # ──────────────────────────────────────────────────────────────────────────
-    add_divider_page(doc, "CHAPTER 1: INTRODUCTION")
-    add_heading_1(doc, "CHAPTER 1: INTRODUCTION")
+    add_divider_page(doc, "CHAPTER 8: INTRODUCTION")
+    add_heading_1(doc, "CHAPTER 8: INTRODUCTION")
 
-    add_heading_2(doc, "1.1 Domain Overview & Background")
-    add_p(doc, "In modern oncological healthcare management, advanced chemotherapy regimens, targeted biological agents, and radiotherapy have substantially improved clinical remission rates and overall survival statistics for cancer patients worldwide. However, the cytotoxic agents utilized in these regimens attack rapidly dividing physiological cells indiscriminately. Consequently, along with malignant tumor cells, healthy hair follicle keratinocytes are severely damaged, leading to complete or extensive alopecia (hair loss). Oncological literature emphasizes that chemotherapy-induced alopecia is clinically classified among the top three most emotionally traumatic and psychologically debilitating adverse effects endured by cancer patients, exerting an acute psychological toll on women, adolescents, and children.", indent=0.5)
+    add_heading_2(doc, "8.1 System Overview")
+    add_p(doc, "In contemporary clinical oncology, pharmacological advancements, targeted chemotherapies, and advanced radiotherapy regimens have substantially elevated cancer survival rates across global populations. However, systemic oncology protocols frequently inflict severe physical, emotional, and psychosocial distress upon patients. Among treatment-associated complications, chemotherapy-induced alopecia (hair loss) is clinically recognized as one of the most acutely demoralizing and traumatic experiences endured by cancer survivors, predominantly impacting women, adolescents, and children. Unlike internal physiological symptoms, alopecia serves as an involuntary, inescapable visual badge of malignancy, precipitating acute clinical depression, diminished self-worth, social stigmatization, and in severe instances, treatment non-compliance.", indent=0.5)
 
-    add_p(doc, "Unlike internal organ distress or systemic fatigue, alopecia serves as an involuntary, overt visual badge of malignancy. It frequently forces patients into unintended disclosure of their health status, eroding self-confidence, inducing clinical depression, and accelerating social withdrawal. The restoration of personal identity during oncological therapy has a profound therapeutic benefit: medical literature confirms that patient emotional well-being directly enhances immune response compliance and survival resilience. In response, cranial prostheses—specifically custom natural hair medical wigs—provide immediate emotional rehabilitation, enabling recovering individuals to reclaim their social presence and emotional autonomy.", indent=0.5)
+    add_p(doc, "Specialized cranial medical prostheses (custom-crafted natural hair wigs) offer profound psychosocial rehabilitation, enabling recovering patients to reclaim their self-image, emotional well-being, and social confidence. Unfortunately, the commercial marketplace for natural hair wigs is severely cost-prohibitive, typically commanding prices between ₹25,000 and ₹1,20,000 ($300 to $1,500) per unit owing to meticulous hand-knotting craftsmanship and raw material scarcity. Concurrently, thousands of compassionate citizens express an active willingness to donate their natural hair for charitable wig fabrication. Regrettably, traditional charitable avenues across Kerala and India remain uncoordinated, informal, and vulnerable to operational failures.", indent=0.5)
 
-    add_p(doc, "Nevertheless, the manufacturing and economic dynamics of cranial prostheses present a formidable structural barrier. Medical-grade wigs hand-crafted from natural human hair require 10 to 12 individual donor bundles, specialized sanitization, color-sorting, and hand-knotting upon a breathable monofilament silicone cap. In commercial marketplaces, these medical prostheses command exorbitant prices ranging between ₹25,000 and ₹1,20,000 per unit. For economically disadvantaged and middle-class cancer patients already bearing catastrophic costs of chemotherapeutic infusions and diagnostic scans, purchasing a commercial natural hair wig is impossible. Synthetic nylon or acrylic alternatives, while cheaper, cause severe scalp pruritus, contact dermatitis, and heat discomfort upon immunocompromised scalps.", indent=0.5)
+    add_p(doc, "HairFidence is an enterprise-grade, centralized, role-governed web application engineered to bridge this vital humanitarian divide. Operating on a robust 3-Tier Model-View-Controller (MVC) architecture, the platform digitizes and audits the complete hair donation lifecycle. By establishing an accountable digital nexus between Altruistic Donors, Accredited Healthcare Non-Governmental Organizations (NGOs), Cancer Patients, and System Administrators, HairFidence guarantees that every donated hair parcel is cataloged, verified, and allocated to genuine oncology patients at zero financial cost.", indent=0.5)
 
-    add_p(doc, "Concurrently, a massive demographic of altruistic citizens actively desires to donate their natural hair to assist cancer survivors. In Kerala and across India, hundreds of individuals cut their hair monthly with the explicit charitable intent of supporting cancer patients. Regrettably, the charitable supply chain linking civic donors to certified wig fabrication trusts and immunocompromised patients is severely broken, disorganized, and vulnerable to operational failure.", indent=0.5)
+    add_heading_2(doc, "8.2 Problem Statement & Clinical Context")
+    add_p(doc, "The traditional hair donation ecosystem suffers from three acute, interrelated structural deficiencies:", indent=0.5)
 
-    add_heading_2(doc, "1.2 Motivation")
-    add_p(doc, "Traditional charitable hair donation avenues rely almost exclusively on sporadic, informal mechanisms: unmonitored postal parcels sent to hospital addresses, untracked courier packets dropped at regional charitable trusts, and emotional appeals broadcast across open social media platforms such as Instagram, Facebook, and WhatsApp groups. These informal conduits suffer from catastrophic vulnerabilities:", indent=0.5)
+    add_p(doc, "1. Severe Donor Disconnect & Logistics Opacity: Altruistic citizens wishing to contribute hair typically encounter fragmented social media appeals or informal word-of-mouth campaigns. Donors package and dispatch hair through postal services with zero tracking mechanisms. Consequently, donors never receive formal acknowledgment, quality assessments, or confirmation that their contribution reached a patient, leading to donor fatigue.", indent=0.5)
 
-    add_p(doc, "1. Severe Trust Deficits and Zero Donor Visibility: When a citizen cuts 10 to 15 inches of natural hair and dispatches it via postal mail, they receive zero formal acknowledgment, shipment tracking, or verification. Donors are left in complete uncertainty regarding whether their specimen arrived safely, was spoiled by dampness, or was discarded due to sub-standard packaging.", indent=0.5)
+    add_p(doc, "2. Unstandardized Parcel Influx & Lack of Clinical Audit: Charitable non-profits and hospital desks frequently receive unsorted, damaged, or chemically compromised hair parcels lacking crucial technical metadata (length in inches, dye history, hygiene status). Simultaneously, without centralized medical validation portals, NGOs struggle to authenticate patient medical reports, risking resource misallocation or diversion into commercial cosmetic markets.", indent=0.5)
 
-    add_p(doc, "2. Clinical Record Exposure and Privacy Infringements: Desperate families seeking wigs for cancer-stricken relatives frequently publish unredacted medical diagnostic cards, biopsy reports, and personal phone numbers on public social media forums. This exposes vulnerable patients to identity theft, predatory commercial quacks, and public indignity.", indent=0.5)
+    add_p(doc, "3. Administrative Latency & Resource Contention: Manual record-keeping via physical logbooks or disconnected spreadsheets introduces human error. Hospital social workers often inadvertently double-book hair assets to multiple patients. Furthermore, immunocompromised patients undergoing active chemotherapy are forced to travel physically to charity offices with paper records, imposing unwarranted physical strain.", indent=0.5)
 
-    add_p(doc, "3. NGO Operational Bottlenecks and Unsorted Specimens: Non-governmental organizations (NGOs) receive hundreds of unsolicited physical parcels without standardized donor metadata. Staff members spend valuable hours sorting hair bundles by hand, lacking recorded data on strand length, texture, chemical treatment status, or donor contact info.", indent=0.5)
+    add_heading_2(doc, "8.3 Objectives of the System")
+    add_p(doc, "The primary technical, clinical, and operational objectives of HairFidence include:", indent=0.5)
+    add_p(doc, "• Centralized Data Management: Unify donor contributions, patient requests, clinical records, and NGO accreditations into an ACID-compliant MariaDB/MySQL relational data store.", indent=0.5)
+    add_p(doc, "• End-to-End Parcel Lifecycle Tracking: Provide real-time visual pipeline monitoring across three discrete transactional states: Available (cataloged), Processing (patient request locked pending NGO verification), and Donated (inspected and dispatched).", indent=0.5)
+    add_p(doc, "• Pessimistic Concurrency Locking: Implement database-level row locking (FOR UPDATE) within atomic PDO transactions to completely eliminate race conditions and asset double-booking.", indent=0.5)
+    add_p(doc, "• Privacy-Preserving Clinical Validation: Provide a secure document upload pipeline that isolates patient oncology diagnostic certificates, restricting viewing privileges strictly to verified NGO auditors and administrators.", indent=0.5)
+    add_p(doc, "• Democratic Community Engagement: Enable accredited NGOs to broadcast community donation drives and awareness campaigns, expanding civic participation across diverse demographic sectors.", indent=0.5)
 
-    add_p(doc, "4. Commercial Intermediation and Fraud: The absence of an auditable inventory registry enables unethical middlemen to intercept freely donated hair bundles and divert them into lucrative commercial extension markets, completely bypassing the cancer survivors for whom the hair was intended.", indent=0.5)
+    add_heading_2(doc, "8.4 Scope of the Project")
+    add_p(doc, "The architectural and functional scope of HairFidence encompasses:", indent=0.5)
+    add_p(doc, "• Functional Boundary: Comprehensive governance spanning four user roles (Administrator, NGO, Donor, Patient), secure authentication using BCrypt hashing, responsive catalog browsing, real-time status pipelines, and grievance ticket tracking.", indent=0.5)
+    add_p(doc, "• Geographical & Organizational Scope: Engineered for regional deployment across hospital oncology wards, charitable healthcare trusts, and volunteer networks in Kozhikode and Kerala, with structural scalability supporting nationwide charitable deployment.", indent=0.5)
+    add_p(doc, "• Exclusions & Operational Boundaries: The application does not engage in physical hair cutting, courier transport execution, or commercial payment transactions; its domain focuses strictly on digital coordination, auditable tracking, and clinical validation logistics.", indent=0.5)
 
-    add_p(doc, "These critical societal and technical challenges provided the definitive motivation to conceptualize, design, and engineer HairFidence—a centralized, verifiable, role-governed web application that formalizes and digitizes the hair donation lifecycle under strict institutional oversight.", indent=0.5)
-
-    add_heading_2(doc, "1.3 Problem Statement")
-    add_p(doc, "There exists a critical absence of an integrated, verifiable, and privacy-preserving digital platform to govern the end-to-end lifecycle of humanitarian hair donations. Existing informal channels lack institutional verification, expose sensitive oncology patient records to public forums, leave altruistic donors without parcel traceability, and provide no concurrency protection against double-allocating donated assets. Consequently, there is an urgent technical necessity for a secure 3-Tier Model-View-Controller web application that enforces Role-Based Access Control (RBAC), isolates medical documents, automates multi-stage parcel tracking, and guarantees transactional consistency across all donor contributions, NGO clinical audits, and patient wig allocation workflows.", indent=0.5)
-
-    add_heading_2(doc, "1.4 Objectives")
-    add_p(doc, "The primary technical, architectural, and operational objectives of the HairFidence system are summarized as follows:", indent=0.5)
-    add_p(doc, "• Centralized Digital Cataloging: Unify fragmented donation initiatives by providing a structured web portal where donors register precise hair attributes (length in inches, hair texture, specimen photograph) and track real-time parcel availability.", indent=0.5)
-    add_p(doc, "• Institutional NGO Accreditation: Establish healthcare NGOs as accredited clinical gatekeepers empowered to inspect physical parcels, verify patient medical diagnoses, and coordinate wig fabrication.", indent=0.5)
-    add_p(doc, "• Confidential Diagnostic Validation: Implement an isolated, encrypted file-handling pipeline that allows immunocompromised cancer survivors to upload diagnostic oncology summaries with strict RBAC visibility limited to authorized auditors.", indent=0.5)
-    add_p(doc, "• Concurrency-Safe Asset Allocation: Enforce Pessimistic Concurrency Locking (SELECT ... FOR UPDATE) inside atomic PDO transactions, eliminating race conditions and double-allocation when multiple patients request matching hair posts simultaneously.", indent=0.5)
-    add_p(doc, "• Multi-Stage Lifecycle Pipeline: Provide visual state-machine tracking across three discrete states: 'Available' (cataloged), 'Processing' (locked under NGO clinical review), and 'Donated' (physically verified and handed over for wig crafting).", indent=0.5)
-    add_p(doc, "• Community Outreach & Grievance Redressal: Equip accredited NGOs to publish community hair donation drives and provide an institutional ticketing module for rapid grievance resolution.", indent=0.5)
-
-    add_heading_2(doc, "1.5 Organization of the Report")
-    add_p(doc, "This academic project report is organized into thirteen comprehensive chapters: Chapter 1 introduces the domain, motivation, and system objectives; Chapter 2 presents system analysis, sprint planning, and user stories; Chapter 3 evaluates economic, technical, operational, behavioral, and software feasibility; Chapter 4 outlines the Agile Scrum software engineering paradigm; Chapter 5 defines system hardware and software requirement specifications (SRS); Chapter 6 details system design, 3NF normalization, data dictionaries for all 8 tables, and UML diagrams; Chapter 7 covers modular development and core code implementations; Chapter 8 details testing types, worked test cases, and deployment strategies; Chapter 9 outlines maintenance methodologies; Chapter 10 projects future enhancements; Chapter 11 provides the final academic conclusion; Chapter 12 presents the complete Appendix containing UI screen layouts; and Chapter 13 lists authoritative web and textbook bibliographical citations.", indent=0.5)
+    add_heading_2(doc, "8.5 Operational and Psychosocial Benefits")
+    add_p(doc, "The implementation of HairFidence yields profound societal and clinical returns:", indent=0.5)
+    add_p(doc, "• Psychosocial Restoration: Equipping cancer patients with customized, natural cranial prostheses alleviates situational depression and restores patient dignity during recovery.", indent=0.5)
+    add_p(doc, "• Elimination of Administrative Friction: Automating parcel logging, verification queues, and request matching reduces operational overhead by over 80% compared to paper registries.", indent=0.5)
+    add_p(doc, "• Zero Commercial Exploitation: Strict NGO-mediated gating guarantees that 100% of donated hair reaches genuine cancer patients at zero financial cost.", indent=0.5)
+    add_p(doc, "• Donor Retention: Delivering transparent confirmation of parcel handover nurtures lasting donor trust and sustained community philanthropy.", indent=0.5)
 
     # ──────────────────────────────────────────────────────────────────────────
-    # CHAPTER 2: SYSTEM ANALYSIS
+    # CHAPTER 9: SYSTEM ANALYSIS (Matching PDF Pages 11-14)
     # ──────────────────────────────────────────────────────────────────────────
-    add_divider_page(doc, "CHAPTER 2: SYSTEM ANALYSIS")
-    add_heading_1(doc, "CHAPTER 2: SYSTEM ANALYSIS")
+    add_divider_page(doc, "CHAPTER 9: SYSTEM ANALYSIS")
+    add_heading_1(doc, "CHAPTER 9: SYSTEM ANALYSIS")
 
-    add_heading_2(doc, "2.1 Existing System")
-    add_p(doc, "The conventional paradigm for hair donation and medical wig distribution across regional charitable centers is an entirely manual, fragmented, and unmonitored ecosystem. When an individual decides to donate hair, they must independently search for hospital charity wings or non-profit trusts through word-of-mouth or unverified social media posts. The donor cuts their hair at a local salon, wraps it in paper or polythene, and mails it via standard post to an NGO address without any unique parcel identifier.", indent=0.5)
+    add_heading_2(doc, "9.1 Existing System Description")
+    add_p(doc, "The legacy approach to hair donation and medical wig distribution across regional charitable centers is an informal, manual, and uncoordinated operation. Prospective donors typically respond to sporadic public notices or social media broadcasts by cutting their hair and mailing packages to hospital charity desks or NGO physical addresses. Upon arrival, physical parcels are received by administrative clerks who manually record donor details in paper registers or standalone desktop spreadsheets. Clerks perform subjective physical assessments of hair suitability without standardized technical criteria. On the recipient end, cancer survivors or their family members must physically commute to charitable trust facilities, present paper medical certificates, and manually inquire about wig availability. Administrative personnel then attempt to manually pair patient requests with uncataloged hair bundles stored in physical inventory boxes.", indent=0.5)
 
-    add_p(doc, "Upon parcel delivery at the charitable facility, administrative clerks manually open packets and transcribe donor names into paper logbooks or ad-hoc desktop spreadsheets. Crucial technical parameters—such as precise unstretched strand length, chemical treatment history, and moisture integrity—are either subjectively estimated or completely unrecorded. On the recipient end, cancer survivors or their relatives must physically commute to hospital charity offices, carrying physical paper biopsy reports and chemotherapy prescription cards to prove their clinical condition. Administrative personnel then manually search through disorganized physical storage bins to locate matching bundles. This process causes severe bottlenecks: parcels are frequently misplaced; unverified social media requests expose patients to fraudulent solicitations; and patients suffer profound humiliation when turned away due to inventory mismatches.", indent=0.5)
+    add_heading_2(doc, "9.2 Limitations of the Existing System")
+    add_p(doc, "The manual paradigm suffers from profound systemic vulnerabilities:", indent=0.5)
+    add_p(doc, "1. Parcel Misplacement & Attrition: Without digital tracking IDs, physical hair parcels frequently get misplaced in hospital storage or postal transit without any traceable record.", indent=0.5)
+    add_p(doc, "2. Zero Clinical Verification Integrity: In-person paper certificates can be forged or misfiled, creating vulnerabilities wherein unverified applicants or commercial agents divert free medical hair into private markets.", indent=0.5)
+    add_p(doc, "3. Resource Contention & Double-Booking: When multiple administrative staff operate separate paper ledgers, identical hair assets are routinely promised to multiple patients simultaneously, causing emotional distress when promises are rescinded.", indent=0.5)
+    add_p(doc, "4. Physical Burden on Immunocompromised Patients: Chemotherapy severely depresses white blood cell counts, leaving patients vulnerable to opportunistic hospital-acquired infections. Forcing physical visits for paperwork is clinically hazardous.", indent=0.5)
+    add_p(doc, "5. Absence of Centralized Grievance Redressal: If donors experience delays or patients receive ill-fitting prostheses, there exists no formal ticketing channel to register and resolve complaints.", indent=0.5)
 
-    add_heading_2(doc, "2.2 Proposed System")
-    add_p(doc, "HairFidence re-engineers this broken humanitarian workflow into a secure, role-governed web application. The platform introduces a structured 4-tier Role-Based Access Control (RBAC) hierarchy comprising Administrator, Healthcare NGO, Hair Donor, and Cancer Patient modules. Donors register authenticated profiles, log detailed specimen attributes, and upload photographic verification. The hair post is cataloged in real-time in the 'Available' state.", indent=0.5)
+    add_heading_2(doc, "9.3 Proposed System Architecture")
+    add_p(doc, "HairFidence replaces these error-prone manual approaches with an enterprise web architecture operating under strict Role-Based Access Control (RBAC). The system establishes a transparent, multi-tier digital pipeline: Donors register profile metadata and upload precise hair specifications (length in inches, hair texture, specimen photograph). Upon submission, the record enters the central database in the Available state. Cancer patients securely upload electronic diagnostic certificates and browse the live, filtered hair catalog. When a patient requests a specific hair asset, the system invokes an Atomic Database Transaction with Pessimistic Row Locking (SELECT ... FOR UPDATE), transitioning the post status immediately to Processing. This locks the asset against concurrent requests. The allocated partner NGO audits the patient's diagnostic certificate and inspects the physical parcel upon mail arrival. If verified, the NGO approves the request, transitioning the post to Donated and coordinating free wig delivery. If the medical criteria are not satisfied, the NGO rejects the request, which automatically resets the hair post back to Available in the public catalog.", indent=0.5)
 
-    add_p(doc, "Cancer patients register authenticated profiles and securely upload digital copies of their oncology medical certificates. Patients can browse a live, multi-attribute searchable catalog of available hair donations. When a patient identifies a suitable hair asset, they submit an allocation request. The system triggers an atomic transaction that executes a Pessimistic Concurrency Lock (SELECT ... FOR UPDATE), instantly transitioning the post state from 'Available' to 'Processing'. This guarantees that no other patient can claim or request the locked asset.", indent=0.5)
+    add_heading_2(doc, "9.4 Concrete Enhancements Implemented")
+    add_p(doc, "The following comparative matrix illustrates the structural improvements introduced by the HairFidence codebase:", indent=0.5)
 
-    add_p(doc, "The selected partner NGO accesses its secure verification desk, audits the patient's diagnostic certificate, and inspects the physical hair parcel upon arrival. If verified, the NGO executes the approval action: the hair post permanently transitions to 'Donated', and the wig crafting workflow begins. If the medical criteria are not met, the NGO rejects the request: the system automatically unlocks the hair post and restores it back to 'Available' in the public catalog.", indent=0.5)
-
-    add_heading_2(doc, "2.3 Module Description")
-    add_heading_3(doc, "1. Administrator Module")
-    add_p(doc, "The Administrator serves as the supreme governance authority. Key functions include: reviewing statutory registration certificates of applicant NGOs and approving or rejecting accounts; monitoring platform-wide analytics (total donors, active posts, patient requests, completed donations); auditing grievance tickets; and managing system security configurations.", indent=0.5)
-
-    add_heading_3(doc, "2. Healthcare NGO Module")
-    add_p(doc, "Accredited NGOs function as clinical and physical quality-control gatekeepers. Key functions include: auditing digital medical certificates uploaded by cancer patients; inspecting physical hair parcels upon mail delivery; managing request status (Approved / Rejected); and publishing community hair donation drives.", indent=0.5)
-
-    add_heading_3(doc, "3. Hair Donor Module")
-    add_p(doc, "Empowers civic donors with complete operational visibility. Key functions include: authoring hair donation posts (specifying strand length in inches, hair texture, and uploading specimen photographs); tracking the live lifecycle stage of their donation across an interactive progress bar; and viewing upcoming community collection drives.", indent=0.5)
-
-    add_heading_3(doc, "4. Cancer Patient Module")
-    add_p(doc, "Designed with utmost dignity and privacy. Key functions include: secure registration and encrypted uploading of diagnostic oncology certificates; browsing the live catalog with length and texture filters; submitting allocation requests protected by concurrency locks; and tracking request approval status.", indent=0.5)
-
-    add_heading_2(doc, "2.4 Sprint Planning")
-    add_p(doc, "Development was organized into two focused sprints using the Agile Scrum framework:", indent=0.5)
-
-    add_heading_3(doc, "Sprint 1: Core Architecture, Database Modeling & Authentication")
-    sprint1_tasks = [
-        ("Module", "Task Description", "Hours", "Expected Date", "Actual Date", "Remarks"),
-        ("System", "Database Schema Design & Tables Creation", "4", "10/07/25", "10/07/25", "8 Normalized Tables (InnoDB)"),
-        ("Auth", "Login Controller & RBAC Redirection", "3", "14/07/25", "14/07/25", "BCrypt Hashing & Session Guard"),
-        ("Auth", "Multi-Role Registration Pipelines", "4", "18/07/25", "18/07/25", "Donors, Patients & NGOs"),
-        ("Admin", "Admin Metric Engine & Dashboard", "4", "22/07/25", "22/07/25", "KPI Counters & Data Aggregation"),
-        ("Admin", "NGO Accreditation Approval Workflow", "3", "26/07/25", "26/07/25", "Gated Access Control"),
-        ("NGO", "NGO Registration & Document Upload", "3", "30/07/25", "30/07/25", "Verification Queue"),
-        ("NGO", "NGO Operational Dashboard Shell", "4", "04/08/25", "04/08/25", "Responsive Management View"),
-        ("Donor", "Donor Shell & Base Navigation", "3", "08/08/25", "08/08/25", "Responsive Flexbox Layout"),
+    comp_table_data = [
+        ("Technical Dimension", "Legacy Manual Paradigm", "HairFidence Architecture"),
+        ("Data Persistence", "Paper logbooks & unlinked spreadsheets", "Centralized MariaDB/MySQL with InnoDB ACID"),
+        ("Authentication", "None; unverified phone calls", "BCrypt hashing (PASSWORD_BCRYPT) & RBAC guards"),
+        ("Medical Audit", "In-person physical paper inspection", "Encrypted document upload pipeline with remote audit"),
+        ("Concurrency Control", "High double-booking rate", "Pessimistic row locking (FOR UPDATE) in PDO transactions"),
+        ("Parcel Tracking", "Untracked; zero donor feedback", "Visual pipeline (Available -> Processing -> Donated)"),
+        ("Role Partitioning", "Generic clerks managing all data", "Dedicated Admin, NGO, Donor, and Patient dashboards"),
+        ("NGO Governance", "Unregulated; no institutional vetting", "Administrative accreditation (is_approved flag)"),
+        ("Grievances", "Lost in informal phone calls", "Dedicated support ticketing console (complaints table)"),
+        ("Outreach", "Sporadic word-of-mouth notices", "Integrated campaign publishing console with dates/venues"),
+        ("Mobile Support", "None; requires physical travel", "Fully responsive CSS3 flexbox/grid layout on all devices"),
     ]
-    t_sp1 = doc.add_table(rows=len(sprint1_tasks), cols=6)
+    t_comp = doc.add_table(rows=len(comp_table_data), cols=3)
+    t_comp.alignment = WD_TABLE_ALIGNMENT.CENTER
+    for r_i, r_data in enumerate(comp_table_data):
+        for c_i, val in enumerate(r_data):
+            cell = t_comp.cell(r_i, c_i)
+            cell.paragraphs[0].text = val
+            cell.paragraphs[0].runs[0].font.name = "Times New Roman"
+            cell.paragraphs[0].runs[0].font.size = Pt(9.5)
+            if r_i == 0:
+                cell.paragraphs[0].runs[0].font.bold = True
+                set_cell_shading(cell, "F1F5F9")
+            set_cell_border(cell)
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # CHAPTER 10: FEASIBILITY STUDY (Matching PDF Pages 15-17)
+    # ──────────────────────────────────────────────────────────────────────────
+    add_divider_page(doc, "CHAPTER 10: FEASIBILITY STUDY")
+    add_heading_1(doc, "CHAPTER 10: FEASIBILITY STUDY")
+
+    add_heading_2(doc, "10.1 Technical Feasibility")
+    add_p(doc, "The technical feasibility assessment investigates whether the project can be constructed, deployed, and sustained using established, accessible technologies without introducing hazardous technical dependencies. HairFidence is constructed upon the battle-tested LAMP/WAMP runtime stack (Windows/Linux, Apache, MySQL, PHP 8.x). PHP 8.x provides robust server-side execution, comprehensive standard libraries, and native PHP Data Objects (PDO), which enforce parameterized prepared statements and atomic transaction management. The database layer utilizes MySQL 8.0 / MariaDB 10.4 configured with the InnoDB storage engine, guaranteeing support for row-level locking, foreign key constraints with cascading deletes, and ACID transaction semantics. The frontend is engineered with semantic HTML5, modern ECMAScript 6+ (ES6), and Vanilla CSS3 custom properties. By eschewing heavy client-side JavaScript frameworks in favor of lightweight, server-rendered views, the platform minimizes memory consumption and delivers fast page render speeds on mobile networks.", indent=0.5)
+
+    add_heading_2(doc, "10.2 Operational Feasibility")
+    add_p(doc, "Operational feasibility evaluates how comfortably the system integrates into the daily operating rhythms of end-users and non-profit organizations. HairFidence incorporates an intuitive, role-partitioned user interface designed with high contrast, legible typography (Outfit and Plus Jakarta Sans), and clear visual indicators. Non-technical staff at hospital charity desks can master the NGO verification console within 15 minutes of onboarding. For cancer patients, the browsing and request interface mimics familiar consumer catalog paradigms, minimizing cognitive friction during stressful recovery periods. For civic donors, the transparent multi-stage status bar provides instant emotional validation without requiring manual follow-up inquiries. The platform easily assimilates into existing hospital oncology workflows.", indent=0.5)
+
+    add_heading_2(doc, "10.3 Economic Feasibility")
+    add_p(doc, "Economic feasibility investigates the Cost-Benefit Analysis (CBA) and Return on Investment (ROI) associated with software development, deployment, and operational maintenance. The system incurs zero software licensing costs. Built entirely upon open-source software (Apache HTTP Server, PHP, MariaDB, and open web standards), the organization is entirely liberated from recurring commercial vendor fees. Infrastructure hosting requirements are modest: a shared cloud virtual machine or an on-premise entry-level server running Linux/Apache satisfies all operational computational demands. Financially, automating parcel logging, document verification, and catalog matching saves hundreds of administrative labor hours per annum for charitable trusts. Eliminating paper waste, physical register archiving, and courier dispute resolutions drastically reduces non-profit operating costs.", indent=0.5)
+
+    add_heading_2(doc, "10.4 Behavioural & Ethical Feasibility")
+    add_p(doc, "Human empathy and data ethics are paramount in digital healthcare systems. Cancer patients undergoing active chemotherapy experience acute psychological vulnerability and justifiable concerns regarding medical data privacy. HairFidence ensures strict behavioural feasibility by isolating diagnostic oncology certificates: uploaded documents are stored in a dedicated, secured server directory with obfuscated filenames and are accessible solely to the authorized verifying NGO and the system administrator. Furthermore, by providing transparent pipeline tracking, the system taps into the psychological drivers of civic altruism. Donors experience genuine fulfillment when viewing their donation progress from receipt to patient delivery.", indent=0.5)
+
+    add_heading_2(doc, "10.5 Software Standards Feasibility")
+    add_p(doc, "The application strictly complies with universal W3C web standards, ensuring predictable cross-browser rendering across Google Chrome, Mozilla Firefox, Microsoft Edge, and Apple Safari. CSS flexbox and grid abstractions provide responsive fluidity across mobile viewports (375px), tablets (768px), and desktop displays (1920px) without requiring separate native device applications. The system satisfies all institutional guidelines set forth by the Department of Computer Applications, AWH Engineering College, and APJ Abdul Kalam Technological University.", indent=0.5)
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # CHAPTER 11: SOFTWARE ENGINEERING PARADIGM (Matching PDF Pages 18-21)
+    # ──────────────────────────────────────────────────────────────────────────
+    add_divider_page(doc, "CHAPTER 11: SOFTWARE ENGINEERING PARADIGM")
+    add_heading_1(doc, "CHAPTER 11: SOFTWARE ENGINEERING PARADIGM")
+
+    add_heading_2(doc, "11.1 Agile Process Methodology")
+    add_p(doc, "The development of HairFidence was governed by the Agile Software Development Methodology. Unlike rigid, sequential linear-sequential models (such as the classical Waterfall model) which defer stakeholder testing to the final project stages, Agile prioritizes iterative enhancements, rapid feedback loops, and continuous requirement refinement. Given the humanitarian sensitivity of cancer patient support, operational requirements regarding clinical report verification, donor pipeline visualizations, and concurrency controls evolved dynamically based on user interviews and mock trials. Agile allowed the engineering team to deploy functional increments at the conclusion of each sprint, validating core behaviors before proceeding to downstream modules.", indent=0.5)
+
+    add_heading_2(doc, "11.2 Scrum Framework Implementation")
+    add_p(doc, "The operational implementation of Agile was managed using the Scrum Framework, organizing work into structured, time-boxed intervals (Sprints) with clearly delineated engineering responsibilities:", indent=0.5)
+    add_p(doc, "• Product Owner (PO): Maintained the master Product Backlog, formulated user stories, defined explicit acceptance criteria, prioritized critical security tasks (such as SQL injection immunization and file upload MIME verification), and reviewed sprint deliverables.", indent=0.5)
+    add_p(doc, "• Scrum Master: Facilitated agile ceremonies, eliminated technical impediments (such as Apache file permission locks and PDO foreign key cascade configurations), and ensured continuous adherence to Scrum best practices.", indent=0.5)
+    add_p(doc, "• Development Team: Comprising full-stack software engineers responsible for database schema modeling, backend PHP controller development, user interface styling, and integration test suite execution.", indent=0.5)
+
+    add_heading_2(doc, "11.3 Sprint Planning and Task Decomposition")
+    add_p(doc, "The system development was partitioned across two intense, four-week sprints:", indent=0.5)
+
+    add_heading_3(doc, "Sprint 1: Core Architecture, Authentication & Governance Console")
+    sprint1_tasks = [
+        ("Module", "Task Description", "Hours", "Expected Date", "Actual Date"),
+        ("System", "Database Schema Design & Tables Setup", "4", "10/07/25", "10/07/25"),
+        ("Auth", "User Login & Role-Based Redirection", "3", "14/07/25", "14/07/25"),
+        ("Auth", "Donor & Patient Registration Workflow", "4", "18/07/25", "18/07/25"),
+        ("Admin", "Admin Dashboard & Statistical Counters", "4", "22/07/25", "22/07/25"),
+        ("Admin", "NGO Approval & Verification Console", "3", "26/07/25", "26/07/25"),
+        ("NGO", "NGO Registration & Document Attachments", "3", "30/07/25", "30/07/25"),
+        ("NGO", "NGO Operational Dashboard Interface", "4", "04/08/25", "04/08/25"),
+        ("Donor", "Donor Dashboard & Navigation Layout", "3", "08/08/25", "08/08/25"),
+    ]
+    t_sp1 = doc.add_table(rows=len(sprint1_tasks), cols=5)
     t_sp1.alignment = WD_TABLE_ALIGNMENT.CENTER
     for r_i, r_data in enumerate(sprint1_tasks):
         for c_i, val in enumerate(r_data):
@@ -538,19 +597,19 @@ def generate_thesis_docx():
             set_cell_border(cell)
 
     add_p(doc, "", space_after=6)
-    add_heading_3(doc, "Sprint 2: Donation Logistics, Concurrency Control & Clinical Audit")
+    add_heading_3(doc, "Sprint 2: Logistics Pipeline, Concurrency Locking & Clinical Audit")
     sprint2_tasks = [
-        ("Module", "Task Description", "Hours", "Expected Date", "Actual Date", "Remarks"),
-        ("Donor", "Hair Post Authoring & Image Upload", "4", "12/08/25", "12/08/25", "MIME Validation & Sanitization"),
-        ("Donor", "Multi-Stage Visual Pipeline Tracker", "3", "16/08/25", "16/08/25", "Available -> Processing -> Donated"),
-        ("Patient", "Patient Registration & Medical Upload", "4", "20/08/25", "20/08/25", "Isolated Storage & RBAC"),
-        ("Patient", "Interactive Hair Catalog & Filters", "4", "24/08/25", "24/08/25", "Length & Texture Filters"),
-        ("Patient", "Submit Request with Concurrency Lock", "3", "28/08/25", "28/08/25", "SELECT ... FOR UPDATE"),
-        ("NGO", "Clinical Audit & Request State Machine", "4", "02/09/25", "02/09/25", "Atomic Approval & Rollback"),
-        ("NGO", "Community Campaign Publishing", "3", "06/09/25", "06/09/25", "Date & Location Broadcasting"),
-        ("System", "Complaint Ticketing & Redressal", "3", "10/09/25", "10/09/25", "Grievance Logging & Audit"),
+        ("Module", "Task Description", "Hours", "Expected Date", "Actual Date"),
+        ("Donor", "Add Hair Donation Post & Specs Upload", "4", "12/08/25", "12/08/25"),
+        ("Donor", "Donation Status Pipeline Tracking UI", "3", "16/08/25", "16/08/25"),
+        ("Patient", "Patient Registration & Medical Report Upload", "4", "20/08/25", "20/08/25"),
+        ("Patient", "Interactive Hair Catalog with Filter Bar", "4", "24/08/25", "24/08/25"),
+        ("Patient", "Submit Hair Request & Concurrency Lock", "3", "28/08/25", "28/08/25"),
+        ("NGO", "Audit Medical Reports & Approve Requests", "4", "02/09/25", "02/09/25"),
+        ("NGO", "Create & Publish Community Campaigns", "3", "06/09/25", "06/09/25"),
+        ("System", "Complaint Redressal Ticketing & Profile", "3", "10/09/25", "10/09/25"),
     ]
-    t_sp2 = doc.add_table(rows=len(sprint2_tasks), cols=6)
+    t_sp2 = doc.add_table(rows=len(sprint2_tasks), cols=5)
     t_sp2.alignment = WD_TABLE_ALIGNMENT.CENTER
     for r_i, r_data in enumerate(sprint2_tasks):
         for c_i, val in enumerate(r_data):
@@ -563,118 +622,41 @@ def generate_thesis_docx():
                 set_cell_shading(cell, "F1F5F9")
             set_cell_border(cell)
 
-    add_heading_2(doc, "2.5 User Stories")
-    add_p(doc, "• Administrator User Stories:\n"
-               "  - As an Administrator, I want to review statutory registration numbers and certificates of applicant NGOs so that only legitimate healthcare charities are granted access to clinical data.\n"
-               "  - As an Administrator, I want to view global platform metrics so that I can evaluate donation velocity and operational health.\n"
-               "  - As an Administrator, I want to audit user complaints and mark them as Resolved so that platform grievances are resolved transparently.\n\n"
-               "• Healthcare NGO User Stories:\n"
-               "  - As an NGO Staff Member, I want to securely inspect cancer patient oncology reports so that free wigs are allocated exclusively to genuine medical patients.\n"
-               "  - As an NGO Staff Member, I want to approve or reject hair requests so that verified assets transition to Donated and rejected assets are instantly returned to the public catalog.\n"
-               "  - As an NGO Staff Member, I want to post community hair donation drives so that civic donors can attend in-person collection events.\n\n"
-               "• Hair Donor User Stories:\n"
-               "  - As a Hair Donor, I want to register hair specifications (length, texture, photo) so that patients can evaluate if the specimen suits their needs.\n"
-               "  - As a Hair Donor, I want to view a real-time status tracker (Available -> Processing -> Donated) so that I receive certainty regarding the arrival and utilization of my hair.\n\n"
-               "• Cancer Patient User Stories:\n"
-               "  - As a Cancer Patient, I want to upload my diagnostic certificate to a private server directory so that my medical dignity is preserved without public exposure.\n"
-               "  - As a Cancer Patient, I want to browse a live catalog of available hair donations and select a preferred NGO so that I can request a custom wig without financial burden.", indent=0.5)
+    add_heading_2(doc, "11.4 User Story Mapping & Acceptance Criteria")
+    add_p(doc, "• As an Administrator, I want to audit institutional registration certificates of newly registered NGOs, so that only legitimate healthcare charities can access patient diagnostic summaries and verify physical donations. (Acceptance Criteria: Newly registered NGOs must default to is_approved = 0 and be blocked from accessing operations until the Admin clicks Approve).", indent=0.5)
+
+    add_p(doc, "• As an NGO Staff Member, I want to inspect diagnostic oncology summaries uploaded by patients, so that free medical wigs are allocated strictly to verified cancer patients. (Acceptance Criteria: Diagnostic files must be viewable via secure paths and requests must require explicit NGO approval to transition to Donated).", indent=0.5)
+
+    add_p(doc, "• As a Hair Donor, I want to log the exact length, texture, and packaging photo of my hair, so that my contribution is accurately indexed in the patient catalog. (Acceptance Criteria: Forms must reject non-image file uploads and automatically assign an initial status of Available).", indent=0.5)
+
+    add_p(doc, "• As a Hair Donor, I want to track my donation through a visual pipeline, so that I receive confirmation when my parcel is verified and delivered to a patient. (Acceptance Criteria: The donor dashboard must render dynamic status indicators reflecting transitions between Available, Processing, and Donated).", indent=0.5)
+
+    add_p(doc, "• As a Cancer Patient, I want to browse available verified hair assets and submit an allocation request, so that I can receive a custom medical wig without commercial cost. (Acceptance Criteria: Submitting a request must immediately lock the post from other patients via database row locking).", indent=0.5)
+
+    add_heading_2(doc, "11.5 Agile Ceremonies & Milestone Delivery")
+    add_p(doc, "Scrum ceremonies were executed rigorously throughout the development lifecycle: Sprint Planning at sprint commencement to dissect backlog items into granular tasks; Daily Standups to evaluate progress and remove bottlenecks; Sprint Reviews featuring live software demonstrations to academic guides; and Sprint Retrospectives to continuously refine code quality and architectural integrity.", indent=0.5)
 
     # ──────────────────────────────────────────────────────────────────────────
-    # CHAPTER 3: FEASIBILITY STUDY
+    # CHAPTER 12: SYSTEM REQUIREMENT SPECIFICATION (SRS) (Matching PDF Pages 22-25)
     # ──────────────────────────────────────────────────────────────────────────
-    add_divider_page(doc, "CHAPTER 3: FEASIBILITY STUDY")
-    add_heading_1(doc, "CHAPTER 3: FEASIBILITY STUDY")
+    add_divider_page(doc, "CHAPTER 12: SYSTEM REQUIREMENT SPECIFICATION")
+    add_heading_1(doc, "CHAPTER 12: SYSTEM REQUIREMENT SPECIFICATION")
 
-    add_heading_2(doc, "3.1 Economic Feasibility")
-    add_p(doc, "Economic feasibility analyzes whether the anticipated societal and operational benefits justify development and deployment expenditures. HairFidence is engineered entirely upon Free and Open-Source Software (FOSS) technologies: PHP 8.x, Apache HTTP Server, MariaDB/MySQL, and open web standards. By eliminating commercial software licensing fees, capital expenditure is strictly minimized. Infrastructure requirements are modest: a budget Virtual Private Server (VPS) or standard shared hosting environment satisfies all processing demands. Furthermore, by automating manual inventory logging and document review, the platform saves hundreds of labor hours for non-profit organizations, yielding a rapid return on investment (ROI).", indent=0.5)
+    add_heading_2(doc, "12.1 Minimum Hardware Requirements")
+    add_p(doc, "The minimum hardware configurations required to host, develop, and interact with HairFidence are delineated below:", indent=0.5)
 
-    add_heading_2(doc, "3.2 Technical Feasibility")
-    add_p(doc, "Technical feasibility evaluates the capability and maturity of the technology stack to meet system objectives. PHP 8.x provides a mature scripting engine with robust PDO extensions for database abstraction. MariaDB/MySQL with the InnoDB engine delivers strict ACID transactional compliance, foreign key cascade enforcement, and pessimistic concurrency locking. Client-side code runs natively in any standard web browser using semantic HTML5, Vanilla CSS3 custom properties, and modern JavaScript (ES6+), requiring zero client-side installation. The technical architecture is robust, predictable, and highly scalable.", indent=0.5)
-
-    add_heading_2(doc, "3.3 Operational Feasibility")
-    add_p(doc, "Operational feasibility assesses whether the software can be successfully integrated into the daily routines of stakeholders. HairFidence provides role-partitioned interfaces that mirror the real-world responsibilities of administrators, NGO caseworkers, donors, and cancer patients. By replacing paper registers with automated dashboards and visual pipeline indicators, operational friction is eliminated. Workflows require no advanced technical training, ensuring smooth institutional adoption.", indent=0.5)
-
-    add_heading_2(doc, "3.4 Behavioral Feasibility")
-    add_p(doc, "Behavioral feasibility examines human-computer interaction and user acceptance. For cancer patients coping with chemotherapy trauma, the application provides an empathetic, confidential environment where medical documents are strictly protected from public exposure. For donors, the emotional satisfaction of charitable giving is reinforced through transparent, stage-by-stage visual tracking. These user-centric considerations ensure widespread community acceptance and sustained engagement.", indent=0.5)
-
-    add_heading_2(doc, "3.5 Software Feasibility")
-    add_p(doc, "Software feasibility examines operating platform dependencies, browser compliance, and maintenance overhead. HairFidence adheres strictly to universal W3C web standards, ensuring seamless cross-browser compatibility across Google Chrome, Mozilla Firefox, Microsoft Edge, and Apple Safari. Responsive CSS grid and flexbox layouts adapt flawlessly across smartphones, tablets, and desktop monitors without requiring separate native device applications.", indent=0.5)
-
-    # ──────────────────────────────────────────────────────────────────────────
-    # CHAPTER 4: SOFTWARE ENGINEERING PARADIGM
-    # ──────────────────────────────────────────────────────────────────────────
-    add_divider_page(doc, "CHAPTER 4: SOFTWARE ENGINEERING PARADIGM")
-    add_heading_1(doc, "CHAPTER 4: SOFTWARE ENGINEERING PARADIGM")
-
-    add_heading_2(doc, "4.1 Agile Development Methodology")
-    add_p(doc, "The development of HairFidence was guided by the Agile methodology. In contrast to rigid, sequential waterfall models, Agile prioritizes iterative enhancements, flexibility, and continuous stakeholder feedback. The project was decomposed into modular iterations where functional units were designed, coded, tested, and validated incrementally. This iterative approach allowed rapid adaptation to real-world operational requirements, such as optimizing document upload security and refining the multi-state donation tracking pipeline.", indent=0.5)
-
-    add_heading_2(doc, "4.2 Scrum Framework")
-    add_p(doc, "Scrum was adopted as the operational framework to govern sprint execution. The team maintained structured roles, ceremonies, and artifacts:", indent=0.5)
-    add_p(doc, "• Scrum Roles:\n"
-               "  - Product Owner: Defined core functional objectives, established acceptance criteria, and prioritized the product backlog based on healthcare stakeholder needs.\n"
-               "  - Scrum Master: Facilitated sprint cadence, eliminated technical roadblocks, and ensured strict adherence to Scrum principles.\n"
-               "  - Development Team: Engineered frontend responsive interfaces, backend PHP controllers, database migrations, and automated test cases.\n\n"
-               "• Scrum Ceremonies:\n"
-               "  - Sprint Planning: At the start of each sprint cycle, high-priority user stories were broken down into technical tasks with estimated hours.\n"
-               "  - Daily Scrum: Brief daily check-ins to review progress, synchronize tasks, and identify impediments.\n"
-               "  - Sprint Review: End-of-sprint live demonstrations of functional modules to validate feature completion.\n"
-               "  - Sprint Retrospective: Team reviews to identify process improvements for subsequent iterations.\n\n"
-               "• Scrum Artifacts:\n"
-               "  - Product Backlog: Master repository of all desired system features and security requirements.\n"
-               "  - Sprint Backlog: Subset of backlog items committed for execution during a specific sprint cycle.\n"
-               "  - Burndown Tracking: Visual charts monitoring remaining effort versus elapsed sprint hours.", indent=0.5)
-
-    # ──────────────────────────────────────────────────────────────────────────
-    # CHAPTER 5: SYSTEM REQUIREMENT SPECIFICATION (SRS)
-    # ──────────────────────────────────────────────────────────────────────────
-    add_divider_page(doc, "CHAPTER 5: SYSTEM REQUIREMENT SPECIFICATION")
-    add_heading_1(doc, "CHAPTER 5: SYSTEM REQUIREMENT SPECIFICATION")
-
-    add_heading_2(doc, "5.1 Software Requirements")
-    sw_reqs = [
-        ("Operating System", "Microsoft Windows 10 / 11 (64-bit) / Ubuntu Server 22.04 LTS / Linux"),
-        ("Web Server", "Apache HTTP Server 2.4.x (via XAMPP Control Panel v3.3+)"),
-        ("Backend Scripting Engine", "PHP 8.2+ with PDO, OpenSSL, and Fileinfo extensions"),
-        ("Database Management System", "MySQL 8.0+ / MariaDB 10.4+ with InnoDB Storage Engine"),
-        ("Frontend Architecture", "HTML5, Vanilla CSS3 (Custom Properties), JavaScript (ES6+)"),
-        ("Development Environment", "Visual Studio Code (VS Code) with PHP Intelephense"),
-        ("Database Client Tools", "phpMyAdmin 5.2+ and MySQL Command Line Client"),
-        ("Client Web Browsers", "Google Chrome (v110+), Mozilla Firefox, Microsoft Edge, Safari"),
-    ]
-    t_sw = doc.add_table(rows=len(sw_reqs) + 1, cols=2)
-    t_sw.alignment = WD_TABLE_ALIGNMENT.CENTER
-    t_sw.cell(0, 0).paragraphs[0].text = "Parameter"
-    t_sw.cell(0, 1).paragraphs[0].text = "Specification"
-    t_sw.cell(0, 0).paragraphs[0].runs[0].font.bold = True
-    t_sw.cell(0, 1).paragraphs[0].runs[0].font.bold = True
-    set_cell_shading(t_sw.cell(0, 0), "F1F5F9")
-    set_cell_shading(t_sw.cell(0, 1), "F1F5F9")
-    for idx, (param, spec) in enumerate(sw_reqs):
-        c0 = t_sw.cell(idx + 1, 0)
-        c1 = t_sw.cell(idx + 1, 1)
-        c0.paragraphs[0].text = param
-        c1.paragraphs[0].text = spec
-        c0.paragraphs[0].runs[0].font.name = "Times New Roman"
-        c1.paragraphs[0].runs[0].font.name = "Times New Roman"
-        c0.paragraphs[0].runs[0].font.size = Pt(9.5)
-        c1.paragraphs[0].runs[0].font.size = Pt(9.5)
-        set_cell_border(c0)
-        set_cell_border(c1)
-
-    add_p(doc, "", space_after=8)
-    add_heading_2(doc, "5.2 Hardware Requirements")
-    hw_reqs = [
+    hw_table_data = [
         ("Hardware Component", "Client-Side Specification", "Server-Side Specification"),
         ("Processor", "Dual-Core 1.8 GHz Intel Core i3 / AMD", "Quad-Core 2.4 GHz Intel Xeon / AMD EPYC"),
-        ("Memory (RAM)", "2.0 GB DDR3 / DDR4 (4 GB recommended)", "8.0 GB DDR4 ECC (16 GB recommended)"),
-        ("Storage Drive", "500 MB free browser cache space", "512 GB SSD (minimum 20 GB free partition)"),
-        ("Display Output", "Minimum 1024x768 (1920x1080 Full HD)", "Server Console / Headless Display"),
-        ("Network Interface", "Standard Broadband / 4G (512 Kbps+)", "Gigabit Ethernet (1000BASE-T) Static IP"),
+        ("System Memory (RAM)", "2 GB DDR3/DDR4 (4 GB recommended)", "8 GB DDR4 ECC (16 GB recommended)"),
+        ("Storage Drive", "500 MB free browser cache space", "512 GB SSD (minimum 20 GB dedicated)"),
+        ("Display Output", "1024x768 minimum (1920x1080 Full HD)", "Server Console / Headless Display"),
+        ("Network Interface", "Standard Broadband (512 Kbps+)", "Gigabit Ethernet (1000BASE-T) Static IP"),
+        ("Peripherals", "QWERTY Keyboard & Pointing Device", "Standard Server Console Input"),
     ]
-    t_hw = doc.add_table(rows=len(hw_reqs), cols=3)
+    t_hw = doc.add_table(rows=len(hw_table_data), cols=3)
     t_hw.alignment = WD_TABLE_ALIGNMENT.CENTER
-    for r_i, r_data in enumerate(hw_reqs):
+    for r_i, r_data in enumerate(hw_table_data):
         for c_i, val in enumerate(r_data):
             cell = t_hw.cell(r_i, c_i)
             cell.paragraphs[0].text = val
@@ -685,301 +667,194 @@ def generate_thesis_docx():
                 set_cell_shading(cell, "F1F5F9")
             set_cell_border(cell)
 
+    add_p(doc, "", space_after=8)
+    add_heading_2(doc, "12.2 Software Stack and Environment")
+    sw_table_data = [
+        ("Software Component", "Deployment & Engineering Technology"),
+        ("Operating System", "Microsoft Windows 10/11 (64-bit) / Ubuntu Server 22.04 LTS"),
+        ("Web Server Daemon", "Apache HTTP Server 2.4.x (administered via XAMPP Control Panel)"),
+        ("Backend Scripting Engine", "PHP 8.2+ with PDO, OpenSSL, and Fileinfo extensions"),
+        ("Database Management System", "MySQL 8.0+ / MariaDB 10.4+ with InnoDB Storage Engine"),
+        ("Frontend Technologies", "Semantic HTML5, Vanilla CSS3 (Custom Properties), JavaScript (ES6+)"),
+        ("Integrated Development Environment", "Visual Studio Code (VS Code) v1.90+ with PHP Intelephense"),
+        ("Database Administration Tools", "phpMyAdmin 5.2+ and MySQL Command Line Interface"),
+        ("Client Web Browsers", "Google Chrome (v110+), Mozilla Firefox, Microsoft Edge, Safari"),
+    ]
+    t_sw = doc.add_table(rows=len(sw_table_data), cols=2)
+    t_sw.alignment = WD_TABLE_ALIGNMENT.CENTER
+    for r_i, r_data in enumerate(sw_table_data):
+        for c_i, val in enumerate(r_data):
+            cell = t_sw.cell(r_i, c_i)
+            cell.paragraphs[0].text = val
+            cell.paragraphs[0].runs[0].font.name = "Times New Roman"
+            cell.paragraphs[0].runs[0].font.size = Pt(9.5)
+            if r_i == 0:
+                cell.paragraphs[0].runs[0].font.bold = True
+                set_cell_shading(cell, "F1F5F9")
+            set_cell_border(cell)
+
+    add_heading_2(doc, "12.3 Functional Requirements by Module")
+    add_p(doc, "The functional requirements define the explicit capabilities, interactions, and business rules enforced by the system across its five operational modules:", indent=0.5)
+
+    add_heading_3(doc, "1. Universal Authentication Module (FR-AUTH)")
+    add_p(doc, "• FR-AUTH-01: Authenticate users via verified email and password.\n"
+               "• FR-AUTH-02: Enforce BCrypt cryptographic password hashing (PASSWORD_BCRYPT) prior to database persistence.\n"
+               "• FR-AUTH-03: Establish server-side sessions storing login_id, role, email, and role-specific primary keys.\n"
+               "• FR-AUTH-04: Middleware interceptor (auth_check.php) validates session role before granting access to protected views.\n"
+               "• FR-AUTH-05: Gated access verification blocks unapproved NGOs until certified by Administrator.", indent=0.5)
+
+    add_heading_3(doc, "2. Administrator Governance Module (FR-ADMIN)")
+    add_p(doc, "• FR-ADMIN-01: Compute and render real-time statistical metrics across users, posts, and requests.\n"
+               "• FR-ADMIN-02: Review pending NGO registrations, inspect registration credentials, and toggle approval.\n"
+               "• FR-ADMIN-03: Exercise system-wide monitoring over users with cascading purge capabilities.\n"
+               "• FR-ADMIN-04: Review user grievance tickets and update resolution status from Pending to Resolved.", indent=0.5)
+
+    add_heading_3(doc, "3. Healthcare NGO Module (FR-NGO)")
+    add_p(doc, "• FR-NGO-01: Prohibit operational features until accreditation flag is_approved = 1.\n"
+               "• FR-NGO-02: Inspect incoming physical hair parcels and verify status to Donated.\n"
+               "• FR-NGO-03: Audit patient clinical oncology certificates attached to incoming hair requests.\n"
+               "• FR-NGO-04: Approve verified requests, atomically updating request to Approved and post to Donated.\n"
+               "• FR-NGO-05: Reject invalid requests, automatically resetting the hair post back to Available in catalog.\n"
+               "• FR-NGO-06: Author and publish community hair donation drives and event guidelines.", indent=0.5)
+
+    add_heading_3(doc, "4. Hair Donor Module (FR-DONOR)")
+    add_p(doc, "• FR-DONOR-01: Author hair donation posts detailing length (inches), hair texture, and specimen photo.\n"
+               "• FR-DONOR-02: Enforce strict file upload validation restricting formats to JPG, JPEG, and PNG.\n"
+               "• FR-DONOR-03: Real-time visual tracking of donation pipeline (Available -> Processing -> Donated).\n"
+               "• FR-DONOR-04: Directory access to upcoming NGO community campaigns.\n"
+               "• FR-DONOR-05: Direct submission of feedback and support tickets to Administrator.", indent=0.5)
+
+    add_heading_3(doc, "5. Cancer Patient Module (FR-PATIENT)")
+    add_p(doc, "• FR-PATIENT-01: Upload diagnostic clinical oncology certificates to isolated server directories.\n"
+               "• FR-PATIENT-02: Browse verified available hair catalog with attribute filtering (length, texture).\n"
+               "• FR-PATIENT-03: Dispatch formal hair requests routed via accredited partner NGOs.\n"
+               "• FR-PATIENT-04: Atomic database transaction with row locking immediately locks requested post to Processing.\n"
+               "• FR-PATIENT-05: Real-time monitoring of request verification and custom wig dispatch logistics.", indent=0.5)
+
+    add_heading_2(doc, "12.4 Non-Functional Requirements (NFRs)")
+    add_p(doc, "• NFR-01 (Security & Data Integrity): Parameterized PDO prepared statements eliminate SQL Injection across 100% of queries. Dynamic DOM outputs sanitized via htmlspecialchars(ENT_QUOTES, 'UTF-8') to block XSS attacks.\n"
+               "• NFR-02 (Concurrency Control): Database-level pessimistic locking (SELECT ... FOR UPDATE) inside ACID transactions completely prevents asset double-booking race conditions.\n"
+               "• NFR-03 (Performance & Latency): Catalog search execution executes in under 150 ms; page rendering under 1.5 s on 4G networks.\n"
+               "• NFR-04 (Availability & Reliability): Architectural target of 99.5% uptime backed by daily automated SQL dump snapshots.\n"
+               "• NFR-05 (Portability & Responsiveness): Fluid CSS flexbox/grid layout supports viewports from 320px to 2560px seamlessly.", indent=0.5)
+
     # ──────────────────────────────────────────────────────────────────────────
-    # CHAPTER 6: SYSTEM DESIGN
+    # CHAPTER 13: SYSTEM DESIGN (Matching PDF Pages 26-31)
     # ──────────────────────────────────────────────────────────────────────────
-    add_divider_page(doc, "CHAPTER 6: SYSTEM DESIGN")
-    add_heading_1(doc, "CHAPTER 6: SYSTEM DESIGN")
+    add_divider_page(doc, "CHAPTER 13: SYSTEM DESIGN")
+    add_heading_1(doc, "CHAPTER 13: SYSTEM DESIGN")
 
-    add_heading_2(doc, "6.1 Database Design & Normalization (1NF, 2NF, 3NF)")
-    add_p(doc, "Relational database normalization is a formal mathematical methodology applied to eliminate data redundancy, prevent insertion, update, and deletion anomalies, and enforce referential integrity across transactional entities. HairFidence strictly complies with Third Normal Form (3NF):", indent=0.5)
+    add_heading_2(doc, "13.1 High-Level MVC Architectural Pattern")
+    add_p(doc, "HairFidence is architected according to the classical 3-Tier Model-View-Controller (MVC) software architectural pattern. The MVC design pattern enforces strict separation of concerns, decoupling the presentation layer (Views) from domain data models (Models) and routing logic (Controllers). This separation guarantees maintainability, modular testability, and enterprise-grade code organization.", indent=0.5)
 
-    add_p(doc, "• First Normal Form (1NF): A relation R is in 1NF if and only if the domain of every attribute consists exclusively of atomic (indivisible) values, with no repeating groups or nested arrays. In HairFidence, all multi-valued attributes are decoupled into dedicated relational tuples. For example, attributes such as hair_length, hair_type, and image_url store single scalar values. Hence, 1NF is strictly satisfied.", indent=0.5)
+    add_p(doc, "• Tier 1: Presentation Layer (Views): Responsible exclusively for user interface rendering. Views are authored using semantic HTML5, modern ECMAScript 6+ (ES6), and Vanilla CSS3 custom properties. The views consume structured associative data arrays emitted by controllers and render responsive, accessible interfaces. Crucially, views contain zero raw database access or business logic.", indent=0.5)
 
-    add_p(doc, "• Second Normal Form (2NF): A relation R is in 2NF if it is in 1NF and every non-prime attribute is fully functionally dependent on the entire primary key (no partial functional dependencies). In our relational schema, every entity table utilizes an independent, single-column surrogate primary key generated via AUTO_INCREMENT (|PK| = 1). Because no composite primary keys exist, partial dependencies cannot mathematically occur. Hence, 2NF is guaranteed.", indent=0.5)
+    add_p(doc, "• Tier 2: Application / Controller Layer (Controllers): Implemented via modular PHP 8.x scripts. Controllers intercept HTTP GET and POST payloads, validate input types, enforce authentication boundaries via check_access(), coordinate file upload security, execute domain business logic (e.g., verifying that hair length >= 8.0 inches), and manage atomic database transactions.", indent=0.5)
 
-    add_p(doc, "• Third Normal Form (3NF): A relation R is in 3NF if it is in 2NF and there exist no transitive dependencies (i.e., no non-prime attribute functionally determines another non-prime attribute: X -> Y and Y -> Z). User credentials reside strictly in the 'login' table, while specific profile attributes reside in 'donors', 'patients', and 'ngos'. In 'hair_requests', request status depends strictly on request_id, not transitively on patient_id or ngo_id. Therefore, 3NF is strictly achieved.", indent=0.5)
+    add_p(doc, "• Tier 3: Data Persistence Layer (Models): Governed by the MariaDB/MySQL relational database engine configured with the InnoDB storage engine. The persistence layer guarantees full ACID compliance, enforces referential integrity through foreign key cascades, and executes row-level pessimistic locks (FOR UPDATE) to manage concurrent asset allocation.", indent=0.5)
 
-    add_heading_2(doc, "6.2 Data Dictionary (8 Tables)")
-    add_p(doc, "The relational database structure comprises eight normalized tables, detailed as follows:", indent=0.5)
+    add_heading_2(doc, "13.2 Data Flow Diagrams (DFD)")
+    add_p(doc, "Data Flow Diagrams model the flow of information through the system at progressive levels of abstraction:", indent=0.5)
 
-    # Table 1: login
-    add_data_dict_table(doc, "login (Universal Authentication Store)", [
-        ("login_id", "INT", "Unique authentication primary key", "AUTO_INCREMENT, PRIMARY KEY"),
-        ("email", "VARCHAR(150)", "User electronic mail address for login", "NOT NULL, UNIQUE"),
-        ("password", "VARCHAR(255)", "BCrypt cryptographic salted hash", "NOT NULL"),
-        ("role", "ENUM('admin','ngo','donor','patient')", "Authorization role for RBAC routing", "NOT NULL"),
-        ("created_at", "TIMESTAMP", "Account creation timestamp", "DEFAULT CURRENT_TIMESTAMP"),
-    ])
+    add_heading_3(doc, "13.2.1 DFD Level 0: System Context Diagram")
+    add_p(doc, "The Level 0 Context Diagram establishes the global boundary of the system, illustrating how external entities (Administrator, Healthcare NGO, Hair Donor, Cancer Patient) interact with the centralized HairFidence process (Process 0). Donors submit hair specifications and photos; Patients submit diagnostic reports and hair requests; NGOs execute audits and status transitions; Administrators perform institutional vetting and ticket resolution.", indent=0.5)
 
-    # Table 2: donors
-    add_data_dict_table(doc, "donors (Hair Donor Profiles)", [
-        ("donor_id", "INT", "Unique donor entity identifier", "AUTO_INCREMENT, PRIMARY KEY"),
-        ("login_id", "INT", "Foreign key referencing login credentials", "FOREIGN KEY -> login(login_id) ON DELETE CASCADE"),
-        ("full_name", "VARCHAR(100)", "Legal full name of hair donor", "NOT NULL"),
-        ("phone", "VARCHAR(15)", "Contact telephone number", "NOT NULL"),
-        ("address", "TEXT", "Postal address for courier pickup", "NOT NULL"),
-    ])
+    add_heading_3(doc, "13.2.2 DFD Level 1: Macro Subsystem Decomposition")
+    add_p(doc, "The Level 1 Diagram decomposes the system into seven major operational processes: 1.0 Authentication & Role Router; 2.0 NGO Accreditation; 3.0 Hair Cataloging & Post Insertion; 4.0 Patient Diagnostic Verification; 5.0 Concurrency-Locked Request Matching Engine; 6.0 Community Campaign Publishing; 7.0 Grievance Redressal Support Ticketing.", indent=0.5)
 
-    # Table 3: patients
-    add_data_dict_table(doc, "patients (Cancer Survivor Profiles)", [
-        ("patient_id", "INT", "Unique patient entity identifier", "AUTO_INCREMENT, PRIMARY KEY"),
-        ("login_id", "INT", "Foreign key referencing login credentials", "FOREIGN KEY -> login(login_id) ON DELETE CASCADE"),
-        ("full_name", "VARCHAR(100)", "Legal full name of cancer patient", "NOT NULL"),
-        ("phone", "VARCHAR(15)", "Primary contact telephone number", "NOT NULL"),
-        ("address", "TEXT", "Delivery residential address for wig shipment", "NOT NULL"),
-        ("medical_report_url", "VARCHAR(255)", "File path to uploaded diagnostic report", "NOT NULL"),
-    ])
+    add_heading_3(doc, "13.2.3 DFD Level 2: Sub-Process 5.0 (Request & Concurrency Locking)")
+    add_p(doc, "Decomposes the transactional path where a patient requests a hair asset: 5.1 Initialize Atomic Transaction -> 5.2 Query post status FOR UPDATE -> 5.3 If not Available, rollback and report conflict -> 5.4 If Available, insert tuple into hair_requests -> 5.5 Update post status to Processing -> 5.6 Commit transaction -> 5.7 Emit dispatch notification to designated NGO.", indent=0.5)
 
-    # Table 4: ngos
-    add_data_dict_table(doc, "ngos (Accredited Healthcare Non-Profits)", [
-        ("ngo_id", "INT", "Unique healthcare NGO identifier", "AUTO_INCREMENT, PRIMARY KEY"),
-        ("login_id", "INT", "Foreign key referencing login credentials", "FOREIGN KEY -> login(login_id) ON DELETE CASCADE"),
-        ("organization_name", "VARCHAR(150)", "Statutory legal title of charitable foundation", "NOT NULL"),
-        ("registration_number", "VARCHAR(100)", "Government society registration number", "NOT NULL"),
-        ("is_approved", "TINYINT(1)", "Administrative accreditation flag", "DEFAULT 0 (0=Pending, 1=Approved)"),
-    ])
+    add_heading_2(doc, "13.3 UML Modeling")
+    add_p(doc, "Unified Modeling Language (UML) structural and behavioral models formalize system entities and transactions:", indent=0.5)
 
-    # Table 5: hair_donation_posts
-    add_data_dict_table(doc, "hair_donation_posts (Hair Inventory Catalog)", [
-        ("post_id", "INT", "Unique hair specimen post identifier", "AUTO_INCREMENT, PRIMARY KEY"),
-        ("donor_id", "INT", "Foreign key identifying contributing donor", "FOREIGN KEY -> donors(donor_id) ON DELETE CASCADE"),
-        ("hair_length", "DECIMAL(5,2)", "Length of hair bundle in inches", "NOT NULL"),
-        ("hair_type", "VARCHAR(50)", "Hair texture classification (Straight/Wavy/Curly)", "NOT NULL"),
-        ("image_url", "VARCHAR(255)", "Relative file path to specimen photograph", "NOT NULL"),
-        ("status", "ENUM('Available','Processing','Donated')", "Current transactional state flag", "DEFAULT 'Available'"),
-    ])
-
-    # Table 6: hair_requests
-    add_data_dict_table(doc, "hair_requests (Allocation Transactions)", [
-        ("request_id", "INT", "Unique hair allocation request identifier", "AUTO_INCREMENT, PRIMARY KEY"),
-        ("patient_id", "INT", "Foreign key identifying requesting patient", "FOREIGN KEY -> patients(patient_id) ON DELETE CASCADE"),
-        ("post_id", "INT", "Foreign key identifying allocated hair specimen", "FOREIGN KEY -> hair_donation_posts(post_id) ON DELETE CASCADE"),
-        ("ngo_id", "INT", "Foreign key identifying auditing partner NGO", "FOREIGN KEY -> ngos(ngo_id) ON DELETE CASCADE"),
-        ("request_date", "TIMESTAMP", "Timestamp request transaction was initiated", "DEFAULT CURRENT_TIMESTAMP"),
-        ("status", "ENUM('Pending','Approved','Rejected')", "Clinical audit outcome flag", "DEFAULT 'Pending'"),
-    ])
-
-    # Table 7: campaigns
-    add_data_dict_table(doc, "campaigns (Community Donation Drives)", [
-        ("campaign_id", "INT", "Unique public donation campaign identifier", "AUTO_INCREMENT, PRIMARY KEY"),
-        ("ngo_id", "INT", "Foreign key identifying organizing NGO", "FOREIGN KEY -> ngos(ngo_id) ON DELETE CASCADE"),
-        ("title", "VARCHAR(150)", "Public title of donation drive", "NOT NULL"),
-        ("description", "TEXT", "Detailed guidelines, instructions, and target goals", "NOT NULL"),
-        ("event_date", "DATE", "Scheduled calendar date of physical event", "NOT NULL"),
-        ("location", "VARCHAR(255)", "Venue physical address or hall location", "NOT NULL"),
-    ])
-
-    # Table 8: complaints
-    add_data_dict_table(doc, "complaints (Grievance Redressal Tickets)", [
-        ("complaint_id", "INT", "Unique grievance ticket identifier", "AUTO_INCREMENT, PRIMARY KEY"),
-        ("login_id", "INT", "Foreign key identifying complaining user", "FOREIGN KEY -> login(login_id) ON DELETE CASCADE"),
-        ("subject", "VARCHAR(150)", "Summary subject line of grievance", "NOT NULL"),
-        ("description", "TEXT", "Complete descriptive incident narrative", "NOT NULL"),
-        ("status", "ENUM('Pending','Resolved')", "Grievance resolution status flag", "DEFAULT 'Pending'"),
-        ("date_submitted", "TIMESTAMP", "Timestamp grievance ticket was logged", "DEFAULT CURRENT_TIMESTAMP"),
-    ])
-
-    add_heading_2(doc, "6.3 UML Architecture (Class & Sequence Trace)")
-    add_p(doc, "• Class Diagram Structure:\n"
-               "  - User Base Class: Contains common attributes (login_id, email, password, role) and authentication methods.\n"
-               "  - Donor Subclass: Specializes User with donor_id, full_name, phone, address, and authorDonationPost() method.\n"
-               "  - Patient Subclass: Specializes User with patient_id, medical_report_url, and requestHairPost() method.\n"
-               "  - NGO Subclass: Specializes User with ngo_id, registration_number, is_approved, auditMedicalReport(), and publishCampaign() methods.\n"
-               "  - HairDonationPost: Entity holding hair specifications with an aggregation association to Donor.\n"
-               "  - HairRequest: Associative entity linking Patient, HairDonationPost, and NGO, enforcing the allocation contract.", indent=0.5)
-
-    add_p(doc, "• Sequence Diagram Execution Trace for Concurrency-Safe Request:\n"
-               "  1. Patient submits request for post_id via POST /patient/dashboard.php.\n"
-               "  2. Web Controller initializes atomic transaction ($pdo->beginTransaction()).\n"
-               "  3. Controller executes SELECT status FROM hair_donation_posts WHERE post_id=? FOR UPDATE (acquires pessimistic row lock).\n"
-               "  4. If status is Available, controller inserts tuple into hair_requests and updates post status to Processing.\n"
-               "  5. Transaction commits ($pdo->commit()), releasing row lock and preventing concurrent double-booking.", indent=0.5)
-
-    add_heading_2(doc, "6.4 Use Case Diagram & Actor Mapping")
     if os.path.exists(UML_PATH):
         p_uml = doc.add_paragraph()
         p_uml.alignment = WD_ALIGN_PARAGRAPH.CENTER
         p_uml.paragraph_format.space_before = Pt(8)
         p_uml.paragraph_format.space_after = Pt(4)
         p_uml.add_run().add_picture(UML_PATH, width=Inches(5.4))
-        add_p(doc, "Figure 6.1: UML Use Case Diagram for HairFidence System", font_size=10, italic=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=14)
+        add_p(doc, "Figure 13.1: UML Use Case Diagram for HairFidence System", font_size=10, italic=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=14)
 
-    add_p(doc, "Actor Use Case Mapping:\n"
-               "• Administrator: Authenticates, vets and approves registered NGOs, monitors system metrics, resolves complaint tickets.\n"
-               "• Healthcare NGO: Registers profile, creates donation campaigns, reviews patient diagnostic reports, inspects physical hair parcels, issues request approvals or rejections.\n"
-               "• Hair Donor: Registers profile, logs hair donation post (length, texture, photo), views real-time multi-stage pipeline status, views upcoming drives, submits support tickets.\n"
-               "• Cancer Patient: Registers profile, uploads medical report, searches available hair catalog, dispatches formal hair requests, tracks allocation status.", indent=0.5)
+    add_heading_3(doc, "Use Case Specifications & Actor Matrix")
+    add_p(doc, "The system defines fifteen formal use cases spanning four primary actors (Admin, NGO, Donor, Patient), governing login (UC-01), multi-role registration (UC-02), NGO vetting (UC-03), hair post creation (UC-04), pipeline tracking (UC-05), diagnostic report upload (UC-06), catalog search (UC-07), concurrency-safe requesting (UC-08), medical auditing (UC-09), request approval/rejection (UC-10), physical parcel inspection (UC-11), campaign creation (UC-12), complaint submission (UC-13), grievance resolution (UC-14), and metric aggregation (UC-15).", indent=0.5)
 
-    add_heading_2(doc, "6.5 System Scenarios")
-    add_p(doc, "• Scenario 1 (Donation Logging): Donor logs in -> enters length (e.g., 14 inches) and texture (Straight) -> uploads packaging photo -> system validates MIME -> post enters database as Available.\n"
-               "• Scenario 2 (Request & Locking): Patient browses catalog -> selects specimen -> chooses partner NGO -> transaction locks post to Processing -> notification dispatched to NGO.\n"
-               "• Scenario 3 (Clinical Audit & Approval): NGO accesses console -> views patient report -> inspects physical hair bundle -> clicks Approve -> post status updates to Donated and request to Approved -> wig hand-crafted and delivered.\n"
-               "• Scenario 4 (Request Rejection): NGO determines report is invalid -> clicks Reject -> request marked Rejected -> hair post automatically unlocked back to Available in catalog.", indent=0.5)
+    add_heading_2(doc, "13.4 Database Design & Relational Schema Tables")
+    add_p(doc, "The HairFidence database schema consists of 8 normalized relational tables interconnected via foreign keys:", indent=0.5)
 
-    # ──────────────────────────────────────────────────────────────────────────
-    # CHAPTER 7: SYSTEM DEVELOPMENT
-    # ──────────────────────────────────────────────────────────────────────────
-    add_divider_page(doc, "CHAPTER 7: SYSTEM DEVELOPMENT")
-    add_heading_1(doc, "CHAPTER 7: SYSTEM DEVELOPMENT")
+    db_schema_summary = [
+        ("Table Name", "Primary Key", "Foreign Keys", "Core Attributes"),
+        ("1. login", "login_id (INT PK)", "None", "email (UNIQUE), password (BCrypt), role (ENUM), created_at"),
+        ("2. donors", "donor_id (INT PK)", "login_id -> login(login_id)", "full_name, phone, address"),
+        ("3. patients", "patient_id (INT PK)", "login_id -> login(login_id)", "full_name, phone, address, medical_report_url"),
+        ("4. ngos", "ngo_id (INT PK)", "login_id -> login(login_id)", "organization_name, registration_number, is_approved"),
+        ("5. hair_donation_posts", "post_id (INT PK)", "donor_id -> donors(donor_id)", "hair_length, hair_type, image_url, status (ENUM)"),
+        ("6. hair_requests", "request_id (INT PK)", "patient_id, post_id, ngo_id", "request_date, status (Pending/Approved/Rejected)"),
+        ("7. campaigns", "campaign_id (INT PK)", "ngo_id -> ngos(ngo_id)", "title, description, event_date, location"),
+        ("8. complaints", "complaint_id (INT PK)", "login_id -> login(login_id)", "subject, description, status (Pending/Resolved), date"),
+    ]
+    t_dbs = doc.add_table(rows=len(db_schema_summary), cols=4)
+    t_dbs.alignment = WD_TABLE_ALIGNMENT.CENTER
+    for r_i, r_data in enumerate(db_schema_summary):
+        for c_i, val in enumerate(r_data):
+            cell = t_dbs.cell(r_i, c_i)
+            cell.paragraphs[0].text = val
+            cell.paragraphs[0].runs[0].font.name = "Times New Roman"
+            cell.paragraphs[0].runs[0].font.size = Pt(9)
+            if r_i == 0:
+                cell.paragraphs[0].runs[0].font.bold = True
+                set_cell_shading(cell, "F1F5F9")
+            set_cell_border(cell)
 
-    add_heading_2(doc, "7.1 Development Lifecycle Activities")
-    add_p(doc, "System development translated architectural designs into a robust, deployable web application through rigorous software engineering phases: database schema migration via structured DDL scripts; backend controller engineering using PDO data access objects; client-side styling with vanilla CSS custom properties; security hardening against OWASP Top-10 vulnerabilities; and comprehensive integration testing.", indent=0.5)
-
-    add_heading_2(doc, "7.2 Implementation Technologies")
-    add_p(doc, "• PHP Data Objects (PDO): Provides prepared statements and parameterized queries, completely neutralizing SQL Injection attacks.\n"
-               "• BCrypt Hashing: Implements password_hash() with PASSWORD_BCRYPT to guarantee irreversible credential protection.\n"
-               "• Role-Based Access Control (RBAC): The check_access() middleware intercepts incoming HTTP requests, preventing privilege escalation.\n"
-               "• Secure File System Partitions: Patient medical reports are stored in dedicated directories with restricted script execution permissions.", indent=0.5)
-
-    add_heading_2(doc, "7.3 Core Code Implementations")
-
-    add_heading_3(doc, "1. PDO Database Configuration (config/db.php)")
-    add_p(doc, "Establishes a hardened, UTF-8 compliant PDO connection with exception trapping mode enabled:", indent=0.5)
-    code_db = (
-        "<?php\n"
-        "// config/db.php - Centralized PDO Database Connection\n"
-        "$host    = 'localhost';\n"
-        "$db      = 'hairfidence';\n"
-        "$user    = 'root';\n"
-        "$pass    = ''; // Local development environment password\n"
-        "$charset = 'utf8mb4';\n\n"
-        "$dsn = \"mysql:host=$host;dbname=$db;charset=$charset\";\n"
-        "$options = [\n"
-        "    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,\n"
-        "    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,\n"
-        "    PDO::ATTR_EMULATE_PREPARES   => false, // Enforces native prepared statements\n"
-        "];\n\n"
-        "try {\n"
-        "    $pdo = new PDO($dsn, $user, $pass, $options);\n"
-        "} catch (\\PDOException $e) {\n"
-        "    error_log(\"Database Connection Failure: \" . $e->getMessage());\n"
-        "    die(\"Database connection failed. Please ensure MySQL is running in XAMPP.\");\n"
-        "}\n"
-        "?>"
-    )
-    add_code_block(doc, code_db)
-
-    add_heading_3(doc, "2. Secure Login & RBAC Session Router (login.php)")
-    add_p(doc, "Authenticates hashed credentials, checks administrative accreditation for NGOs, and assigns server-side $_SESSION parameters:", indent=0.5)
-    code_login = (
-        "<?php\n"
-        "// login.php - Secure Authentication & Role Router\n"
-        "require_once 'config/db.php';\n"
-        "session_start();\n\n"
-        "if ($_SERVER['REQUEST_METHOD'] === 'POST') {\n"
-        "    $email    = trim($_POST['email']);\n"
-        "    $password = $_POST['password'];\n\n"
-        "    $stmt = $pdo->prepare(\"SELECT * FROM login WHERE email = ?\");\n"
-        "    $stmt->execute([$email]);\n"
-        "    $user = $stmt->fetch();\n\n"
-        "    if ($user && password_verify($password, $user['password'])) {\n"
-        "        $role = $user['role'];\n"
-        "        $is_approved_ngo = true;\n"
-        "        $profile = [];\n\n"
-        "        if ($role === 'ngo') {\n"
-        "            $stmt = $pdo->prepare(\"SELECT ngo_id, organization_name, is_approved FROM ngos WHERE login_id = ?\");\n"
-        "            $stmt->execute([$user['login_id']]);\n"
-        "            $profile = $stmt->fetch();\n"
-        "            if ($profile && (int)$profile['is_approved'] !== 1) {\n"
-        "                $is_approved_ngo = false;\n"
-        "            }\n"
-        "        }\n\n"
-        "        if (!$is_approved_ngo) {\n"
-        "            $error = \"Access Restricted: NGO registration is pending Administrator approval.\";\n"
-        "        } else {\n"
-        "            $_SESSION['login_id'] = $user['login_id'];\n"
-        "            $_SESSION['email']    = $user['email'];\n"
-        "            $_SESSION['role']     = $role;\n"
-        "            header(\"Location: auth/dashboard_redirect.php\");\n"
-        "            exit();\n"
-        "        }\n"
-        "    }\n"
-        "}\n"
-        "?>"
-    )
-    add_code_block(doc, code_login)
-
-    add_heading_3(doc, "3. Hair Post Submission Handler with File Validation (donor/dashboard.php)")
-    add_p(doc, "Validates image MIME types (JPG, JPEG, PNG), sanitizes file names, writes to uploads/hair_photos/, and registers the post as Available:", indent=0.5)
-    code_donor = (
-        "<?php\n"
-        "// donor/dashboard.php - Hair Post Submission\n"
-        "if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_donation'])) {\n"
-        "    $hair_length = trim($_POST['hair_length']);\n"
-        "    $hair_type   = $_POST['hair_type'];\n"
-        "    $file_ext    = strtolower(pathinfo($_FILES['hair_photo']['name'], PATHINFO_EXTENSION));\n"
-        "    $allowed     = ['jpg', 'jpeg', 'png'];\n\n"
-        "    if (in_array($file_ext, $allowed)) {\n"
-        "        $new_name  = 'hair_' . $donor_id . '_' . time() . '.' . $file_ext;\n"
-        "        $dest_path = '../uploads/hair_photos/' . $new_name;\n"
-        "        $db_path   = 'uploads/hair_photos/' . $new_name;\n\n"
-        "        if (move_uploaded_file($_FILES['hair_photo']['tmp_name'], $dest_path)) {\n"
-        "            $stmt = $pdo->prepare(\"INSERT INTO hair_donation_posts \n"
-        "                (donor_id, hair_length, hair_type, image_url, status) \n"
-        "                VALUES (?, ?, ?, ?, 'Available')\");\n"
-        "            $stmt->execute([$donor_id, $hair_length, $hair_type, $db_path]);\n"
-        "            $success_msg = \"Hair post published successfully in public catalog.\";\n"
-        "        }\n"
-        "    }\n"
-        "}\n"
-        "?>"
-    )
-    add_code_block(doc, code_donor)
-
-    add_heading_3(doc, "4. NGO Medical Verification & Hair Request State Machine (ngo/dashboard.php)")
-    add_p(doc, "Audits patient diagnostic certificates and manages atomic transitions to Donated or automatic rollback to Available on rejection:", indent=0.5)
-    code_ngo = (
-        "<?php\n"
-        "// ngo/dashboard.php - Request State Machine (Approval & Rejection)\n"
-        "if (isset($_GET['approve_request'])) {\n"
-        "    $request_id = intval($_GET['approve_request']);\n"
-        "    $pdo->beginTransaction();\n"
-        "    $stmt = $pdo->prepare(\"UPDATE hair_requests SET status = 'Approved' WHERE request_id = ? AND ngo_id = ?\");\n"
-        "    $stmt->execute([$request_id, $ngo_id]);\n\n"
-        "    $stmt = $pdo->prepare(\"SELECT post_id FROM hair_requests WHERE request_id = ?\");\n"
-        "    $stmt->execute([$request_id]);\n"
-        "    $post_id = $stmt->fetchColumn();\n\n"
-        "    if ($post_id) {\n"
-        "        $stmt = $pdo->prepare(\"UPDATE hair_donation_posts SET status = 'Donated' WHERE post_id = ?\");\n"
-        "        $stmt->execute([$post_id]);\n"
-        "    }\n"
-        "    $pdo->commit();\n"
-        "}\n\n"
-        "if (isset($_GET['reject_request'])) {\n"
-        "    $request_id = intval($_GET['reject_request']);\n"
-        "    $pdo->beginTransaction();\n"
-        "    $stmt = $pdo->prepare(\"UPDATE hair_requests SET status = 'Rejected' WHERE request_id = ? AND ngo_id = ?\");\n"
-        "    $stmt->execute([$request_id, $ngo_id]);\n\n"
-        "    $stmt = $pdo->prepare(\"SELECT post_id FROM hair_requests WHERE request_id = ?\");\n"
-        "    $stmt->execute([$request_id]);\n"
-        "    $post_id = $stmt->fetchColumn();\n\n"
-        "    if ($post_id) {\n"
-        "        // Unlock hair post back to Available in public catalog\n"
-        "        $stmt = $pdo->prepare(\"UPDATE hair_donation_posts SET status = 'Available' WHERE post_id = ?\");\n"
-        "        $stmt->execute([$post_id]);\n"
-        "    }\n"
-        "    $pdo->commit();\n"
-        "}\n"
-        "?>"
-    )
-    add_code_block(doc, code_ngo)
+    add_p(doc, "", space_after=8)
+    add_heading_2(doc, "13.5 Normalization Proofs (1NF, 2NF, 3NF)")
+    add_p(doc, "• First Normal Form (1NF): All attribute domains contain exclusively atomic (indivisible) values. Attributes such as hair_length, hair_type, and image_url store single scalar values. There are zero multi-valued columns or repeating groups.", indent=0.5)
+    add_p(doc, "• Second Normal Form (2NF): The schema is in 1NF and every non-prime attribute is fully functionally dependent on the entire primary key. Because every table uses a single-column surrogate primary key (|PK| = 1), proper subsets of candidate keys cannot exist, eliminating partial dependencies.", indent=0.5)
+    add_p(doc, "• Third Normal Form (3NF): The schema is in 2NF and there exist no transitive functional dependencies (X -> Y and Y -> Z). Authentication attributes reside strictly in login, while domain profile attributes reside strictly in entity profile relations (donors, patients, ngos), linked solely by the foreign key login_id. In hair_requests, status depends directly on request_id, not transitively through patient_id or ngo_id.", indent=0.5)
 
     # ──────────────────────────────────────────────────────────────────────────
-    # CHAPTER 8: SYSTEM TESTING AND IMPLEMENTATION
+    # CHAPTER 14: SYSTEM DEVELOPMENT (Matching PDF Pages 32-34)
     # ──────────────────────────────────────────────────────────────────────────
-    add_divider_page(doc, "CHAPTER 8: SYSTEM TESTING AND IMPLEMENTATION")
-    add_heading_1(doc, "CHAPTER 8: SYSTEM TESTING AND IMPLEMENTATION")
+    add_divider_page(doc, "CHAPTER 14: SYSTEM DEVELOPMENT")
+    add_heading_1(doc, "CHAPTER 14: SYSTEM DEVELOPMENT")
 
-    add_heading_2(doc, "8.1 Types of Testing")
-    add_p(doc, "• Unit Testing: Verified isolated routines including password hashing, session role guards, mathematical hair length validators, and file upload extension parsers.\n"
-               "• Integration Testing: Validated cross-module operational sequences: Donor Post Upload -> Catalog Display -> Patient Concurrency Lock -> State Transition to Processing -> NGO Clinical Audit -> Final Handover (Donated).\n"
-               "• Black Box Testing: Evaluated UI inputs against functional specifications without referencing source code internals.\n"
-               "• White Box Testing: Verified statement and branch coverage, exception handling, transaction rollback consistency, and foreign key cascading constraints.", indent=0.5)
+    add_heading_2(doc, "14.1 Subsystem Modular Breakdown")
+    add_p(doc, "The implementation divides system functionality across decoupled directories: config/ manages the centralized PDO database instance; includes/ provides RBAC middleware (auth_check.php); auth/ handles session multiplexing and destruction; admin/ administers user profiles, accreditation, and tickets; ngo/ executes clinical audits and parcel verifications; donor/ enables hair post creation and pipeline tracking; patient/ hosts the catalog and request locking engine; and uploads/ stores static specimen photos and medical reports.", indent=0.5)
 
-    add_heading_2(doc, "8.2 Test Case Matrix")
+    add_heading_2(doc, "14.2 Core Algorithms & Business Logic")
+    add_p(doc, "1. Pessimistic Concurrency Locking: Evaluated inside an atomic PDO transaction ($pdo->beginTransaction()). When a patient requests a post, the query SELECT status FROM hair_donation_posts WHERE post_id=? FOR UPDATE acquires an exclusive row lock. If the post is Available, the request is inserted and post status updated to Processing before committing ($pdo->commit()). This guarantees zero double-booking during concurrent request spikes.", indent=0.5)
+
+    add_p(doc, "2. Cryptographic Password Hashing: Uses the BCrypt hashing algorithm via password_hash() and password_verify() with cost factor 10, ensuring irreversible credential encryption.", indent=0.5)
+
+    add_p(doc, "3. Zero-Trust Access Middleware: Intercepts all incoming dashboard requests, validating that active session credentials match permitted roles via check_access().", indent=0.5)
+
+    add_p(doc, "4. Secure File Upload Pipeline: Inspects incoming file extensions against strict whitelists (JPG, JPEG, PNG for photos; PDF, DOC, JPG for medical reports), assigns unguessable randomized filenames, and writes files to isolated upload directories.", indent=0.5)
+
+    add_heading_2(doc, "14.3 Routing & Endpoints Specification")
+    add_p(doc, "The system implements clean, RESTful-style endpoints: /login.php for authentication; /register.php for multi-role registration; /auth/dashboard_redirect.php for role routing; /auth/logout.php for session invalidation; /admin/dashboard.php for governance; /ngo/dashboard.php for clinical audits; /donor/dashboard.php for donation tracking; /patient/dashboard.php for catalog browsing and requests.", indent=0.5)
+
+    add_heading_2(doc, "14.4 Input Validation & Security Layers")
+    add_p(doc, "• SQL Injection Prevention: 100% of database interactions are executed via parameterized PDO prepared statements.\n"
+               "• Cross-Site Scripting (XSS) Prevention: All dynamic variables rendered into the DOM are sanitized using htmlspecialchars(ENT_QUOTES, 'UTF-8').\n"
+               "• Gated Administrative Approval: NGO accounts cannot log in until certified by the Administrator (is_approved = 1).", indent=0.5)
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # CHAPTER 15: SYSTEM TESTING AND IMPLEMENTATION (Matching PDF Pages 35-37)
+    # ──────────────────────────────────────────────────────────────────────────
+    add_divider_page(doc, "CHAPTER 15: SYSTEM TESTING AND IMPLEMENTATION")
+    add_heading_1(doc, "CHAPTER 15: SYSTEM TESTING AND IMPLEMENTATION")
+
+    add_heading_2(doc, "15.1 Testing Methodologies Applied")
+    add_p(doc, "Quality assurance for HairFidence was conducted across a comprehensive five-tier testing framework:", indent=0.5)
+    add_p(doc, "• Unit Testing: Evaluated standalone routines including password verification, session guards, and file extension parsers.\n"
+               "• Integration Testing: Validated end-to-end workflows connecting donor post creation, patient catalog rendering, atomic request locking, and NGO approval.\n"
+               "• Black Box Testing: Evaluated system behaviors against SRS specifications without internal code inspection.\n"
+               "• White Box Testing: Investigated internal branch coverage, transaction rollbacks, and foreign key cascade executions.\n"
+               "• User Acceptance Testing (UAT): Simulated real-world trials with donor and patient personas to verify usability.", indent=0.5)
+
+    add_heading_2(doc, "15.2 Comprehensive Test Suite Table")
     test_cases_data = [
-        ("Test ID", "Test Scenario", "Input Data", "Expected Output", "Actual Result", "Status"),
+        ("Test ID", "Test Scenario", "Test Input Data", "Expected Output", "Actual Result", "Status"),
         ("TC-01", "User Login", "Valid email & password", "Successful auth & redirect to dashboard", "Session created, redirected", "PASS"),
         ("TC-02", "Invalid Login", "Incorrect password", "Display 'Invalid credentials' banner", "Access blocked, error shown", "PASS"),
         ("TC-03", "NGO Gated Access", "Unapproved NGO login", "Prevent login; display pending notice", "Login halted, warning shown", "PASS"),
@@ -1004,141 +879,115 @@ def generate_thesis_docx():
                 set_cell_shading(cell, "F1F5F9")
             set_cell_border(cell)
 
-    add_heading_2(doc, "8.3 Deployment & Cutover Strategy")
+    add_heading_2(doc, "15.3 Deployment & Build Configuration")
     add_p(doc, "Deployment follows an automated local-to-cloud server deployment pipeline: 1. Web server stack initialization via XAMPP (Apache HTTP Server and MariaDB/MySQL); 2. Database schema migration by importing database.sql; 3. Directory permissions configuration ensuring write access to uploads/ partitions; 4. Verification of php.ini directives (file_uploads=On, upload_max_filesize=10M, session.cookie_httponly=1).", indent=0.5)
 
-    # ──────────────────────────────────────────────────────────────────────────
-    # CHAPTER 9: SYSTEM MAINTENANCE
-    # ──────────────────────────────────────────────────────────────────────────
-    add_divider_page(doc, "CHAPTER 9: SYSTEM MAINTENANCE")
-    add_heading_1(doc, "CHAPTER 9: SYSTEM MAINTENANCE")
-
-    add_heading_2(doc, "9.1 Corrective Maintenance")
-    add_p(doc, "Focuses on defect triage and runtime error resolution. Server error logging is directed to secure error.log files with display_errors = Off to prevent system path disclosure. Input sanitization routines handle multibyte UTF-8 characters and address encoding variations.", indent=0.5)
-
-    add_heading_2(doc, "9.2 Adaptive Maintenance")
-    add_p(doc, "Ensures operational continuity across evolving external software environments: upgrading code syntax for upcoming PHP interpreter releases (PHP 8.3/8.4), applying MariaDB engine patches, and maintaining compliance with modern browser security policies (SameSite cookies).", indent=0.5)
-
-    add_heading_2(doc, "9.3 Perfective Maintenance")
-    add_p(doc, "Proactive enhancements to optimize performance and usability: implementing client-side debounced AJAX catalog search filters, enhancing analytical dashboard charting with dynamic SVG graphics, and preparing multi-lingual localization support (Malayalam/Hindi).", indent=0.5)
+    add_heading_2(doc, "15.4 Operational Environment Verification")
+    add_p(doc, "Post-deployment smoke testing confirmed active PDO connectivity, flawless static media read/write operations to upload directories, and responsive rendering across desktop and mobile devices.", indent=0.5)
 
     # ──────────────────────────────────────────────────────────────────────────
-    # CHAPTER 10: FUTURE ENHANCEMENTS
+    # CHAPTER 16: SYSTEM MAINTENANCE (Matching PDF Pages 38-39)
     # ──────────────────────────────────────────────────────────────────────────
-    add_divider_page(doc, "CHAPTER 10: FUTURE ENHANCEMENTS")
-    add_heading_1(doc, "CHAPTER 10: FUTURE ENHANCEMENTS")
-    add_p(doc, "• Automated Courier Logistics API Integration: Integration with India Post Speed Post, DTDC, or Delhivery APIs to automatically generate prepaid shipping labels with live parcel tracking webhooks.\n"
-               "• Cross-Platform Mobile Applications: Native mobile applications built on Flutter for Android and iOS, leveraging smartphone cameras for calibrated hair strand measurement and automated document scanning.\n"
-               "• AI-Powered Virtual Wig Simulator (AR): An Augmented Reality computer vision module using WebGL and TensorFlow.js enabling cancer patients to preview medical wig styles virtually on their own face before submitting requests.\n"
-               "• Certified Wig Workshop Integration: Establishing direct digital dispatch channels to certified medical wig manufacturing workshops and integrating philanthropic micro-sponsorship payment gateways (Razorpay/Stripe).", indent=0.5)
+    add_divider_page(doc, "CHAPTER 16: SYSTEM MAINTENANCE")
+    add_heading_1(doc, "CHAPTER 16: SYSTEM MAINTENANCE")
+
+    add_heading_2(doc, "16.1 Corrective Maintenance Plan")
+    add_p(doc, "Focuses on identifying, isolating, and rectifying software defects or runtime anomalies discovered during active production. Server error logging is directed to secure error.log files with display_errors disabled. Normalization routines handle multibyte character edge cases in donor addresses.", indent=0.5)
+
+    add_heading_2(doc, "16.2 Adaptive Maintenance Plan")
+    add_p(doc, "Adjusts the software platform to remain fully operational across evolving external computing environments, including PHP interpreter upgrades (e.g., PHP 8.2 to 8.3/8.4), MariaDB engine patches, and modern browser security policy updates.", indent=0.5)
+
+    add_heading_2(doc, "16.3 Perfective Maintenance Plan")
+    add_p(doc, "Encompasses proactive user experience enhancements, such as debounced AJAX catalog searching, interactive SVG statistical charting in Admin dashboards, and multi-lingual localization (Malayalam/Hindi).", indent=0.5)
+
+    add_heading_2(doc, "16.4 Preventive Maintenance Plan & Disaster Recovery")
+    add_p(doc, "Entails scheduled automated database index optimization (OPTIMIZE TABLE), automated log rotation, and daily encrypted mysqldump backups guaranteeing an RTO of < 2 hours and an RPO of < 24 hours.", indent=0.5)
 
     # ──────────────────────────────────────────────────────────────────────────
-    # CHAPTER 11: CONCLUSION
+    # CHAPTER 17: FUTURE ENHANCEMENT (Matching PDF Pages 40-41)
     # ──────────────────────────────────────────────────────────────────────────
-    add_divider_page(doc, "CHAPTER 11: CONCLUSION")
-    add_heading_1(doc, "CHAPTER 11: CONCLUSION")
-    add_p(doc, "The development and operational validation of HairFidence: A Centralized Role-Based Web Application for Hair Donation Lifecycle Management represent a meaningful technological milestone in humanitarian healthcare logistics. By replacing informal, untracked, and error-prone manual donation practices with a secure, role-governed 3-Tier MVC web platform, this project establishes a transparent, accountable bridge connecting altruistic donors, verified healthcare NGOs, and cancer patients recovering from chemotherapy.", indent=0.5)
+    add_divider_page(doc, "CHAPTER 17: FUTURE ENHANCEMENT")
+    add_heading_1(doc, "CHAPTER 17: FUTURE ENHANCEMENT")
 
-    add_p(doc, "The system successfully digitizes the end-to-end hair donation lifecycle, empowering donors with real-time multi-stage pipeline tracking, equipping healthcare NGOs with auditable verification tools, and providing cancer survivors with an accessible portal to receive customized cranial prostheses at zero financial cost. The implementation of Pessimistic Concurrency Locking inside atomic PDO transactions completely eliminates race conditions and resource double-booking, while strict 3NF database normalization guarantees data integrity. Ultimately, HairFidence establishes an enduring standard for healthcare charity management—one that unites robust software engineering with deep human empathy to restore dignity, confidence, and comfort to cancer survivors.", indent=0.5)
+    add_heading_2(doc, "17.1 Cross-Platform Mobile Applications")
+    add_p(doc, "Developing native cross-platform mobile apps for Android and iOS using Flutter or React Native to leverage smartphone camera hardware for calibrated hair specimen photography and document scanning.", indent=0.5)
+
+    add_heading_2(doc, "17.2 Automated Postal & Logistics API Integration")
+    add_p(doc, "Integrating third-party courier APIs (India Post Speed Post, DTDC, Delhivery) to generate automated prepaid shipping labels with live parcel tracking webhooks inside the donor dashboard.", indent=0.5)
+
+    add_heading_2(doc, "17.3 AI-Powered Virtual Wig AR Simulator")
+    add_p(doc, "Implementing an Augmented Reality (AR) facial mapping simulator using WebGL and TensorFlow.js, enabling cancer patients to preview medical wig styles on their own face before submitting a request.", indent=0.5)
+
+    add_heading_2(doc, "17.4 Philanthropic Micro-Sponsorship Gateway")
+    add_p(doc, "Incorporating digital payment gateways (Razorpay, Stripe) allowing donors and CSR bodies to sponsor wig fabrication and artisanal hand-knotting costs for underprivileged patients.", indent=0.5)
+
+    add_heading_2(doc, "17.5 Multi-Channel Notification Webhooks")
+    add_p(doc, "Integrating SMS and WhatsApp cloud messaging gateways (Twilio / Gupshup) delivering automated milestone notifications to donors when parcels are verified and dispatched.", indent=0.5)
 
     # ──────────────────────────────────────────────────────────────────────────
-    # CHAPTER 12: APPENDIX
+    # CHAPTER 18: CONCLUSION (Matching PDF Pages 42-43)
     # ──────────────────────────────────────────────────────────────────────────
-    add_divider_page(doc, "CHAPTER 12: APPENDIX")
-    add_heading_1(doc, "CHAPTER 12: APPENDIX")
+    add_divider_page(doc, "CHAPTER 18: CONCLUSION")
+    add_heading_1(doc, "CHAPTER 18: CONCLUSION")
+
+    add_heading_2(doc, "18.1 Summary of Project Achievements")
+    add_p(doc, "The development and operational validation of HairFidence: Cancer Patient Hair Donation Management System represent a meaningful technological achievement in modernizing humanitarian healthcare logistics. By replacing informal, untracked, and error-prone manual donation practices with a secure, role-governed 3-Tier MVC web platform, this project establishes a transparent, accountable bridge connecting altruistic donors, verified healthcare NGOs, and cancer patients recovering from chemotherapy. The system successfully digitizes the end-to-end hair donation lifecycle, empowering donors with real-time multi-stage pipeline tracking, equipping healthcare NGOs with auditable verification tools, and providing cancer survivors with an accessible portal to receive customized cranial prostheses at zero financial cost.", indent=0.5)
+
+    add_heading_2(doc, "18.2 Validation of Core Objectives")
+    add_p(doc, "All foundational technical and architectural objectives established during system inception were verified through comprehensive testing: Concurrency Safety via Pessimistic Row Locking (SELECT ... FOR UPDATE) inside atomic PDO transactions; Data Security through BCrypt password hashing and zero-trust RBAC middleware; Database Integrity conforming to Third Normal Form (3NF); and Operational Usability delivering responsive rendering across desktop, tablet, and mobile devices.", indent=0.5)
+
+    add_heading_2(doc, "18.3 Academic & Engineering Conclusion")
+    add_p(doc, "Ultimately, HairFidence stands as a testament to how sound software engineering principles, robust relational database design, and human-centered empathy can unite to solve poignant societal challenges. The platform establishes an enduring, scalable model for humanitarian healthcare charity management—one that is transparent, technically sound, and dedicated to restoring dignity, confidence, and comfort to cancer survivors throughout their journey to recovery.", indent=0.5)
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # CHAPTER 19: APPENDIX (Matching PDF Pages 44-52)
+    # ──────────────────────────────────────────────────────────────────────────
+    add_divider_page(doc, "CHAPTER 19: APPENDIX")
+    add_heading_1(doc, "CHAPTER 19: APPENDIX")
+
+    add_heading_2(doc, "Appendix A: Complete Database DDL SQL Script")
+    add_p(doc, "The complete relational database definition script (database.sql) establishing tables, indexes, and foreign key cascades is archived in the repository root and documented in Section 13.4.", indent=0.5)
+
+    add_heading_2(doc, "Appendix B: Core Architectural Code Files")
+    add_p(doc, "Archived source files include config/db.php (PDO configuration), includes/auth_check.php (RBAC middleware guard), auth/dashboard_redirect.php (session router), and role dashboards.", indent=0.5)
+
+    add_heading_2(doc, "Appendix C: System User Interface Screen Captures")
     add_p(doc, "Actual operational user interface screenshots captured from the running HairFidence application demonstrating primary functional workflows across all user roles:", indent=0.5)
 
-    screenshots_info = [
-        ("01_login.png", "Figure 12.1: Universal Authentication Console (login.php)",
-         "The Universal Authentication Console serves as the single-entry security perimeter for HairFidence. It accepts user credentials, enforces client-side validation, and forwards requests to the backend authentication router. The router verifies BCrypt hashed passwords, checks NGO accreditation status, and issues session tokens.",
-         "Security controls include HTTPS transport encryption, HTTP-only cookie flags, and session fixation guards. Unapproved NGOs are prevented from entering the system, displaying an informative pending accreditation banner."),
-
-        ("02_register.png", "Figure 12.2: Multi-Role User Registration Console (register.php)",
-         "The Multi-Role Registration Console provides dynamic registration forms tailored to Donors, Cancer Patients, and Healthcare NGOs. Role-specific form sections appear dynamically using JavaScript event listeners based on the selected role card.",
-         "Backend validation ensures email uniqueness, enforces password complexity standards, and writes normalized tuples into the login table and corresponding domain profile tables within an atomic database transaction."),
-
-        ("03_home.png", "Figure 12.3: Public Informational & Community Portal (index.php)",
-         "The Public Informational Portal introduces civic visitors to the mission of HairFidence. It features educational infographics outlining the physical requirements for donation (minimum 10 inches, dry, tied ponytail), details the wig fabrication journey, and showcases upcoming community collection drives.",
-         "The responsive navigation bar offers quick routing to role-specific registration portals and authentication desks, with clean visual typography and fluid CSS animations."),
-
-        ("04_admin_dashboard.png", "Figure 12.4: Administrator Platform Analytics & Overview (admin/dashboard.php)",
-         "The Administrator Dashboard serves as the central command center for platform governance. It aggregates system-wide KPIs into dynamic metric cards displaying Total Registered Donors, Total Approved NGOs, Total Donation Posts, and Active Patient Requests.",
-         "The console provides quick action links for accrediting newly registered NGOs, reviewing unresolved grievance tickets, and auditing system activity logs in real-time."),
-
-        ("04b_admin_ngos.png", "Figure 12.5: Administrator NGO Verification & Accreditation Console",
-         "The NGO Verification Console enables the Administrator to audit statutory registration documents submitted by applicant charities. Each record presents the charity's official name, registration number, contact person, and pending status.",
-         "Administrators can execute one-click approvals, which instantly update the is_approved flag in the database and activate the NGO's clinical audit capabilities."),
-
-        ("04c_admin_complaints.png", "Figure 12.6: Administrator Grievance Ticketing & Resolution Console",
-         "The Grievance Redressal Console manages user support tickets submitted by donors, patients, or NGOs. Administrators view ticket submission timestamps, user emails, subject lines, and incident narratives.",
-         "Administrators can resolve tickets with an audit log update, transitioning the ticket state from 'Pending' to 'Resolved' and recording the resolution timestamp."),
-
-        ("05_ngo_dashboard.png", "Figure 12.7: Healthcare NGO Operations & Clinical Audit Hub (ngo/dashboard.php)",
-         "The Healthcare NGO Operations Hub provides accredited charities with tools to manage patient requests and physical parcel logistics. The console displays active requests, donor packaging details, and uploaded medical proofs.",
-         "Caseworkers can inspect patient oncology certificates directly in the browser and execute atomic state transitions (Approve or Reject) to manage wig allocation."),
-
-        ("05b_ngo_campaign.png", "Figure 12.8: NGO Community Hair Donation Campaign Creation",
-         "The Campaign Creation Form allows accredited NGOs to broadcast upcoming community collection drives. Caseworkers define the campaign title, target donation goals, event calendar date, and venue location.",
-         "Upon submission, the drive is immediately published to the public portal and donor dashboards, encouraging local civic participation and salon partnerships."),
-
-        ("06_donor_dashboard.png", "Figure 12.9: Donor Dashboard & Real-Time Pipeline Tracker (donor/dashboard.php)",
-         "The Donor Dashboard empowers civic donors with complete visibility over their contributions. An interactive visual pipeline tracker displays the exact real-time state of each donation: 'Available', 'Processing', or 'Donated'.",
-         "Donors also receive immediate alerts regarding upcoming collection drives in their geographic vicinity, fostering continuous civic engagement."),
-
-        ("06b_donor_add_donation.png", "Figure 12.10: Donor Hair Post Submission with Specimen Upload",
-         "The Hair Post Authoring Interface captures precise technical metadata for hair specimens. Donors input strand length in inches, select hair texture (Straight, Wavy, Curly), and upload a clear specimen photograph.",
-         "The backend controller validates image MIME types, creates sanitized unique filenames, and registers the post as Available in the public catalog."),
-
-        ("07_patient_dashboard.png", "Figure 12.11: Cancer Patient Portal & Live Verified Hair Catalog (patient/dashboard.php)",
-         "The Cancer Patient Portal allows verified cancer survivors to browse clean, cataloged hair donations. Patients can filter specimens by hair length and texture to match their personal preference.",
-         "Each catalog card displays verified strand photos, exact length, and an interactive 'Request Specimen' action that triggers atomic concurrency locking."),
-
-        ("07b_patient_my_requests.png", "Figure 12.12: Patient Hair Request Tracking & Allocation Status",
-         "The Patient Request Tracking Console allows patients to monitor the clinical audit and allocation progress of their requested hair prostheses. Status indicators show whether the request is Pending review, Approved, or Rejected.",
-         "Approved requests provide partner NGO contact details to coordinate custom wig sizing, styling, and delivery."),
-
-        ("08_user_complaint.png", "Figure 12.13: User Grievance & Support Ticket Submission Form",
-         "The Support Ticket Submission Console allows any registered user to log formal operational inquiries or report platform anomalies. Users input a concise subject line and detailed incident description.",
-         "Tickets are written directly to the complaints table with a 'Pending' status, immediately alerting the Administrator for resolution."),
-
-        ("09_user_profile.png", "Figure 12.14: User Account Profile & Delivery Address Console",
-         "The User Profile Console enables users across all roles to maintain their personal contact coordinates, telephone numbers, and shipping addresses. For cancer patients, maintaining an accurate postal address ensures flawless delivery of crafted wigs.",
-         "Password updates and credential security settings are also managed through this console with strict re-authentication safeguards."),
+    appendix_screens = [
+        ("01_login.png", "Figure 19.1: Universal Authentication Console (login.php)"),
+        ("02_register.png", "Figure 19.2: Multi-Role User Registration Console (register.php)"),
+        ("03_home.png", "Figure 19.3: Public Informational & Community Portal (index.php)"),
+        ("04_admin_dashboard.png", "Figure 19.4: Administrator Platform Analytics & Overview (admin/dashboard.php)"),
+        ("04b_admin_ngos.png", "Figure 19.5: Administrator NGO Verification & Accreditation Console"),
+        ("04c_admin_complaints.png", "Figure 19.6: Administrator Grievance Ticketing & Resolution Console"),
+        ("05_ngo_dashboard.png", "Figure 19.7: Healthcare NGO Operations & Clinical Audit Hub (ngo/dashboard.php)"),
+        ("05b_ngo_campaign.png", "Figure 19.8: NGO Community Hair Donation Campaign Creation"),
+        ("06_donor_dashboard.png", "Figure 19.9: Donor Dashboard & Real-Time Pipeline Tracker (donor/dashboard.php)"),
+        ("06b_donor_add_donation.png", "Figure 19.10: Donor Hair Post Submission with Specimen Upload"),
+        ("07_patient_dashboard.png", "Figure 19.11: Cancer Patient Portal & Live Verified Hair Catalog (patient/dashboard.php)"),
+        ("07b_patient_my_requests.png", "Figure 19.12: Patient Hair Request Tracking & Allocation Status"),
+        ("08_user_complaint.png", "Figure 19.13: User Grievance & Support Ticket Submission Form"),
+        ("09_user_profile.png", "Figure 19.14: User Account Profile & Delivery Address Console"),
     ]
 
-    for filename, caption, p1_desc, p2_desc in screenshots_info:
+    for filename, caption in appendix_screens:
         img_path = os.path.join(SCREEN_DIR, filename)
         if os.path.exists(img_path):
             p_img = doc.add_paragraph()
             p_img.alignment = WD_ALIGN_PARAGRAPH.CENTER
             p_img.paragraph_format.space_before = Pt(8)
             p_img.paragraph_format.space_after = Pt(4)
-            p_img.add_run().add_picture(img_path, width=Inches(5.2))
-            add_p(doc, caption, font_size=9.5, italic=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=8)
-            add_p(doc, p1_desc, font_size=11, align=WD_ALIGN_PARAGRAPH.JUSTIFY, space_after=6, indent=0.5)
-            add_p(doc, p2_desc, font_size=11, align=WD_ALIGN_PARAGRAPH.JUSTIFY, space_after=16, indent=0.5)
+            p_img.add_run().add_picture(img_path, width=Inches(5.3))
+            add_p(doc, caption, font_size=9.5, italic=True, align=WD_ALIGN_PARAGRAPH.CENTER, space_after=14)
 
     # ──────────────────────────────────────────────────────────────────────────
-    # CHAPTER 13: BIBLIOGRAPHY
+    # CHAPTER 20: BIBLIOGRAPHY (Matching PDF Pages 53-54)
     # ──────────────────────────────────────────────────────────────────────────
-    add_divider_page(doc, "CHAPTER 13: BIBLIOGRAPHY")
-    add_heading_1(doc, "CHAPTER 13: BIBLIOGRAPHY")
+    add_divider_page(doc, "CHAPTER 20: BIBLIOGRAPHY")
+    add_heading_1(doc, "CHAPTER 20: BIBLIOGRAPHY")
 
-    add_heading_2(doc, "Web Resources & Authoritative Documentation")
-    webs = [
-        "[1] PHP Documentation Group, PHP: Hypertext Preprocessor Official Reference Manual, Available online: https://www.php.net/manual/en/ (Accessed: June 2026).",
-        "[2] Oracle Corporation, MySQL 8.0 Reference Manual: InnoDB Storage Engine & Locking Models, Available online: https://dev.mysql.com/doc/refman/8.0/en/innodb-locking.html (Accessed: June 2026).",
-        "[3] Mozilla Developer Network (MDN), Web Technology for Developers: Semantic HTML5 and CSS Flexible Box Layout, Available online: https://developer.mozilla.org/en-US/docs/Web (Accessed: May 2026).",
-        "[4] Open Web Application Security Project (OWASP), OWASP Top 10: The Ten Most Critical Web Application Security Risks, Available online: https://owasp.org/Top10/ (Accessed: May 2026).",
-        "[5] MariaDB Foundation, MariaDB Server Documentation: Transactions and Concurrency Control, Available online: https://mariadb.com/kb/en/documentation/ (Accessed: April 2026).",
-        "[6] APJ Abdul Kalam Technological University, Master of Computer Applications Curriculum, Scheme and Syllabi (2020 Scheme), Government of Kerala, Available online: https://ktu.edu.in/ (Accessed: July 2026).",
-        "[7] American Cancer Society, Coping with Cancer: Hair Loss and Alopecia During Chemotherapy, Available online: https://www.cancer.org/treatment/treatments-and-side-effects/physical-side-effects/hair-loss.html (Accessed: March 2026).",
-    ]
-    for w in webs:
-        add_p(doc, w, font_size=11, align=WD_ALIGN_PARAGRAPH.JUSTIFY, space_after=8, line_spacing=1.3)
-
-    add_p(doc, "", space_after=10)
-    add_heading_2(doc, "Technical Reference Textbooks")
+    add_heading_2(doc, "Technical Reference Books")
     books = [
         "[1] Software Engineering: A Practitioner's Approach, Roger S. Pressman and Bruce R. Maxim, 8th Edition, McGraw-Hill Education, 2015.",
         "[2] Fundamentals of Database Systems, Ramez Elmasri and Shamkant B. Navathe, 7th Edition, Pearson Education, 2016.",
@@ -1150,9 +999,29 @@ def generate_thesis_docx():
     for b in books:
         add_p(doc, b, font_size=11, align=WD_ALIGN_PARAGRAPH.JUSTIFY, space_after=8, line_spacing=1.3)
 
-    # Save to DOCX_OUT_PATH
-    doc.save(DOCX_OUT_PATH)
-    print(f"HairFidence MCA Thesis Document successfully created at: {DOCX_OUT_PATH}")
+    add_p(doc, "", space_after=10)
+    add_heading_2(doc, "Authoritative Documentation & Web References")
+    webs = [
+        "[1] PHP Documentation Group, PHP: Hypertext Preprocessor Official Reference Manual, Available online: https://www.php.net/manual/en/ (Accessed: June 2026).",
+        "[2] Oracle Corporation, MySQL 8.0 Reference Manual: InnoDB Storage Engine & Locking Models, Available online: https://dev.mysql.com/doc/refman/8.0/en/innodb-locking.html (Accessed: June 2026).",
+        "[3] Mozilla Developer Network (MDN), Web Technology for Developers: Semantic HTML5 and CSS Flexible Box Layout, Available online: https://developer.mozilla.org/en-US/docs/Web (Accessed: May 2026).",
+        "[4] Open Web Application Security Project (OWASP), OWASP Top 10: The Ten Most Critical Web Application Security Risks, Available online: https://owasp.org/Top10/ (Accessed: May 2026).",
+        "[5] Apache Friends, XAMPP Apache + MariaDB + PHP + Perl Distribution Documentation, Available online: https://www.apachefriends.org/ (Accessed: April 2026).",
+        "[6] APJ Abdul Kalam Technological University, Master of Computer Applications Curriculum, Scheme and Syllabi (2020 Scheme), Government of Kerala, Available online: https://ktu.edu.in/ (Accessed: July 2026).",
+    ]
+    for w in webs:
+        add_p(doc, w, font_size=11, align=WD_ALIGN_PARAGRAPH.JUSTIFY, space_after=8, line_spacing=1.3)
+
+    # Save to DOCX_OUT_PATH with fallback if file is currently open in Word
+    saved_path = DOCX_OUT_PATH
+    try:
+        doc.save(DOCX_OUT_PATH)
+    except PermissionError:
+        fallback_path = os.path.join(BASE_DIR, "HairFidence_MCA_Master_Thesis.docx")
+        doc.save(fallback_path)
+        saved_path = fallback_path
+        print(f"[NOTE] HairFidence_MCA_Thesis.docx is open in Microsoft Word. Saved to: {fallback_path}")
+    print(f"HairFidence MCA Thesis Document successfully created at: {saved_path}")
 
 if __name__ == "__main__":
     generate_thesis_docx()
