@@ -1,4 +1,22 @@
-# HAIRFIDENCE
+import fitz
+import os
+import sys
+
+PDF_PATH = r'C:\Users\ARSHAN NIZAR\.gemini\antigravity-ide\brain\092badc1-a1a9-44e9-ab43-c05438b7e052\.user_uploaded\media_1788794877769.pdf'
+WORKSPACE_DIR = r'c:\Users\ARSHAN NIZAR\Downloads\MINI_PROJECT'
+OUTPUT_MD_PATH = os.path.join(WORKSPACE_DIR, 'documentation', 'HairFidence_KTU_MCA_Project_Report.md')
+
+def build_markdown():
+    doc = fitz.open(PDF_PATH)
+    print(f"Loaded PDF with {len(doc)} pages.")
+
+    # We will assemble the exact markdown content matching HairFidence_MCA_new.pdf verbatim.
+    md = []
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # PAGE 1: TITLE / COVER PAGE
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# HAIRFIDENCE
 ## CANCER PATIENT HAIR DONATION MANAGEMENT SYSTEM
 
 ### PROJECT THESIS
@@ -30,8 +48,12 @@ FOR THE AWARD OF THE DEGREE OF
 ---
 
 <div style="page-break-after: always;"></div>
+""")
 
-# DEPARTMENT OF COMPUTER APPLICATIONS
+    # ──────────────────────────────────────────────────────────────────────────
+    # PAGE 2: BONA FIDE CERTIFICATE
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# DEPARTMENT OF COMPUTER APPLICATIONS
 # AWH ENGINEERING COLLEGE
 # KUTTIKKATTOOR, CALICUT - 673008
 
@@ -57,8 +79,12 @@ AWH Engineering College, Calicut &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 ---
 
 <div style="page-break-after: always;"></div>
+""")
 
-# ACKNOWLEDGEMENT
+    # ──────────────────────────────────────────────────────────────────────────
+    # PAGE 3: ACKNOWLEDGEMENT
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# ACKNOWLEDGEMENT
 
 		I express my profound sense of gratitude and sincere indebtedness to our respected Principal, Dr. Sabeena M V, for providing all necessary academic facilities, computational infrastructure, and institutional encouragement that made the completion of this thesis work possible.
 
@@ -80,8 +106,12 @@ AWH Engineering College, Calicut &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 ---
 
 <div style="page-break-after: always;"></div>
+""")
 
-# ABSTRACT
+    # ──────────────────────────────────────────────────────────────────────────
+    # PAGE 4: ABSTRACT
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# ABSTRACT
 
 		Chemotherapy-induced hair loss severely impacts the psychological well-being of cancer patients. While many compassionate individuals wish to donate hair for medical wigs, the lack of a standardized platform bottlenecks coordination between donors, non-governmental organizations (NGOs), and verified recipients. The proposed project, HairFidence, resolves this operational gap by introducing a centralized web application designed to digitalize and streamline the entire hair donation lifecycle.
 
@@ -92,8 +122,12 @@ AWH Engineering College, Calicut &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 ---
 
 <div style="page-break-after: always;"></div>
+""")
 
-# CONTENTS
+    # ──────────────────────────────────────────────────────────────────────────
+    # PAGES 5-6: CONTENTS
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# CONTENTS
 
 | Sl. No. | Section / Chapter Heading | Page No. |
 | :---: | :--- | :---: |
@@ -167,8 +201,12 @@ AWH Engineering College, Calicut &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 ---
 
 <div style="page-break-after: always;"></div>
+""")
 
-# CHAPTER 8: INTRODUCTION
+    # ──────────────────────────────────────────────────────────────────────────
+    # CHAPTER 8: INTRODUCTION (Pages 7-10)
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# CHAPTER 8: INTRODUCTION
 
 <br><br>
 
@@ -209,8 +247,12 @@ AWH Engineering College, Calicut &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 ---
 
 <div style="page-break-after: always;"></div>
+""")
 
-# CHAPTER 9: SYSTEM ANALYSIS
+    # ──────────────────────────────────────────────────────────────────────────
+    # CHAPTER 9: SYSTEM ANALYSIS (Pages 11-14)
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# CHAPTER 9: SYSTEM ANALYSIS
 
 <br><br>
 
@@ -236,7 +278,7 @@ AWH Engineering College, Calicut &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 | **Authentication** | None; unverified phone calls | BCrypt hashing (`PASSWORD_BCRYPT`) & RBAC guards |
 | **Medical Audit** | In-person physical paper inspection | Encrypted document upload pipeline with remote audit |
 | **Concurrency Control** | High double-booking rate | Pessimistic row locking (`FOR UPDATE`) in PDO transactions |
-| **Parcel Tracking** | Untracked; zero donor feedback | Visual pipeline (`Available` $\rightarrow$ `Processing` $\rightarrow$ `Donated`) |
+| **Parcel Tracking** | Untracked; zero donor feedback | Visual pipeline (`Available` $\\rightarrow$ `Processing` $\\rightarrow$ `Donated`) |
 | **Role Partitioning** | Generic clerks managing all data | Dedicated Admin, NGO, Donor, and Patient dashboards |
 | **NGO Governance** | Unregulated; no institutional vetting | Administrative accreditation (`is_approved` flag) |
 | **Grievances** | Lost in informal phone calls | Dedicated support ticketing console (`complaints` table) |
@@ -246,8 +288,12 @@ AWH Engineering College, Calicut &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 ---
 
 <div style="page-break-after: always;"></div>
+""")
 
-# CHAPTER 10: FEASIBILITY STUDY
+    # ──────────────────────────────────────────────────────────────────────────
+    # CHAPTER 10: FEASIBILITY STUDY (Pages 15-17)
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# CHAPTER 10: FEASIBILITY STUDY
 
 <br><br>
 
@@ -272,8 +318,12 @@ AWH Engineering College, Calicut &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 ---
 
 <div style="page-break-after: always;"></div>
+""")
 
-# CHAPTER 11: SOFTWARE ENGINEERING PARADIGM
+    # ──────────────────────────────────────────────────────────────────────────
+    # CHAPTER 11: SOFTWARE ENGINEERING PARADIGM (Pages 18-21)
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# CHAPTER 11: SOFTWARE ENGINEERING PARADIGM
 
 <br><br>
 
@@ -331,8 +381,12 @@ AWH Engineering College, Calicut &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 ---
 
 <div style="page-break-after: always;"></div>
+""")
 
-# CHAPTER 12: SYSTEM REQUIREMENT SPECIFICATION (SRS)
+    # ──────────────────────────────────────────────────────────────────────────
+    # CHAPTER 12: SYSTEM REQUIREMENT SPECIFICATION (Pages 22-25)
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# CHAPTER 12: SYSTEM REQUIREMENT SPECIFICATION (SRS)
 
 <br><br>
 
@@ -372,8 +426,8 @@ AWH Engineering College, Calicut &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 
 ### 2. Administrator Governance Module (FR-ADMIN)
 		• **FR-ADMIN-01:** Provide a real-time statistical dashboard displaying platform metrics (Donations, Requests, NGOs).
-		• **FR-ADMIN-02:** Audit newly registered NGOs and toggle institutional status (`Pending` $\rightarrow$ `Approved`).
-		• **FR-ADMIN-03:** Manage user complaints and mark resolution status (`Pending` $\rightarrow$ `Resolved`).
+		• **FR-ADMIN-02:** Audit newly registered NGOs and toggle institutional status (`Pending` $\\rightarrow$ `Approved`).
+		• **FR-ADMIN-03:** Manage user complaints and mark resolution status (`Pending` $\\rightarrow$ `Resolved`).
 
 ### 3. Healthcare NGO Module (FR-NGO)
 		• **FR-NGO-01:** Restrict dashboard access exclusively to NGOs possessing administrative approval.
@@ -383,7 +437,7 @@ AWH Engineering College, Calicut &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 ### 4. Hair Donor Module (FR-DONOR)
 		• **FR-DONOR-01:** Author hair donation posts detailing length (inches), hair texture, and specimen photo.
 		• **FR-DONOR-02:** Enforce strict file upload validation restricting formats to JPG, JPEG, and PNG.
-		• **FR-DONOR-03:** Real-time visual tracking of donation pipeline (`Available` $\rightarrow$ `Processing` $\rightarrow$ `Donated`).
+		• **FR-DONOR-03:** Real-time visual tracking of donation pipeline (`Available` $\\rightarrow$ `Processing` $\\rightarrow$ `Donated`).
 
 ### 5. Cancer Patient Module (FR-PATIENT)
 		• **FR-PATIENT-01:** Upload oncology diagnostic certificates during registration (stored securely in `uploads/medical_reports/`).
@@ -400,8 +454,12 @@ AWH Engineering College, Calicut &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 ---
 
 <div style="page-break-after: always;"></div>
+""")
 
-# CHAPTER 13: SYSTEM DESIGN
+    # ──────────────────────────────────────────────────────────────────────────
+    # CHAPTER 13: SYSTEM DESIGN (Pages 26-31)
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# CHAPTER 13: SYSTEM DESIGN
 
 <br><br>
 
@@ -441,24 +499,28 @@ AWH Engineering College, Calicut &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 | Table Name | Primary Key | Foreign Keys | Core Attributes |
 | :--- | :--- | :--- | :--- |
 | **1. login** | `login_id` (INT PK) | None | `email` (UNIQUE), `password` (BCrypt), `role` (ENUM), `created_at` |
-| **2. donors** | `donor_id` (INT PK) | `login_id` $\rightarrow$ `login(login_id)` | `full_name`, `phone`, `address` |
-| **3. patients** | `patient_id` (INT PK) | `login_id` $\rightarrow$ `login(login_id)` | `full_name`, `phone`, `address`, `medical_report_url` |
-| **4. ngos** | `ngo_id` (INT PK) | `login_id` $\rightarrow$ `login(login_id)` | `organization_name`, `registration_number`, `is_approved` |
-| **5. hair_donation_posts** | `post_id` (INT PK) | `donor_id` $\rightarrow$ `donors(donor_id)` | `hair_length`, `hair_type`, `image_url`, `status` (ENUM) |
+| **2. donors** | `donor_id` (INT PK) | `login_id` $\\rightarrow$ `login(login_id)` | `full_name`, `phone`, `address` |
+| **3. patients** | `patient_id` (INT PK) | `login_id` $\\rightarrow$ `login(login_id)` | `full_name`, `phone`, `address`, `medical_report_url` |
+| **4. ngos** | `ngo_id` (INT PK) | `login_id` $\\rightarrow$ `login(login_id)` | `organization_name`, `registration_number`, `is_approved` |
+| **5. hair_donation_posts** | `post_id` (INT PK) | `donor_id` $\\rightarrow$ `donors(donor_id)` | `hair_length`, `hair_type`, `image_url`, `status` (ENUM) |
 | **6. hair_requests** | `request_id` (INT PK) | `patient_id`, `post_id`, `ngo_id` | `request_date`, `status` (`Pending`/`Approved`/`Rejected`) |
-| **7. campaigns** | `campaign_id` (INT PK) | `ngo_id` $\rightarrow$ `ngos(ngo_id)` | `title`, `description`, `event_date`, `location` |
-| **8. complaints** | `complaint_id` (INT PK) | `login_id` $\rightarrow$ `login(login_id)` | `subject`, `description`, `status` (`Pending`/`Resolved`), `date` |
+| **7. campaigns** | `campaign_id` (INT PK) | `ngo_id` $\\rightarrow$ `ngos(ngo_id)` | `title`, `description`, `event_date`, `location` |
+| **8. complaints** | `complaint_id` (INT PK) | `login_id` $\\rightarrow$ `login(login_id)` | `subject`, `description`, `status` (`Pending`/`Resolved`), `date` |
 
 ## 13.5 Normalization Proofs (1NF, 2NF, 3NF)
 		• **First Normal Form (1NF):** Every attribute contains atomic, indivisible values. Multi-valued repeating groups (e.g. storing multiple hair posts within a donor row) are eliminated by establishing the dedicated `hair_donation_posts` entity.
 		• **Second Normal Form (2NF):** The schema satisfies 1NF and contains zero partial key dependencies. All tables utilize single-attribute synthetic auto-increment primary keys (`login_id`, `post_id`, `request_id`), ensuring non-key attributes depend strictly on the whole primary key.
-		• **Third Normal Form (3NF):** The schema satisfies 2NF and exhibits zero transitive dependencies ($X \rightarrow Y$ and $Y \rightarrow Z$). Authentication attributes reside strictly in `login`, while domain profile attributes reside strictly in entity profile relations (`donors`, `patients`, `ngos`), linked solely by the foreign key `login_id`. In `hair_requests`, status depends directly on `request_id`, not transitively through `post_id`.
+		• **Third Normal Form (3NF):** The schema satisfies 2NF and exhibits zero transitive dependencies ($X \\rightarrow Y$ and $Y \\rightarrow Z$). Authentication attributes reside strictly in `login`, while domain profile attributes reside strictly in entity profile relations (`donors`, `patients`, `ngos`), linked solely by the foreign key `login_id`. In `hair_requests`, status depends directly on `request_id`, not transitively through `post_id`.
 
 ---
 
 <div style="page-break-after: always;"></div>
+""")
 
-# CHAPTER 14: SYSTEM DEVELOPMENT
+    # ──────────────────────────────────────────────────────────────────────────
+    # CHAPTER 14: SYSTEM DEVELOPMENT (Pages 32-34)
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# CHAPTER 14: SYSTEM DEVELOPMENT
 
 <br><br>
 
@@ -515,8 +577,12 @@ try {
 ---
 
 <div style="page-break-after: always;"></div>
+""")
 
-# CHAPTER 15: SYSTEM TESTING AND IMPLEMENTATION
+    # ──────────────────────────────────────────────────────────────────────────
+    # CHAPTER 15: SYSTEM TESTING AND IMPLEMENTATION (Pages 35-37)
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# CHAPTER 15: SYSTEM TESTING AND IMPLEMENTATION
 
 <br><br>
 
@@ -536,11 +602,11 @@ try {
 | **TC-02** | Invalid Login | Incorrect password | Display 'Invalid credentials' banner | Access blocked, error shown | **PASS** |
 | **TC-03** | NGO Gated Access | Unapproved NGO login | Prevent login; display pending notice | Login halted, warning shown | **PASS** |
 | **TC-04** | Role Traversal | Donor accessing `/admin/` | Intercept via `check_access()`; redirect | HTTP 302 redirect to login | **PASS** |
-| **TC-05** | Post Creation | Length: 12.5, Wavy, Photo | Post created; status $\rightarrow$ 'Available' | Tuple inserted, catalog updated | **PASS** |
+| **TC-05** | Post Creation | Length: 12.5, Wavy, Photo | Post created; status $\\rightarrow$ 'Available' | Tuple inserted, catalog updated | **PASS** |
 | **TC-06** | Concurrency Lock | Simultaneous requests | Only first succeeds; second rolled back | Lock acquired; conflict caught | **PASS** |
 | **TC-07** | Report Upload | Valid PDF report (1.8 MB) | Stored in `uploads/medical_reports/` | File saved, database updated | **PASS** |
 | **TC-08** | Malicious File | Disallowed file (`.exe`) | Block upload with MIME error | Upload rejected, zero write | **PASS** |
-| **TC-09** | NGO Rejection | NGO rejects Request #35 | Request Rejected; Post $\rightarrow$ 'Available' | Post unlocked in catalog | **PASS** |
+| **TC-09** | NGO Rejection | NGO rejects Request #35 | Request Rejected; Post $\\rightarrow$ 'Available' | Post unlocked in catalog | **PASS** |
 | **TC-10** | Complaint Flow | Valid grievance ticket | Ticket logged; visible to Admin | Tuple logged, marked Resolved | **PASS** |
 
 ## 15.3 Deployment & Build Configuration
@@ -556,8 +622,12 @@ try {
 ---
 
 <div style="page-break-after: always;"></div>
+""")
 
-# CHAPTER 16: SYSTEM MAINTENANCE
+    # ──────────────────────────────────────────────────────────────────────────
+    # CHAPTER 16: SYSTEM MAINTENANCE (Pages 38-39)
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# CHAPTER 16: SYSTEM MAINTENANCE
 
 <br><br>
 
@@ -581,8 +651,12 @@ try {
 ---
 
 <div style="page-break-after: always;"></div>
+""")
 
-# CHAPTER 17: FUTURE ENHANCEMENT
+    # ──────────────────────────────────────────────────────────────────────────
+    # CHAPTER 17: FUTURE ENHANCEMENT (Pages 40-41)
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# CHAPTER 17: FUTURE ENHANCEMENT
 
 <br><br>
 
@@ -604,8 +678,12 @@ try {
 ---
 
 <div style="page-break-after: always;"></div>
+""")
 
-# CHAPTER 18: CONCLUSION
+    # ──────────────────────────────────────────────────────────────────────────
+    # CHAPTER 18: CONCLUSION (Pages 42-43)
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# CHAPTER 18: CONCLUSION
 
 <br><br>
 
@@ -624,8 +702,12 @@ try {
 ---
 
 <div style="page-break-after: always;"></div>
+""")
 
-# CHAPTER 19: APPENDIX
+    # ──────────────────────────────────────────────────────────────────────────
+    # CHAPTER 19: APPENDIX (Pages 44-52)
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# CHAPTER 19: APPENDIX
 
 <br><br>
 
@@ -757,8 +839,12 @@ try {
 ---
 
 <div style="page-break-after: always;"></div>
+""")
 
-# CHAPTER 20: BIBLIOGRAPHY
+    # ──────────────────────────────────────────────────────────────────────────
+    # CHAPTER 20: BIBLIOGRAPHY (Pages 53-54)
+    # ──────────────────────────────────────────────────────────────────────────
+    md.append("""# CHAPTER 20: BIBLIOGRAPHY
 
 <br><br>
 
@@ -777,3 +863,16 @@ try {
 		[4] OWASP Foundation, OWASP Top Ten Web Application Security Risks, Available online: https://owasp.org/Top10/ (Accessed: June 2026).  
 		[5] Apache Friends, XAMPP Apache + MariaDB + PHP + Perl Distribution, Available online: https://www.apachefriends.org/ (Accessed: April 2026).  
 		[6] APJ Abdul Kalam Technological University, Master of Computer Applications Curriculum, Scheme and Syllabi (2020 Scheme), Government of Kerala, Available online: https://ktu.edu.in/ (Accessed: July 2026).  
+""")
+
+    full_text = "\n".join(md)
+    
+    with open(OUTPUT_MD_PATH, 'w', encoding='utf-8') as f:
+        f.write(full_text)
+        
+    print(f"Successfully compiled exact Markdown documentation to: {OUTPUT_MD_PATH}")
+    print(f"Total characters: {len(full_text)}")
+    print(f"Total words: {len(full_text.split())}")
+
+if __name__ == '__main__':
+    build_markdown()
