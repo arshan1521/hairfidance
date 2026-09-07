@@ -333,6 +333,6 @@ for i, (icon, label, spec) in enumerate(sw):
     add_text(s, spec,  lft+0.55, top+0.55, 5.3, 0.65, size=12.5, color=MUTED)
 
 # ─── SAVE ─────────────────────────────────────────────────────────────────────
-out_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "HairFidence_Presentation.pptx")
+out_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "HairFidence_Presentation.pptx")
 prs.save(out_path)
 print(f"Saved: {out_path}")

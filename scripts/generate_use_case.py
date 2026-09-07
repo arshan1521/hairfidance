@@ -107,5 +107,6 @@ def make_usecase_diagram(out_path):
     print(f"UML Diagram saved to {out_path}")
 
 if __name__ == "__main__":
-    out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "use_case_diagram.png")
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    out = os.path.join(base_dir, "use_case_diagram.png")
     make_usecase_diagram(out)

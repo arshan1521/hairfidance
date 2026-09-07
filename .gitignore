@@ -1,6 +1,23 @@
-chrome_profile/
+# Python cache and environments
 __pycache__/
-*.pyc
-py_debug.log
+*.py[cod]
+*$py.class
+*.env
+.venv/
+env/
+venv/
+
+# Temporary logs and debug files
+*.log
 err.txt
+py_debug.log
 get-pip.py
+
+# Chrome / automation profiles
+chrome_profile/
+.playwright/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -8,9 +8,8 @@ from docx.enum.section import WD_SECTION_START
 from docx.oxml import parse_xml, OxmlElement
 from docx.oxml.ns import nsdecls, qn
 
-BASE_DIR = r"c:\Users\ARSHAN NIZAR\Downloads\MINI_PROJECT"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCX_OUT_PATH = os.path.join(BASE_DIR, "HairFidence_MCA_Thesis.docx")
-ALT_DOCX_PATH = os.path.join(BASE_DIR, "HairFidence_Project_Report.docx")
 LOGO_PATH = os.path.join(BASE_DIR, "college_logo.png")
 UML_PATH = os.path.join(BASE_DIR, "use_case_diagram.png")
 SCREEN_DIR = os.path.join(BASE_DIR, "screenshots")
@@ -1033,10 +1032,9 @@ def generate_thesis_docx():
     for w in webs:
         add_p(doc, w, font_size=11, align=WD_ALIGN_PARAGRAPH.JUSTIFY, space_after=8, line_spacing=1.3)
 
-    # Save to primary and alternate paths
+    # Save thesis document
     doc.save(DOCX_OUT_PATH)
-    doc.save(ALT_DOCX_PATH)
-    print(f"Thesis Document successfully generated and saved to:\n1. {DOCX_OUT_PATH}\n2. {ALT_DOCX_PATH}")
+    print(f"Thesis Document successfully generated and saved to: {DOCX_OUT_PATH}")
 
 if __name__ == "__main__":
     generate_thesis_docx()

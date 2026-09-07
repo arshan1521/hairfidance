@@ -7,10 +7,11 @@ from docx.enum.table import WD_TABLE_ALIGNMENT, WD_ALIGN_VERTICAL
 from docx.oxml import OxmlElement, parse_xml
 from docx.oxml.ns import nsdecls, qn
 
-DOC_PATH = r"c:\Users\ARSHAN NIZAR\Downloads\MINI_PROJECT\HairFidence_Project_Report.docx"
-SCREEN_DIR = r"c:\Users\ARSHAN NIZAR\Downloads\MINI_PROJECT\screenshots"
-LOGO_PATH = r"c:\Users\ARSHAN NIZAR\Downloads\MINI_PROJECT\college_logo.png"
-UML_PATH = r"c:\Users\ARSHAN NIZAR\Downloads\MINI_PROJECT\use_case_diagram.png"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DOC_PATH = os.path.join(BASE_DIR, "HairFidence_MCA_Thesis.docx")
+SCREEN_DIR = os.path.join(BASE_DIR, "screenshots")
+LOGO_PATH = os.path.join(BASE_DIR, "college_logo.png")
+UML_PATH = os.path.join(BASE_DIR, "use_case_diagram.png")
 
 # Helper XML styling
 def set_cell_border(cell, **kwargs):
