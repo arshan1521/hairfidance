@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HairFidence - Project Abstract</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --secondary: #10b981;
+            --text-color: #334155;
+            --border-color: #cbd5e1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-color);
+            line-height: 1.8;
+            background-color: #f1f5f9;
+            padding: 40px 0;
+        }
+
+        .page {
+            background: white;
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 35mm 25mm;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            color: var(--secondary);
+            font-weight: 600;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .abstract-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 1.05rem;
+            text-indent: 40px;
+            margin-bottom: 20px;
+        }
+
+        .meta-container {
+            margin-top: auto;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            font-size: 0.95rem;
+        }
+
+        .keywords {
+            margin-bottom: 25px;
+        }
+
+        .prepared-by {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-weight: 500;
+        }
+
+        .footer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        /* Print formatting */
+        @media print {
+            body {
+                background-color: transparent;
+                padding: 0;
+            }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        <div class="header-section">
+            <h1 class="title">HAIRFIDENCE</h1>
+            <div class="subtitle">Cancer Patient Hair Donation Management System</div>
+        </div>
+
+        <div class="abstract-title">ABSTRACT</div>
+        
+        <p>
+            Hair loss induced by aggressive chemotherapy regimens remains one of the most psychologically distressing side effects for cancer patients. Although thousands of compassionate individuals across society are eager to donate their hair to support medical wig-making initiatives, the lack of a standardized and legally transparent interface severely bottlenecks connections between organic donors, non-governmental organizations (NGOs), and verified healthcare recipients. The proposed project, <strong>HairFidence</strong>, directly resolves this operational gap by introducing a centralized web application designed to digitalize and streamline the entire hair donation lifecycle.
+        </p>
+        
+        <p>
+            Built on an interactive HTML5, CSS3, and JavaScript frontend paired with a secure, modular PHP backend, HairFidence manages transactions through an optimized MySQL database engine running in a local XAMPP Server environment. By restricting database definitions to an elegant 8-table relational MySQL schema, the platform ensures rapid execution speeds, robust concurrency control via PDO transactions, and strict data privacy, preventing resource double-booking and secure data leakage.
+        </p>
+        
+        <p>
+            The system logically partitions functionalities among four distinct modules: System Administrator, NGOs, Donors, and Patients. Donors can easily list hair specifications and track their donation pipeline; patients can search the verified catalog and securely upload medical reports; registered NGOs serve as gatekeepers to audit records, verify physical donations, and organize donation drives; while the administrator oversees the entire ecosystem. Ultimately, HairFidence returns dignity and psychological comfort to cancer survivors through an efficient, transparent, and community-driven charitable logistics network.
+        </p>
+
+        
+        <div class="footer">
+            <span>HairFidence Abstract</span>
+            <span>Page 1</span>
+        </div>
+    </div>
+
+</body>
+</html>

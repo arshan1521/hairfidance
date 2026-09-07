@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HairFidence - MVC Architecture Diagram Map</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --secondary: #10b981;
+            --view-bg: #eff6ff;
+            --view-border: #3b82f6;
+            --ctrl-bg: #fef3c7;
+            --ctrl-border: #d97706;
+            --db-bg: #ecfdf5;
+            --db-border: #10b981;
+            --text: #1e293b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+            color: var(--text);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Chart-sized container to match standard board proportion */
+        .chart-board {
+            background-color: white;
+            width: 1200px;
+            height: 900px;
+            border: 2px solid #cbd5e1;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            position: relative;
+            padding: 30px;
+            overflow: hidden;
+        }
+
+        .board-title {
+            text-align: center;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Database Cylinder Styles */
+        .db-cylinder {
+            position: absolute;
+            width: 120px;
+            height: 70px;
+            background: var(--db-bg);
+            border: 2px solid var(--db-border);
+            border-radius: 50% / 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            font-size: 0.8rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            z-index: 10;
+        }
+
+        .db-cylinder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -2px;
+            width: calc(100% + 4px);
+            height: 20px;
+            border: 2px solid var(--db-border);
+            border-radius: 50%;
+            background: #d1fae5;
+        }
+
+        .db-title {
+            margin-top: 12px;
+            font-family: 'Outfit', sans-serif;
+            z-index: 2;
+            color: #065f46;
+        }
+
+        /* Module Box Styles */
+        .module-box {
+            position: absolute;
+            background: var(--view-bg);
+            border: 2px solid var(--view-border);
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            z-index: 5;
+        }
+
+        .module-header {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-align: center;
+            border-bottom: 2px solid var(--view-border);
+            padding-bottom: 8px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* Layout Grid lists inside modules */
+        .layout-table {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .layout-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .view-item {
+            background: white;
+            border: 1px solid #cbd5e1;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            flex-grow: 1;
+        }
+
+        .controller-item {
+            background: var(--ctrl-bg);
+            border: 1.5px solid var(--ctrl-border);
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #78350f;
+            text-align: center;
+            min-width: 110px;
+        }
+
+        /* SVG Line Canvas Overlay */
+        .lines-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Position mappings for elements */
+        #db-login { top: 40px; left: 40px; }
+        #db-ngos { top: 40px; right: 40px; }
+        #db-donors { top: 380px; left: 40px; }
+        #db-patients { top: 380px; right: 40px; }
+        #db-posts { top: 450px; left: 350px; }
+        #db-requests { top: 450px; right: 350px; }
+        #db-campaigns { bottom: 40px; left: 40px; }
+        #db-complaints { bottom: 40px; right: 40px; }
+
+        /* Module dimensions and positioning */
+        #mod-admin {
+            top: 100px;
+            left: 380px;
+            width: 440px;
+            height: 250px;
+        }
+
+        #mod-donor {
+            bottom: 60px;
+            left: 190px;
+            width: 380px;
+            height: 230px;
+        }
+
+        #mod-patient {
+            bottom: 60px;
+            right: 190px;
+            width: 380px;
+            height: 230px;
+        }
+
+        #mod-ngo {
+            top: 380px;
+            left: 508px;
+            width: 184px;
+            height: 350px;
+            background: #f0fdf4;
+            border-color: #10b981;
+        }
+        #mod-ngo .module-header {
+            border-bottom-color: #10b981;
+        }
+
+        .guide-note {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            color: #64748b;
+            text-align: center;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chart-board">
+        <div class="board-title">HairFidence - MVC System Architecture Layout Map</div>
+
+        <!-- 1. DATABASE CYLINDERS (MODELS) -->
+        <div class="db-cylinder" id="db-login">
+            <span class="db-title">Login DB</span>
+        </div>
+        <div class="db-cylinder" id="db-ngos">
+            <span class="db-title">NGOs DB</span>
+        </div>
+        <div class="db-cylinder" id="db-donors">
+            <span class="db-title">Donors DB</span>
+        </div>
+        <div class="db-cylinder" id="db-patients">
+            <span class="db-title">Patients DB</span>
+        </div>
+        <div class="db-cylinder" id="db-posts">
+            <span class="db-title">Posts DB</span>
+        </div>
+        <div class="db-cylinder" id="db-requests">
+            <span class="db-title">Requests DB</span>
+        </div>
+        <div class="db-cylinder" id="db-campaigns">
+            <span class="db-title">Campaigns DB</span>
+        </div>
+        <div class="db-cylinder" id="db-complaints">
+            <span class="db-title">Complaints DB</span>
+        </div>
+
+        <!-- 2. USER MODULES (VIEWS & CONTROLLERS) -->
+        
+        <!-- Admin Module -->
+        <div class="module-box" id="mod-admin">
+            <div class="module-header">Admin View Module</div>
+            <div class="layout-table">
+                <div class="layout-row">
+                    <div class="view-item">Verify NGO credentials</div>
+                    <div class="controller-item">Admin Controller</div>
+                </div>
+                <div class="layout-row">
+                    <div class="view-item">Moderate User Profiles</div>
+                    <div class="controller-item">Admin Controller</div>
+                </div>
+                <div class="layout-row">
+                    <div class="view-item">Resolve complaints console</div>
+                    <div class="controller-item">Admin Controller</div>
+                </div>
+                <div class="layout-row">
+                    <div class="view-item">System Login/Logout</div>
+                    <div class="controller-item">AuthController</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NGO Module -->
+        <div class="module-box" id="mod-ngo">
+            <div class="module-header">NGO View</div>
+            <div class="layout-table" style="height: 100%; justify-content: space-around;">
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                    <div class="view-item" style="width: 100%; text-align: center;">Verify Reports</div>
+                    <div class="view-item" style="width: 100%; text-align: center;">Verify Donations</div>
+                    <div class="view-item" style="width: 100%; text-align: center;">Deploy Campaign</div>
+                    <div class="view-item" style="width: 100%; text-align: center;">Manage Requests</div>
+                </div>
+                <div class="controller-item" style="width: 100%;">NGO Controller</div>
+            </div>
+        </div>
+
+        <!-- Donor Module -->
+        <div class="module-box" id="mod-donor">
+            <div class="module-header">Donor View Module</div>
+            <div class="layout-table">
+                <div class="layout-row">
+                    <div class="view-item">Add Hair Donation Post</div>
+                    <div class="controller-item">Donor Controller</div>
+                </div>
+                <div class="layout-row">
+                    <div class="view-item">View Donation Status</div>
+                    <div class="controller-item">Donor Controller</div>
+                </div>
+                <div class="layout-row">
+                    <div class="view-item">View Campaigns list</div>
+                    <div class="controller-item">Donor Controller</div>
+                </div>
+                <div class="layout-row">
+                    <div class="view-item">Register / Access portal</div>
+                    <div class="controller-item">AuthController</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Patient Module -->
+        <div class="module-box" id="mod-patient">
+            <div class="module-header">Patient View Module</div>
+            <div class="layout-table">
+                <div class="layout-row">
+                    <div class="view-item">Upload Medical Report</div>
+                    <div class="controller-item">Patient Controller</div>
+                </div>
+                <div class="layout-row">
+                    <div class="view-item">Browse Available Hair</div>
+                    <div class="controller-item">Patient Controller</div>
+                </div>
+                <div class="layout-row">
+                    <div class="view-item">Send & Track Request</div>
+                    <div class="controller-item">Patient Controller</div>
+                </div>
+                <div class="layout-row">
+                    <div class="view-item">Register / Access portal</div>
+                    <div class="controller-item">AuthController</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. DRAWN RELATIONSHIP LINES (SVG) -->
+        <svg class="lines-canvas">
+            <!-- Line markers for arrows -->
+            <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+                </marker>
+                <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
+                </marker>
+            </defs>
+
+            <!-- CONNECTIONS: Controllers to Tables (Models) -->
+            
+            <!-- AuthController (Admin Module) to Login DB -->
+            <path d="M 390 315 L 160 85" fill="none" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrow)"/>
+            
+            <!-- AdminController to NGOs DB -->
+            <path d="M 810 130 L 1030 85" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+            
+            <!-- AdminController to Complaints DB -->
+            <path d="M 810 190 Q 950 250 1060 820" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+            <!-- NGO Controller to Campaigns DB -->
+            <path d="M 515 700 Q 300 700 150 820" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+            
+            <!-- NGO Controller to Requests DB -->
+            <path d="M 685 700 L 720 700 Q 780 700 780 520" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+            <!-- NGO Controller to Posts DB -->
+            <path d="M 515 700 L 450 700 Q 420 700 420 520" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+            <!-- Donor AuthController to Donors DB -->
+            <path d="M 500 830 Q 300 830 110 450" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+            <!-- Donor Controller to Posts DB (Hair Donation Post) -->
+            <path d="M 500 680 L 420 520" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+            <!-- Patient Controller to Patients DB -->
+            <path d="M 920 680 Q 1060 620 1060 450" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+            <!-- Patient Controller to Requests DB -->
+            <path d="M 920 740 Q 850 740 810 520" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+            <!-- DBs (Models) updating Views (Data Binding flow) -->
+            <!-- Campaigns DB (Bottom Left) populates Donor View (Campaigns list) -->
+            <path d="M 110 820 L 190 750" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3" marker-end="url(#arrow-green)"/>
+            <!-- Posts DB populates Patient View (Browse catalog) -->
+            <path d="M 420 520 L 710 680" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3" marker-end="url(#arrow-green)"/>
+            <!-- Requests DB populates Patient View (View status) -->
+            <path d="M 810 520 L 810 680" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3" marker-end="url(#arrow-green)"/>
+            <!-- Requests DB populates NGO View (Manage requests) -->
+            <path d="M 780 520 L 600 480" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3" marker-end="url(#arrow-green)"/>
+        </svg>
+
+        <div class="guide-note">
+            Refer to this layout map to draw your physical MVC chart. Boxes represent Views, yellow pills represent Controllers, and cylinders represent Database tables.
+        </div>
+    </div>
+
+</body>
+</html>

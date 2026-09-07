@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HairFidence - Software Requirement Specification (SRS)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+        :root {
+            --primary: #0f172a;
+            --secondary: #10b981;
+            --text-color: #334155;
+            --border-color: #cbd5e1;
+            --light-bg: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #f1f5f9;
+            padding: 40px 0;
+        }
+
+        .page {
+            background: white;
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto 30px auto;
+            padding: 25mm 20mm;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cover-page {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .cover-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .cover-subtitle {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            color: var(--secondary);
+            font-weight: 600;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+            width: 80%;
+        }
+
+        .cover-meta {
+            margin-top: 150px;
+            font-size: 1.1rem;
+            color: #64748b;
+        }
+
+        .cover-meta p {
+            margin: 8px 0;
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            border-left: 4px solid var(--secondary);
+            padding-left: 12px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin: 20px 0 10px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .bold-term {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Database table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            text-align: left;
+            padding: 12px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            border: 1px solid var(--primary);
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--light-bg);
+        }
+
+        .footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 15px;
+        }
+
+        /* Print formatting */
+        @media print {
+            body {
+                background-color: transparent;
+                padding: 0;
+            }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1: COVER PAGE -->
+    <div class="page cover-page">
+        <h1 class="cover-title">HAIRFIDENCE</h1>
+        <h2 class="cover-subtitle"> Software Requirement Specification (SRS)</h2>
+        
+        
+        
+        <div class="footer">
+            <span>HairFidence SRS</span>
+            <span>Page 1</span>
+        </div>
+    </div>
+
+    <!-- PAGE 2: INTRODUCTION & MODULES (ADMIN/NGO) -->
+    <div class="page">
+        <div class="section-title">1. INTRODUCTION</div>
+        <p>
+            Hair loss induced by aggressive chemotherapy regimens remains one of the most psychologically challenging and emotionally distressing side effects for cancer patients, severely degrading their self-esteem and mental well-being during recovery. Although thousands of compassionate individuals are eager to donate hair, the lack of a standardized, legally transparent interface bottlenecks connections between donors, non-governmental organizations (NGOs), and verified recipients.
+        </p>
+        <p>
+            HairFidence is a centralized web-based platform designed to digitalize and streamline the hair donation ecosystem. This SRS document outlines the complete technical, functional, and structural parameters required to develop, deploy, and maintain the system securely.
+        </p>
+
+        <div class="section-title">2. MODULES AND MODULE DESCRIPTION</div>
+        <p>
+            The system is logically partitioned into four primary user modules, ensuring strict boundaries for data security and role-specific workflows.
+        </p>
+
+        <h3>2.1 Admin Module</h3>
+        <p>The overarching governance layer for the application.</p>
+        <ul>
+            <li><span class="bold-term">Approve NGOs:</span> Reviews registration credentials and activates NGO accounts.</li>
+            <li><span class="bold-term">Manage Users & Campaigns:</span> Monitors Donor/Patient profiles and moderates NGO-created campaigns.</li>
+            <li><span class="bold-term">Resolve Complaints:</span> A ticketing console to view user-submitted issues and update their status to resolved.</li>
+        </ul>
+
+        <h3>2.2 NGO Module</h3>
+        <p>The intermediary layer responsible for medical verification and physical asset logistics.</p>
+        <ul>
+            <li><span class="bold-term">Create Campaign:</span> Deploys local hair donation drives with details (venue, date, description).</li>
+            <li><span class="bold-term">View Hair Donation Posts:</span> Displays all logged donor hair posts in the system.</li>
+            <li><span class="bold-term">Verify Hair Donations:</span> Validates incoming physical hair donations and updates status to Donated.</li>
+            <li><span class="bold-term">Manage Hair Requests:</span> Audits patient requests and approves/rejects them based on medical reports.</li>
+        </ul>
+
+        <div class="footer">
+            <span>HairFidence SRS</span>
+            <span>Page 2</span>
+        </div>
+    </div>
+
+    <!-- PAGE 3: MODULES (DONOR/PATIENT) & USER STORIES -->
+    <div class="page">
+        <h3>2.3 Donor Module</h3>
+        <p>The philanthropic interface optimized for rapid data entry and tracking.</p>
+        <ul>
+            <li><span class="bold-term">Add Hair Donation:</span> Uploads details of the hair (length, texture, photo).</li>
+            <li><span class="bold-term">View Donation Status:</span> Real-time tracking of the donation pipeline (Available → Processing → Donated).</li>
+            <li><span class="bold-term">View Campaigns:</span> Accesses the directory of upcoming NGO-led donation events.</li>
+        </ul>
+
+        <h3>2.4 Patient Module</h3>
+        <p>A highly secure, privacy-focused interface for cancer survivors to request wigs.</p>
+        <ul>
+            <li><span class="bold-term">Upload Medical Report:</span> Securely attaches institutional diagnostic reports for NGO validation.</li>
+            <li><span class="bold-term">Browse Available Hair:</span> An interactive directory to browse and filter verified, available hair donations.</li>
+            <li><span class="bold-term">Send Hair Request:</span> Dispatches a formal request for a specific hair asset routing it via an approved NGO.</li>
+            <li><span class="bold-term">View Request Status:</span> Monitors the status of requested hair (Pending → Approved / Rejected).</li>
+        </ul>
+
+        <div class="section-title">3. USER STORIES</div>
+        <ul>
+            <li><span class="bold-term">As an Admin:</span> I want to review and approve newly registered NGOs so that only legitimate medical intermediaries can access the verification tools.</li>
+            <li><span class="bold-term">As an Admin:</span> I want to resolve user complaints to ensure the platform operates smoothly without technical friction.</li>
+            <li><span class="bold-term">As an NGO:</span> I want to verify medical reports submitted by patients so that resources are allocated strictly to genuine cancer survivors.</li>
+            <li><span class="bold-term">As an NGO:</span> I want to publish awareness campaigns to encourage community participation in hair donation drives.</li>
+            <li><span class="bold-term">As a Donor:</span> I want to publish my hair donation details (length, texture, photo) so that it can be matched with a patient in need.</li>
+            <li><span class="bold-term">As a Donor:</span> I want to track my donation's status so I know exactly when my contribution has been delivered to a patient.</li>
+            <li><span class="bold-term">As a Patient:</span> I want to securely upload my medical certificates without public exposure to validate my need for a wig.</li>
+            <li><span class="bold-term">As a Patient:</span> I want to browse a catalog of available hair and request a specific match so I can regain my confidence.</li>
+        </ul>
+
+        <div class="footer">
+            <span>HairFidence SRS</span>
+            <span>Page 3</span>
+        </div>
+    </div>
+
+    <!-- PAGE 4: FUNCTIONAL & NON-FUNCTIONAL REQUIREMENTS -->
+    <div class="page">
+        <div class="section-title">4. FUNCTIONAL REQUIREMENTS</div>
+        
+        <h3>4.1 Authentication & Session Management</h3>
+        <ul>
+            <li>The system must authenticate users using securely hashed passwords and maintain role-based access control (RBAC).</li>
+            <li>The system must automatically separate user interfaces based on the logged-in role (Admin, NGO, Donor, Patient) using PHP sessions.</li>
+        </ul>
+
+        <h3>4.2 Document Parsing & Auditing</h3>
+        <ul>
+            <li>The system must enforce mandatory document uploads (Medical Reports for Patients, Registration Certificates for NGOs).</li>
+            <li>The system must hold new NGO accounts in a 'Pending' state until the Admin explicitly toggles their status to 'Approved'.</li>
+        </ul>
+
+        <h3>4.3 Cataloging & Request Handling</h3>
+        <ul>
+            <li>The system must allow Donors to create posts detailing hair attributes and automatically append a status of 'Available'.</li>
+            <li>The system must lock a donation from the public catalog the moment a Patient requests it, changing its status to 'Processing' to prevent double-booking.</li>
+            <li>The system must allow NGOs to manually finalize a request, updating the specific donation status to 'Donated'.</li>
+        </ul>
+
+        <div class="section-title">5. NON-FUNCTIONAL REQUIREMENTS</div>
+        <ul>
+            <li><span class="bold-term">Concurrency Control:</span> The system must utilize atomic database transactions (using MySQL PDO transactions) to prevent race conditions when multiple users attempt to request the same hair donation simultaneously.</li>
+            <li><span class="bold-term">Data Security & Privacy:</span> Patient medical documents must be strictly isolated. They must never be exposed publicly and are accessible only to the verifying NGO and the Admin.</li>
+            <li><span class="bold-term">Performance:</span> The application must render primary interfaces and execute catalog search queries within 3 seconds under standard broadband conditions.</li>
+            <li><span class="bold-term">Usability & Responsiveness:</span> The user interface must utilize a responsive grid framework to adapt seamlessly to desktop, tablet, and mobile device viewports.</li>
+            <li><span class="bold-term">Reliability & Availability:</span> The platform should aim for 99% uptime, utilizing automated backups to protect the relational database clusters.</li>
+            <li><span class="bold-term">Maintainability:</span> The PHP backend must be structured with modular routing, ensuring future developers can easily add new modules without breaking existing functions.</li>
+        </ul>
+
+        <div class="footer">
+            <span>HairFidence SRS</span>
+            <span>Page 4</span>
+        </div>
+    </div>
+
+    <!-- PAGE 5: DATABASE DESIGN (DB SCHEMA) -->
+    <div class="page">
+        <div class="section-title">6. DATABASE DESIGN (DB SCHEMA)</div>
+        <p>
+            The platform operates on a highly optimized 8-table relational schema, prioritizing relational data integrity while eliminating unnecessary overhead.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Table Name</th>
+                    <th>Primary Key (PK) / Foreign Key (FK)</th>
+                    <th>Core Attributes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. Login</strong></td>
+                    <td>login_id (PK)</td>
+                    <td>email, password (hashed), role, created_at</td>
+                </tr>
+                <tr>
+                    <td><strong>2. Donors</strong></td>
+                    <td>donor_id (PK), login_id (FK)</td>
+                    <td>full_name, phone, address</td>
+                </tr>
+                <tr>
+                    <td><strong>3. Patients</strong></td>
+                    <td>patient_id (PK), login_id (FK)</td>
+                    <td>full_name, phone, address, medical_report_url</td>
+                </tr>
+                <tr>
+                    <td><strong>4. NGOs</strong></td>
+                    <td>ngo_id (PK), login_id (FK)</td>
+                    <td>organization_name, registration_number, is_approved</td>
+                </tr>
+                <tr>
+                    <td><strong>5. Hair Donation Posts</strong></td>
+                    <td>post_id (PK), donor_id (FK)</td>
+                    <td>hair_length, hair_type, image_url, status</td>
+                </tr>
+                <tr>
+                    <td><strong>6. Hair Requests</strong></td>
+                    <td>request_id (PK), patient_id (FK), post_id (FK), ngo_id (FK)</td>
+                    <td>request_date, status (Pending/Approved/Rejected)</td>
+                </tr>
+                <tr>
+                    <td><strong>7. Campaigns</strong></td>
+                    <td>campaign_id (PK), ngo_id (FK)</td>
+                    <td>title, description, event_date, location</td>
+                </tr>
+                <tr>
+                    <td><strong>8. Complaints</strong></td>
+                    <td>complaint_id (PK), login_id (FK)</td>
+                    <td>subject, description, status, date_submitted</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>
+            This strictly relational schema connects user credentials directly to profile tables via a central <span class="bold-term">login_id</span> foreign key. This ensures that every role transition and data request can be safely authenticated across the entire system infrastructure without data duplication.
+        </p>
+
+        <div class="footer">
+            <span>HairFidence SRS</span>
+            <span>Page 5</span>
+        </div>
+    </div>
+
+    <!-- PAGE 6: SYSTEM SPECIFICATIONS -->
+    <div class="page">
+        <div class="section-title">7. SYSTEM SPECIFICATIONS</div>
+        
+        <h3>7.1 Hardware Specifications (Minimum Requirements)</h3>
+        <ul>
+            <li><span class="bold-term">Processor:</span> Intel Core i3 (or AMD equivalent) and above.</li>
+            <li><span class="bold-term">Memory (RAM):</span> Minimum 4 GB (8 GB highly recommended for development and server hosting).</li>
+            <li><span class="bold-term">Storage Space:</span> Minimum 20 GB of free disk space.</li>
+            <li><span class="bold-term">Network:</span> Continuous Broadband Internet connection for API and Database synchronization.</li>
+        </ul>
+
+        <h3>7.2 Software Specifications</h3>
+        <ul>
+            <li><span class="bold-term">Frontend Architecture:</span> HTML5, CSS3, JavaScript (ES6+), Premium CSS variables (custom styling framework).</li>
+            <li><span class="bold-term">Backend Architecture:</span> PHP 8.x Web Server Engine.</li>
+            <li><span class="bold-term">Database Engine:</span> MySQL Relational Database (MariaDB) managed via PDO (PHP Data Objects).</li>
+            <li><span class="bold-term">Development / Hosting Server:</span> XAMPP Control Panel v3.x (Apache Web Server & MariaDB MySQL Server).</li>
+            <li><span class="bold-term">IDE / Deployment:</span> Visual Studio Code (Development), modern web browser (Chrome/Edge/Firefox) for client access.</li>
+        </ul>
+
+
+        <div class="footer">
+            <span>HairFidence SRS</span>
+            <span>Page 6</span>
+        </div>
+    </div>
+
+</body>
+</html>

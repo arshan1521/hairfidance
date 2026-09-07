@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HairFidence – Database Design Tables</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+        :root {
+            --dark:    #0f172a;
+            --green:   #10b981;
+            --muted:   #64748b;
+            --border:  #e2e8f0;
+            --light:   #f8fafc;
+            --pk:      #3b82f6;
+            --fk:      #f59e0b;
+            --type:    #7c3aed;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #f1f5f9;
+            color: var(--dark);
+            padding: 30px 20px;
+        }
+
+        /* ── Header ──────────────────────────────────────────────── */
+        .page-header {
+            background: var(--dark);
+            color: white;
+            border-radius: 16px;
+            padding: 30px 40px;
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 8px solid var(--green);
+        }
+        .page-header h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+        .page-header h1 span { color: var(--green); }
+        .page-header p { color: #94a3b8; font-size: 0.95rem; margin-top: 5px; }
+        .badge-count {
+            background: var(--green);
+            color: white;
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+        .badge-count small { font-size: 0.65rem; font-weight: 600; }
+
+        /* ── Grid ──────────────────────────────────────────────────── */
+        .tables-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 24px;
+        }
+
+        /* ── Each Table Card ───────────────────────────────────────── */
+        .db-card {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1.5px solid var(--border);
+        }
+
+        .db-card-header {
+            background: var(--dark);
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .table-number {
+            background: var(--green);
+            color: white;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 0.85rem;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .table-name-wrap { flex: 1; }
+        .table-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #e2e8f0;
+        }
+        .table-desc {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 2px;
+        }
+        .engine-tag {
+            background: #1e293b;
+            color: #94a3b8;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 5px;
+        }
+
+        /* ── Column Rows ───────────────────────────────────────────── */
+        .col-header-row {
+            display: grid;
+            grid-template-columns: 2fr 1.4fr 1fr 2.5fr;
+            background: #f8fafc;
+            padding: 8px 18px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .col-row {
+            display: grid;
+            grid-template-columns: 2fr 1.4fr 1fr 2.5fr;
+            padding: 10px 18px;
+            border-bottom: 1px solid #f1f5f9;
+            align-items: start;
+            transition: background 0.15s;
+        }
+        .col-row:last-child { border-bottom: none; }
+        .col-row:hover { background: #f8fafc; }
+
+        .col-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tag {
+            font-size: 0.62rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .tag-pk { background: #dbeafe; color: #1d4ed8; }
+        .tag-fk { background: #fef3c7; color: #b45309; }
+        .tag-ai { background: #dcfce7; color: #15803d; font-size: 0.58rem; }
+
+        .col-type {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--type);
+            font-weight: 500;
+        }
+
+        .col-null {
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+        .not-null { color: #dc2626; }
+        .nullable { color: #64748b; }
+
+        .col-note {
+            font-size: 0.78rem;
+            color: #64748b;
+            line-height: 1.4;
+        }
+        .col-note strong { color: var(--green); font-weight: 700; }
+
+        /* ── FK Row (relationship line) ───────────────────────────── */
+        .fk-footer {
+            background: #fffbeb;
+            border-top: 1.5px solid #fde68a;
+            padding: 8px 18px;
+            font-size: 0.78rem;
+            color: #92400e;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .fk-entry {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .fk-arrow { color: var(--fk); font-weight: 800; }
+
+        /* ── Legend ───────────────────────────────────────────────── */
+        .legend {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            background: white;
+            padding: 14px 20px;
+            border-radius: 10px;
+            border: 1.5px solid var(--border);
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+
+        /* ── ERD relationship summary ─────────────────────────────── */
+        .erd-summary {
+            background: white;
+            border-radius: 14px;
+            border: 1.5px solid var(--border);
+            padding: 24px 28px;
+            margin-top: 28px;
+        }
+        .erd-summary h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 16px;
+            border-left: 4px solid var(--green);
+            padding-left: 12px;
+        }
+        .erd-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 12px;
+        }
+        .erd-item {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            padding: 12px 14px;
+            font-size: 0.83rem;
+        }
+        .erd-item .rel {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 4px;
+        }
+        .erd-item .rel-type {
+            color: var(--green);
+            font-weight: 800;
+        }
+        .erd-item .rel-desc { color: var(--muted); font-size: 0.78rem; }
+
+        @media print {
+            body { background: white; padding: 10px; }
+            .db-card { box-shadow: none; break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══ PAGE HEADER ══════════════════════════════════════════════════════════ -->
+<div class="page-header">
+    <div>
+        <h1>Hair<span>Fidence</span> — Database Design</h1>
+        <p>MySQL Relational Schema · InnoDB Engine · UTF-8 Charset · PDO Secured</p>
+    </div>
+    <div class="badge-count">8<small>Tables</small></div>
+</div>
+
+<!-- ══ LEGEND ══════════════════════════════════════════════════════════════ -->
+<div class="legend">
+    <div class="legend-item"><span class="tag tag-pk">PK</span> Primary Key</div>
+    <div class="legend-item"><span class="tag tag-fk">FK</span> Foreign Key</div>
+    <div class="legend-item"><span class="tag tag-ai">AI</span> Auto Increment</div>
+    <div class="legend-item"><span style="color:#dc2626;font-weight:700">NOT NULL</span> = Required field</div>
+    <div class="legend-item"><span style="color:#64748b;font-weight:700">NULL</span> = Optional field</div>
+    <div class="legend-item" style="margin-left:auto;font-family:'JetBrains Mono',monospace;color:#7c3aed">Engine: InnoDB</div>
+</div>
+
+<!-- ══ TABLES GRID ══════════════════════════════════════════════════════════ -->
+<div class="tables-grid">
+
+    <!-- 1. LOGIN -->
+    <div class="db-card">
+        <div class="db-card-header">
+            <div class="table-number">1</div>
+            <div class="table-name-wrap">
+                <div class="table-name">login</div>
+                <div class="table-desc">Core authentication &amp; session credentials for all users</div>
+            </div>
+            <div class="engine-tag">InnoDB</div>
+        </div>
+        <div class="col-header-row">
+            <div>Column Name</div><div>Data Type</div><div>Null</div><div>Notes</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name"><span class="tag tag-pk">PK</span><span class="tag tag-ai">AI</span> login_id</div>
+            <div class="col-type">INT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note"><strong>Primary Key</strong> — Auto-incremented unique user ID</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">email</div>
+            <div class="col-type">VARCHAR(150)</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">UNIQUE — Login email address</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">password</div>
+            <div class="col-type">VARCHAR(255)</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">BCrypt hashed via PHP <code>password_hash()</code></div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">role</div>
+            <div class="col-type">ENUM</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Values: <strong>admin · ngo · donor · patient</strong></div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">created_at</div>
+            <div class="col-type">TIMESTAMP</div>
+            <div class="col-null nullable">NULL</div>
+            <div class="col-note">DEFAULT CURRENT_TIMESTAMP — Auto-set on insert</div>
+        </div>
+    </div>
+
+    <!-- 2. DONORS -->
+    <div class="db-card">
+        <div class="db-card-header">
+            <div class="table-number">2</div>
+            <div class="table-name-wrap">
+                <div class="table-name">donors</div>
+                <div class="table-desc">Profile data for registered hair donors</div>
+            </div>
+            <div class="engine-tag">InnoDB</div>
+        </div>
+        <div class="col-header-row">
+            <div>Column Name</div><div>Data Type</div><div>Null</div><div>Notes</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name"><span class="tag tag-pk">PK</span><span class="tag tag-ai">AI</span> donor_id</div>
+            <div class="col-type">INT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note"><strong>Primary Key</strong></div>
+        </div>
+        <div class="col-row">
+            <div class="col-name"><span class="tag tag-fk">FK</span> login_id</div>
+            <div class="col-type">INT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">→ <strong>login.login_id</strong> · ON DELETE CASCADE</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">full_name</div>
+            <div class="col-type">VARCHAR(100)</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Donor's full legal name</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">phone</div>
+            <div class="col-type">VARCHAR(15)</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Contact phone number</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">address</div>
+            <div class="col-type">TEXT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Full residential address</div>
+        </div>
+        <div class="fk-footer">
+            <div class="fk-entry"><span class="tag tag-fk">FK</span><span class="fk-arrow">→</span> login (login_id) ON DELETE CASCADE</div>
+        </div>
+    </div>
+
+    <!-- 3. PATIENTS -->
+    <div class="db-card">
+        <div class="db-card-header">
+            <div class="table-number">3</div>
+            <div class="table-name-wrap">
+                <div class="table-name">patients</div>
+                <div class="table-desc">Profile data for cancer patients requesting wigs</div>
+            </div>
+            <div class="engine-tag">InnoDB</div>
+        </div>
+        <div class="col-header-row">
+            <div>Column Name</div><div>Data Type</div><div>Null</div><div>Notes</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name"><span class="tag tag-pk">PK</span><span class="tag tag-ai">AI</span> patient_id</div>
+            <div class="col-type">INT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note"><strong>Primary Key</strong></div>
+        </div>
+        <div class="col-row">
+            <div class="col-name"><span class="tag tag-fk">FK</span> login_id</div>
+            <div class="col-type">INT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">→ <strong>login.login_id</strong> · ON DELETE CASCADE</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">full_name</div>
+            <div class="col-type">VARCHAR(100)</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Patient's full name</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">phone</div>
+            <div class="col-type">VARCHAR(15)</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Contact phone number</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">address</div>
+            <div class="col-type">TEXT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Residential address</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">medical_report_url</div>
+            <div class="col-type">VARCHAR(255)</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">File path to uploaded medical certificate (PDF/IMG)</div>
+        </div>
+        <div class="fk-footer">
+            <div class="fk-entry"><span class="tag tag-fk">FK</span><span class="fk-arrow">→</span> login (login_id) ON DELETE CASCADE</div>
+        </div>
+    </div>
+
+    <!-- 4. NGOS -->
+    <div class="db-card">
+        <div class="db-card-header">
+            <div class="table-number">4</div>
+            <div class="table-name-wrap">
+                <div class="table-name">ngos</div>
+                <div class="table-desc">Registered NGO organisations pending Admin approval</div>
+            </div>
+            <div class="engine-tag">InnoDB</div>
+        </div>
+        <div class="col-header-row">
+            <div>Column Name</div><div>Data Type</div><div>Null</div><div>Notes</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name"><span class="tag tag-pk">PK</span><span class="tag tag-ai">AI</span> ngo_id</div>
+            <div class="col-type">INT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note"><strong>Primary Key</strong></div>
+        </div>
+        <div class="col-row">
+            <div class="col-name"><span class="tag tag-fk">FK</span> login_id</div>
+            <div class="col-type">INT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">→ <strong>login.login_id</strong> · ON DELETE CASCADE</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">organization_name</div>
+            <div class="col-type">VARCHAR(150)</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Official registered NGO name</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">registration_number</div>
+            <div class="col-type">VARCHAR(100)</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Government registration / certificate number</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">is_approved</div>
+            <div class="col-type">TINYINT(1)</div>
+            <div class="col-null nullable">NULL</div>
+            <div class="col-note">DEFAULT <strong>0</strong> (Pending) · <strong>1</strong> = Approved by Admin</div>
+        </div>
+        <div class="fk-footer">
+            <div class="fk-entry"><span class="tag tag-fk">FK</span><span class="fk-arrow">→</span> login (login_id) ON DELETE CASCADE</div>
+        </div>
+    </div>
+
+    <!-- 5. HAIR DONATION POSTS -->
+    <div class="db-card">
+        <div class="db-card-header">
+            <div class="table-number">5</div>
+            <div class="table-name-wrap">
+                <div class="table-name">hair_donation_posts</div>
+                <div class="table-desc">Hair specimen listings posted by registered donors</div>
+            </div>
+            <div class="engine-tag">InnoDB</div>
+        </div>
+        <div class="col-header-row">
+            <div>Column Name</div><div>Data Type</div><div>Null</div><div>Notes</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name"><span class="tag tag-pk">PK</span><span class="tag tag-ai">AI</span> post_id</div>
+            <div class="col-type">INT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note"><strong>Primary Key</strong></div>
+        </div>
+        <div class="col-row">
+            <div class="col-name"><span class="tag tag-fk">FK</span> donor_id</div>
+            <div class="col-type">INT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">→ <strong>donors.donor_id</strong> · ON DELETE CASCADE</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">hair_length</div>
+            <div class="col-type">DECIMAL(5,2)</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Length in centimetres (e.g. 35.50 cm)</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">hair_type</div>
+            <div class="col-type">VARCHAR(50)</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Texture: Straight · Wavy · Curly · Coily</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">image_url</div>
+            <div class="col-type">VARCHAR(255)</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Server path to uploaded hair photo</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">status</div>
+            <div class="col-type">ENUM</div>
+            <div class="col-null nullable">NULL</div>
+            <div class="col-note">DEFAULT <strong>Available</strong> · Processing · <strong>Donated</strong></div>
+        </div>
+        <div class="fk-footer">
+            <div class="fk-entry"><span class="tag tag-fk">FK</span><span class="fk-arrow">→</span> donors (donor_id) ON DELETE CASCADE</div>
+        </div>
+    </div>
+
+    <!-- 6. HAIR REQUESTS -->
+    <div class="db-card">
+        <div class="db-card-header">
+            <div class="table-number">6</div>
+            <div class="table-name-wrap">
+                <div class="table-name">hair_requests</div>
+                <div class="table-desc">Patient requests for a specific donation post, routed via an NGO</div>
+            </div>
+            <div class="engine-tag">InnoDB</div>
+        </div>
+        <div class="col-header-row">
+            <div>Column Name</div><div>Data Type</div><div>Null</div><div>Notes</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name"><span class="tag tag-pk">PK</span><span class="tag tag-ai">AI</span> request_id</div>
+            <div class="col-type">INT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note"><strong>Primary Key</strong></div>
+        </div>
+        <div class="col-row">
+            <div class="col-name"><span class="tag tag-fk">FK</span> patient_id</div>
+            <div class="col-type">INT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">→ <strong>patients.patient_id</strong> · ON DELETE CASCADE</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name"><span class="tag tag-fk">FK</span> post_id</div>
+            <div class="col-type">INT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">→ <strong>hair_donation_posts.post_id</strong> · ON DELETE CASCADE</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name"><span class="tag tag-fk">FK</span> ngo_id</div>
+            <div class="col-type">INT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">→ <strong>ngos.ngo_id</strong> · ON DELETE CASCADE</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">request_date</div>
+            <div class="col-type">TIMESTAMP</div>
+            <div class="col-null nullable">NULL</div>
+            <div class="col-note">DEFAULT CURRENT_TIMESTAMP — Auto-set on insert</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">status</div>
+            <div class="col-type">ENUM</div>
+            <div class="col-null nullable">NULL</div>
+            <div class="col-note">DEFAULT <strong>Pending</strong> · Approved · Rejected</div>
+        </div>
+        <div class="fk-footer">
+            <div class="fk-entry"><span class="tag tag-fk">FK</span><span class="fk-arrow">→</span> patients (patient_id)</div>
+            <div class="fk-entry"><span class="tag tag-fk">FK</span><span class="fk-arrow">→</span> hair_donation_posts (post_id)</div>
+            <div class="fk-entry"><span class="tag tag-fk">FK</span><span class="fk-arrow">→</span> ngos (ngo_id)</div>
+        </div>
+    </div>
+
+    <!-- 7. CAMPAIGNS -->
+    <div class="db-card">
+        <div class="db-card-header">
+            <div class="table-number">7</div>
+            <div class="table-name-wrap">
+                <div class="table-name">campaigns</div>
+                <div class="table-desc">Community donation drives organised by NGOs</div>
+            </div>
+            <div class="engine-tag">InnoDB</div>
+        </div>
+        <div class="col-header-row">
+            <div>Column Name</div><div>Data Type</div><div>Null</div><div>Notes</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name"><span class="tag tag-pk">PK</span><span class="tag tag-ai">AI</span> campaign_id</div>
+            <div class="col-type">INT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note"><strong>Primary Key</strong></div>
+        </div>
+        <div class="col-row">
+            <div class="col-name"><span class="tag tag-fk">FK</span> ngo_id</div>
+            <div class="col-type">INT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">→ <strong>ngos.ngo_id</strong> · ON DELETE CASCADE</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">title</div>
+            <div class="col-type">VARCHAR(150)</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Campaign / event title</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">description</div>
+            <div class="col-type">TEXT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Detailed description of the drive / event</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">event_date</div>
+            <div class="col-type">DATE</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Scheduled event date (YYYY-MM-DD)</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">location</div>
+            <div class="col-type">VARCHAR(255)</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Venue / address of the event</div>
+        </div>
+        <div class="fk-footer">
+            <div class="fk-entry"><span class="tag tag-fk">FK</span><span class="fk-arrow">→</span> ngos (ngo_id) ON DELETE CASCADE</div>
+        </div>
+    </div>
+
+    <!-- 8. COMPLAINTS -->
+    <div class="db-card">
+        <div class="db-card-header">
+            <div class="table-number">8</div>
+            <div class="table-name-wrap">
+                <div class="table-name">complaints</div>
+                <div class="table-desc">Support tickets filed by any user, resolved by Admin</div>
+            </div>
+            <div class="engine-tag">InnoDB</div>
+        </div>
+        <div class="col-header-row">
+            <div>Column Name</div><div>Data Type</div><div>Null</div><div>Notes</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name"><span class="tag tag-pk">PK</span><span class="tag tag-ai">AI</span> complaint_id</div>
+            <div class="col-type">INT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note"><strong>Primary Key</strong></div>
+        </div>
+        <div class="col-row">
+            <div class="col-name"><span class="tag tag-fk">FK</span> login_id</div>
+            <div class="col-type">INT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">→ <strong>login.login_id</strong> · ON DELETE CASCADE</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">subject</div>
+            <div class="col-type">VARCHAR(150)</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Short title / subject of the complaint</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">description</div>
+            <div class="col-type">TEXT</div>
+            <div class="col-null not-null">NOT NULL</div>
+            <div class="col-note">Full detailed description of the issue</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">status</div>
+            <div class="col-type">ENUM</div>
+            <div class="col-null nullable">NULL</div>
+            <div class="col-note">DEFAULT <strong>Pending</strong> · Resolved</div>
+        </div>
+        <div class="col-row">
+            <div class="col-name">date_submitted</div>
+            <div class="col-type">TIMESTAMP</div>
+            <div class="col-null nullable">NULL</div>
+            <div class="col-note">DEFAULT CURRENT_TIMESTAMP — Auto-set on insert</div>
+        </div>
+        <div class="fk-footer">
+            <div class="fk-entry"><span class="tag tag-fk">FK</span><span class="fk-arrow">→</span> login (login_id) ON DELETE CASCADE</div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ══ RELATIONSHIP SUMMARY ══════════════════════════════════════════════════ -->
+<div class="erd-summary">
+    <h3>Table Relationships (ERD Summary)</h3>
+    <div class="erd-grid">
+        <div class="erd-item">
+            <div class="rel">login <span class="rel-type">1 → N</span> donors</div>
+            <div class="rel-desc">One login account links to one donor profile via login_id (FK)</div>
+        </div>
+        <div class="erd-item">
+            <div class="rel">login <span class="rel-type">1 → N</span> patients</div>
+            <div class="rel-desc">One login account links to one patient profile via login_id (FK)</div>
+        </div>
+        <div class="erd-item">
+            <div class="rel">login <span class="rel-type">1 → N</span> ngos</div>
+            <div class="rel-desc">One login account links to one NGO organisation record via login_id (FK)</div>
+        </div>
+        <div class="erd-item">
+            <div class="rel">login <span class="rel-type">1 → N</span> complaints</div>
+            <div class="rel-desc">Any user can file many complaints — linked via login_id (FK)</div>
+        </div>
+        <div class="erd-item">
+            <div class="rel">donors <span class="rel-type">1 → N</span> hair_donation_posts</div>
+            <div class="rel-desc">One donor can create many hair donation posts via donor_id (FK)</div>
+        </div>
+        <div class="erd-item">
+            <div class="rel">hair_donation_posts <span class="rel-type">1 → N</span> hair_requests</div>
+            <div class="rel-desc">One donation post can receive many patient requests via post_id (FK)</div>
+        </div>
+        <div class="erd-item">
+            <div class="rel">patients <span class="rel-type">1 → N</span> hair_requests</div>
+            <div class="rel-desc">One patient can send many requests across different posts via patient_id (FK)</div>
+        </div>
+        <div class="erd-item">
+            <div class="rel">ngos <span class="rel-type">1 → N</span> hair_requests</div>
+            <div class="rel-desc">One NGO manages many requests routed through it via ngo_id (FK)</div>
+        </div>
+        <div class="erd-item">
+            <div class="rel">ngos <span class="rel-type">1 → N</span> campaigns</div>
+            <div class="rel-desc">One NGO can create many campaigns/drives via ngo_id (FK)</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
